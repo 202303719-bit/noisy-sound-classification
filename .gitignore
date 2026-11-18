@@ -1,0 +1,11 @@
+# raw datasets (do not upload)
+data/ESC-50/
+data/DEMAND/
+
+# python
+__pycache__/
+*.pyc
+
+# model checkpoints (put the download link in README instead)
+checkpoints/*.pt
+checkpoints/*.pth
