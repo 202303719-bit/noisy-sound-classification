@@ -1,0 +1,28 @@
+# Classic model 1: 2-D CNN trained from scratch on log-mel
+base: base.yaml
+name: cnn_scratch
+
+model:
+  name: cnn
+  params:
+    channels: [32, 64, 128, 256]
+    dropout: 0.3            # before / inside the MLP head
+    block_dropout: 0.1      # Dropout2d after each conv block
+    head_hidden: 256
+    spec_augment: {enabled: true, freq_mask: 24, time_mask: 40, n_freq_masks: 2, n_time_masks: 2}
+
+train:
+  optimizer: adamw
+  lr: 0.001
+  weight_decay: 0.01
+  batch_size: 32
+  epochs: 100
+  warmup_epochs: 5
+  scheduler: cosine         # cosine | constant
+  min_lr_ratio: 0.01
+  label_smoothing: 0.1
+  mixup_alpha: 0.0          # >0 enables mixup (data-strategy study)
+  grad_clip: 5.0
+  amp: true
+  early_stopping_patience: 20
+  select_metric: macro_f1

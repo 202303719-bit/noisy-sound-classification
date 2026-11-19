@@ -9,3 +9,7 @@ __pycache__/
 # model checkpoints (put the download link in README instead)
 checkpoints/*.pt
 checkpoints/*.pth
+checkpoints/*.joblib
+
+# debug runs from --fast-dev-run
+experiments/*_debug/

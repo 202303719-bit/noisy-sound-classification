@@ -1,0 +1,22 @@
+# Baseline 1: MFCC statistics + RBF-SVM
+base: base.yaml
+name: baseline_svm
+
+features:                 # MFCC + delta + delta-delta, mean & std over time -> 240-d
+  sample_rate: 16000      # must match the sample rate returned by datasets.esc50.ESC50
+  n_mfcc: 40
+  n_mels: 128
+  win_ms: 46.0
+  hop_ms: 23.0
+
+model:
+  name: svm
+  params: {kernel: rbf, C: 10.0, gamma: scale, class_weight: null}
+  # grid searched on the VALIDATION split (no test data involved)
+  search:
+    C: [1.0, 10.0, 100.0]
+    gamma: [scale, 0.001, 0.01]
+
+train:
+  batch_size: 64          # only used for feature extraction
+  select_metric: macro_f1

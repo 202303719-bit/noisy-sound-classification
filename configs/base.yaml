@@ -1,0 +1,34 @@
+# Shared settings for ALL models (same split, preprocessing and selection rule
+# -> fair comparison, requirement #6). Model configs inherit with `base: base.yaml`.
+
+data:
+  root: data/ESC-50
+  demand_dir: data/DEMAND
+  n_classes: 50
+  num_workers: 4
+  # Training audio. snr_db: null = clean clips.
+  # (Noise-augmented training, e.g. snr_db: 10, uses the 10 TRAIN DEMAND environments
+  #  and belongs to the data-strategy study.)
+  train: {split: train, snr_db: null}
+  # Validation conditions. Model selection = mean macro-F1 over these conditions.
+  # Noisy val uses the 3 VAL DEMAND environments (NRIVER, OMEETING, PRESTO) only.
+  val:
+    - {split: val, snr_db: null}
+    - {split: val, snr_db: 5}
+
+# Log-mel front-end for the deep models. By default the shared
+# datasets.esc50.LogMel is used; the values below are only used by the fallback.
+frontend:
+  use_dataset_logmel: true
+  sample_rate: 16000
+  n_mels: 128
+  n_fft: 2048
+  hop_length: 512
+
+seeds: [0, 1, 2]          # requirement: >= 3 seeds per final configuration
+device: auto              # auto | cpu | cuda
+deterministic: false
+
+output:
+  checkpoint_dir: checkpoints
+  experiment_dir: experiments
