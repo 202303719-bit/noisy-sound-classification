@@ -1,0 +1,42 @@
+name: Setup datasets and verify
+
+on:
+  workflow_dispatch:
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout project
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install torch torchaudio soundfile pandas numpy
+
+      - name: Clone ESC-50
+        run: |
+          git clone https://github.com/karolpiczak/ESC-50.git data/ESC-50
+
+      - name: Download and extract DEMAND 16k noise files
+        run: |
+          mkdir -p data/DEMAND
+          ENVIRONMENTS="DKITCHEN DLIVING DWASHING NFIELD NPARK NRIVER OHALLWAY OMEETING OOFFICE PCAFETER PRESTO PSTATION SPSQUARE STRAFFIC TBUS TCAR TMETRO"
+
+          for ENV in $ENVIRONMENTS; do
+            echo "Downloading ${ENV}_16k.zip"
+            wget -q "https://zenodo.org/records/1227121/files/${ENV}_16k.zip?download=1" -O "${ENV}_16k.zip"
+            unzip -q "${ENV}_16k.zip" -d "data/DEMAND/${ENV}"
+            rm "${ENV}_16k.zip"
+          done
+
+      - name: Run data verification (step 3)
+        run: |
+          python data/check_data.py
