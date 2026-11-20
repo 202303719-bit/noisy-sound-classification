@@ -1,9 +1,8 @@
-# Baseline 2: MFCC statistics + Random Forest
+﻿# Baseline 2: MFCC statistics + Random Forest
 base: base.yaml
 name: baseline_rf
 
 features:
-  sample_rate: 16000
   n_mfcc: 40
   n_mels: 128
   win_ms: 46.0

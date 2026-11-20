@@ -23,7 +23,7 @@ class LogMelFrontend(nn.Module):
     otherwise falls back to an equivalent torchaudio implementation.
     """
 
-    def __init__(self, sample_rate: int = 44100, n_mels: int = 128, n_fft: int = 2048,
+    def __init__(self, sample_rate: int = 16000, n_mels: int = 128, n_fft: int = 2048,
                  hop_length: int = 512, use_dataset_logmel: bool = True):
         super().__init__()
         self.transform = None
@@ -142,6 +142,61 @@ class AttentionPool(nn.Module):
         a = self.score(torch.tanh(self.proj(x))).squeeze(-1)  # (B, T)
         a = F.softmax(a, dim=1)
         return torch.bmm(a.unsqueeze(1), x).squeeze(1)       # (B, D)
+
+
+class ASTFrontend(nn.Module):
+    """waveform (B, T) at `sample_rate` -> AST input (B, max_length, 128).
+
+    Re-implements the HuggingFace `ASTFeatureExtractor` on tensors so it runs on
+    GPU in the training loop: resample to 16 kHz, Kaldi-compatible 128-bin fbank
+    (25 ms window, 10 ms shift), pad/crop to `max_length` frames and normalise with
+    the AudioSet statistics used during AST pre-training (Gong et al., 2021).
+    5-s ESC-50 clips give 498 frames, so max_length=512 (instead of 1024) halves
+    the compute; positional embeddings are resized in models/ast.py.
+    """
+
+    def __init__(self, sample_rate: int = 16000, target_sr: int = 16000, num_mel_bins: int = 128,
+                 max_length: int = 512, mean: float = -4.2677393, std: float = 4.5689974):
+        super().__init__()
+        self.sample_rate, self.target_sr = sample_rate, target_sr
+        self.num_mel_bins, self.max_length = num_mel_bins, max_length
+        self.mean, self.std = mean, std
+        self.source = "kaldi fbank (AST)"
+
+    def forward(self, wave: torch.Tensor) -> torch.Tensor:
+        import torchaudio
+
+        if wave.dim() == 3:
+            wave = wave.mean(1)
+        wave = wave.float()
+        if self.sample_rate != self.target_sr:
+            wave = torchaudio.functional.resample(wave, self.sample_rate, self.target_sr)
+        feats = []
+        for w in wave:
+            fb = torchaudio.compliance.kaldi.fbank(
+                w.unsqueeze(0), htk_compat=True, sample_frequency=self.target_sr, use_energy=False,
+                window_type="hanning", num_mel_bins=self.num_mel_bins, dither=0.0, frame_shift=10)
+            n = fb.size(0)
+            if n < self.max_length:
+                fb = F.pad(fb, (0, 0, 0, self.max_length - n))
+            feats.append(fb[: self.max_length])
+        x = torch.stack(feats)                       # (B, max_length, mel)
+        return (x - self.mean) / (self.std * 2)
+
+
+def build_frontend(fcfg: dict | None, sample_rate: int = 16000) -> nn.Module:
+    """Front-end factory driven by the `frontend:` block of a config.
+    type: logmel (CNN / CRNN / Conformer)  |  ast_fbank (AST)."""
+    fcfg = dict(fcfg or {})
+    kind = fcfg.get("type", "logmel")
+    sr = fcfg.get("sample_rate", sample_rate)
+    if kind == "logmel":
+        keys = ("n_mels", "n_fft", "hop_length", "use_dataset_logmel")
+        return LogMelFrontend(sample_rate=sr, **{k: fcfg[k] for k in keys if k in fcfg})
+    if kind == "ast_fbank":
+        keys = ("target_sr", "num_mel_bins", "max_length", "mean", "std")
+        return ASTFrontend(sample_rate=sr, **{k: fcfg[k] for k in keys if k in fcfg})
+    raise ValueError(f"Unknown frontend type '{kind}'")
 
 
 def count_parameters(model: nn.Module, trainable_only: bool = True) -> int:

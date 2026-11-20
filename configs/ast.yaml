@@ -1,0 +1,38 @@
+# Modern model: AST pretrained on ImageNet + AudioSet, fine-tuned on ESC-50.
+# Slowest model -> run on Kaggle / Colab GPU (see notebooks/train_on_colab_kaggle.ipynb).
+base: base.yaml
+name: ast_pretrained
+
+data:
+  num_workers: 2
+
+frontend:
+  type: ast_fbank           # 16 kHz Kaldi fbank, 128 bins, AudioSet normalisation
+  max_length: 512           # 5-s clip = 498 frames -> 512 (pos. embeddings resized from 1024)
+
+model:
+  name: ast
+  params:
+    pretrained: true
+    checkpoint: MIT/ast-finetuned-audioset-10-10-0.4593
+    max_length: 512
+    hidden_dropout: 0.0
+    attention_dropout: 0.0
+    freeze_layers: 0
+    spec_augment: {enabled: true, freq_mask: 24, time_mask: 48, n_freq_masks: 2, n_time_masks: 2}
+
+train:
+  optimizer: adamw
+  lr: 0.00002               # small LR for fine-tuning (AST paper: 1e-5 for ESC-50)
+  weight_decay: 0.01
+  batch_size: 16
+  epochs: 25
+  warmup_epochs: 1
+  scheduler: cosine
+  min_lr_ratio: 0.01
+  label_smoothing: 0.1
+  mixup_alpha: 0.0
+  grad_clip: 5.0
+  amp: true
+  early_stopping_patience: 8
+  select_metric: macro_f1

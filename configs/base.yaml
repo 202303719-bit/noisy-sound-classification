@@ -4,11 +4,11 @@
 data:
   root: data/ESC-50
   demand_dir: data/DEMAND
+  sample_rate: 16000      # sample rate returned by datasets.esc50.ESC50
   n_classes: 50
   num_workers: 4
-  # Training audio. snr_db: null = clean clips.
-  # (Noise-augmented training, e.g. snr_db: 10, uses the 10 TRAIN DEMAND environments
-  #  and belongs to the data-strategy study.)
+  # Training audio. snr_db: null = clean clips. Noise augmentation is done on the fly
+  # by `noise_aug` below (TRAIN DEMAND environments only).
   train: {split: train, snr_db: null}
   # Validation conditions. Model selection = mean macro-F1 over these conditions.
   # Noisy val uses the 3 VAL DEMAND environments (NRIVER, OMEETING, PRESTO) only.
@@ -16,11 +16,25 @@ data:
     - {split: val, snr_db: null}
     - {split: val, snr_db: 5}
 
-# Log-mel front-end for the deep models. By default the shared
-# datasets.esc50.LogMel is used; the values below are only used by the fallback.
+# DEMAND split (used by src/augment.py and the demo; ESC50 loader uses the same split)
+demand_envs:
+  train: [DKITCHEN, DLIVING, DWASHING, NFIELD, NPARK, OHALLWAY, OOFFICE, PSTATION, SPSQUARE, TCAR]
+  val: [NRIVER, OMEETING, PRESTO]
+  test: [PCAFETER, STRAFFIC, TBUS, TMETRO]
+
+# On-the-fly noise mixing (data-strategy study / advanced model). Off by default.
+noise_aug:
+  enabled: false
+  envs: null              # null = demand_envs.train
+  channels: [1]           # DEMAND microphone channels to sample from (ch01)
+  snr_range: [-5, 20]     # SNR ~ U(-5, 20) dB per clip
+  p: 0.8                  # probability that a clip gets noise
+
+# Front-end for the deep models. type: logmel (CNN/CRNN/Conformer) | ast_fbank (AST).
+# logmel uses the shared datasets.esc50.LogMel; values below only used by the fallback.
 frontend:
+  type: logmel
   use_dataset_logmel: true
-  sample_rate: 16000
   n_mels: 128
   n_fft: 2048
   hop_length: 512
@@ -32,3 +46,8 @@ deterministic: false
 output:
   checkpoint_dir: checkpoints
   experiment_dir: experiments
+
+# Final evaluation (src/evaluate.py) - test split only
+eval:
+  snrs: [null, 20, 10, 5, 0, -5]   # null = clean
+  error_snr: 0                     # SNR used for the confusion matrix / error analysis

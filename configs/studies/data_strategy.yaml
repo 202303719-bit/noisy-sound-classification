@@ -1,0 +1,27 @@
+# Data-strategy study on the CNN (cheap model, 3 seeds each):
+# no augmentation vs SpecAugment vs noise mixing vs mixup vs all combined.
+#   python scripts/run_study.py configs/studies/data_strategy.yaml
+#   python src/evaluate.py --study configs/studies/data_strategy.yaml --out experiments/eval_data_strategy
+study: data_strategy
+reference: cnn_ds_none
+runs:
+  - name: cnn_ds_none
+    config: configs/cnn.yaml
+    set: [model.params.spec_augment.enabled=false, noise_aug.enabled=false, train.mixup_alpha=0.0]
+    removed: "No augmentation"
+  - name: cnn_ds_specaug
+    config: configs/cnn.yaml
+    set: [model.params.spec_augment.enabled=true, noise_aug.enabled=false, train.mixup_alpha=0.0]
+    removed: "SpecAugment"
+  - name: cnn_ds_noise
+    config: configs/cnn.yaml
+    set: [model.params.spec_augment.enabled=false, noise_aug.enabled=true, train.mixup_alpha=0.0]
+    removed: "Noise mixing (DEMAND train envs, U(-5,20) dB)"
+  - name: cnn_ds_mixup
+    config: configs/cnn.yaml
+    set: [model.params.spec_augment.enabled=false, noise_aug.enabled=false, train.mixup_alpha=0.4]
+    removed: "Mixup (alpha = 0.4)"
+  - name: cnn_ds_all
+    config: configs/cnn.yaml
+    set: [model.params.spec_augment.enabled=true, noise_aug.enabled=true, train.mixup_alpha=0.4]
+    removed: "SpecAugment + noise mixing + mixup"

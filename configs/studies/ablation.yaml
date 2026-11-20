@@ -1,0 +1,37 @@
+# Ablation study (Table 5): remove one component at a time from the full model.
+#   python scripts/run_study.py configs/studies/ablation.yaml          # train all runs (3 seeds)
+#   python src/evaluate.py --study configs/studies/ablation.yaml --out experiments/eval_ablation
+study: ablation
+reference: conformer_full        # default row to compare against
+runs:
+  - name: conformer_full
+    config: configs/conformer.yaml
+    removed: "- (full model)"
+  - name: conformer_no_mhsa
+    config: configs/conformer.yaml
+    set: [model.params.use_mhsa=false]
+    removed: "Self-attention (MHSA)"
+  - name: conformer_no_convmodule
+    config: configs/conformer.yaml
+    set: [model.params.use_conv_module=false]
+    removed: "Convolution module"
+  - name: conformer_meanpool
+    config: configs/conformer.yaml
+    set: [model.params.pooling=mean]
+    removed: "Attention pooling (-> mean pooling)"
+  - name: conformer_no_specaug
+    config: configs/conformer.yaml
+    set: [model.params.spec_augment.enabled=false]
+    removed: "SpecAugment"
+  - name: conformer_no_noiseaug
+    config: configs/conformer.yaml
+    set: [noise_aug.enabled=false]
+    removed: "Noise-mixing augmentation"
+  # pretraining ablation: same AST architecture with / without pretraining
+  - name: ast_pretrained
+    config: configs/ast.yaml
+    removed: "- (full AST)"
+  - name: ast_scratch
+    config: configs/ast_scratch.yaml
+    removed: "Pretraining (AST from scratch)"
+    compare_to: ast_pretrained

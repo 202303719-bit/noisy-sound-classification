@@ -1,9 +1,8 @@
-# Baseline 1: MFCC statistics + RBF-SVM
+﻿# Baseline 1: MFCC statistics + RBF-SVM
 base: base.yaml
 name: baseline_svm
 
 features:                 # MFCC + delta + delta-delta, mean & std over time -> 240-d
-  sample_rate: 16000      # must match the sample rate returned by datasets.esc50.ESC50
   n_mfcc: 40
   n_mels: 128
   win_ms: 46.0

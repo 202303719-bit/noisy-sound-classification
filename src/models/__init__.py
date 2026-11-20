@@ -1,15 +1,26 @@
 """Model registry. One file per model family:
-    baseline.py -> MFCC + SVM / Random Forest   (type: sklearn)
-    cnn.py      -> CNN / CRNN on log-mel        (type: torch)
-Other families (modern / advanced) can register themselves in TORCH_MODELS.
+    baseline.py  -> MFCC + SVM / Random Forest        (baseline, sklearn)
+    cnn.py       -> CNN / CRNN on log-mel, scratch    (classic)
+    ast.py       -> Audio Spectrogram Transformer     (modern, pretrained vs scratch)
+    conformer.py -> Conformer encoder, scratch        (advanced)
 """
 from .baseline import MFCCStats, build_classifier  # noqa: F401
 from .cnn import CNN, CRNN
-from .layers import LogMelFrontend, SpecAugment, count_parameters  # noqa: F401
+from .conformer import Conformer
+from .layers import (ASTFrontend, LogMelFrontend, SpecAugment, build_frontend,  # noqa: F401
+                     count_parameters)
+
+
+def _ast(**kw):
+    from .ast import AST  # lazy: needs `transformers`
+    return AST(**kw)
+
 
 TORCH_MODELS = {
     "cnn": CNN,
     "crnn": CRNN,
+    "conformer": Conformer,
+    "ast": _ast,
 }
 
 SKLEARN_MODELS = ("svm", "rf")

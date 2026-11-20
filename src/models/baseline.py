@@ -24,7 +24,7 @@ from sklearn.svm import SVC
 class MFCCStats(torch.nn.Module):
     """waveform (B, T) or (B, 1, T) -> fixed-length MFCC statistics (B, 6*n_mfcc)."""
 
-    def __init__(self, sample_rate: int = 44100, n_mfcc: int = 40, n_mels: int = 128,
+    def __init__(self, sample_rate: int = 16000, n_mfcc: int = 40, n_mels: int = 128,
                  win_ms: float = 46.0, hop_ms: float = 23.0, f_min: float = 0.0,
                  f_max: float | None = None):
         super().__init__()

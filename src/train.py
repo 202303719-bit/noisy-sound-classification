@@ -37,6 +37,7 @@ from sklearn.metrics import accuracy_score, f1_score  # noqa: E402
 from torch.utils.data import DataLoader, Subset  # noqa: E402
 
 import models as M  # noqa: E402
+from augment import build_noise_mixer  # noqa: E402
 from utils import (condition_name, dataset_kwargs, file_size_mb, hardware_info,  # noqa: E402
                    load_config, save_json, seed_worker, set_seed)
 
@@ -108,7 +109,7 @@ def get_device(cfg) -> torch.device:
 def train_sklearn(cfg: dict, seed: int, run_dir: Path, ckpt_path: Path, fast: bool) -> dict:
     device = get_device(cfg)
     train_ds, val_dss = build_datasets(cfg, fast)
-    feat_cfg = dict(cfg.get("features", {}))
+    feat_cfg = {"sample_rate": cfg["data"].get("sample_rate", 16000), **cfg.get("features", {})}
     extractor = M.MFCCStats(**feat_cfg)
     bs = cfg["train"].get("batch_size", 64)
 
@@ -171,9 +172,12 @@ def train_sklearn(cfg: dict, seed: int, run_dir: Path, ckpt_path: Path, fast: bo
 def build_optimizer(model: nn.Module, tcfg: dict):
     name = tcfg.get("optimizer", "adamw").lower()
     lr, wd = tcfg["lr"], tcfg.get("weight_decay", 0.0)
-    # no weight decay on BatchNorm / bias parameters
-    decay = [p for n, p in model.named_parameters() if p.requires_grad and p.dim() > 1]
-    no_decay = [p for n, p in model.named_parameters() if p.requires_grad and p.dim() <= 1]
+    # no weight decay on BatchNorm / LayerNorm / bias / positional embeddings / special tokens
+    def no_wd(n, p):
+        return p.dim() <= 1 or any(k in n for k in ("position_embeddings", "cls_token", "distillation_token"))
+
+    decay = [p for n, p in model.named_parameters() if p.requires_grad and not no_wd(n, p)]
+    no_decay = [p for n, p in model.named_parameters() if p.requires_grad and no_wd(n, p)]
     groups = [{"params": decay, "weight_decay": wd}, {"params": no_decay, "weight_decay": 0.0}]
     if name == "adamw":
         return torch.optim.AdamW(groups, lr=lr)
@@ -231,10 +235,15 @@ def train_torch(cfg: dict, seed: int, run_dir: Path, ckpt_path: Path, fast: bool
     train_loader = make_loader(train_ds, cfg, True, seed)
     val_loaders = {k: make_loader(v, cfg, False, seed, tcfg["batch_size"] * 2) for k, v in val_dss.items()}
 
-    frontend = M.LogMelFrontend(**cfg.get("frontend", {})).to(device).eval()
+    sample_rate = cfg["data"].get("sample_rate", 16000)
+    fcfg = {**cfg.get("frontend", {}), "sample_rate": cfg.get("frontend", {}).get("sample_rate", sample_rate)}
+    frontend = M.build_frontend(fcfg, sample_rate).to(device).eval()
     model = M.build_torch_model(mcfg["name"], n_classes, mcfg.get("params")).to(device)
     n_params = M.count_parameters(model)
-    print(f"[model] {mcfg['name']}: {n_params:,} trainable params | front-end: {frontend.source} | device: {device}")
+    n_params_total = M.count_parameters(model, trainable_only=False)
+    mixer = build_noise_mixer(cfg, ROOT, seed)          # None unless noise_aug.enabled
+    print(f"[model] {mcfg['name']}: {n_params:,} trainable params | front-end: {frontend.source} | "
+          f"noise aug: {'on ' + str(mixer.envs) if mixer else 'off'} | device: {device}")
 
     opt = build_optimizer(model, tcfg)
     sched = build_scheduler(opt, tcfg, len(train_loader))
@@ -259,7 +268,10 @@ def train_torch(cfg: dict, seed: int, run_dir: Path, ckpt_path: Path, fast: bool
                 break
             y = torch.as_tensor(y).long().to(device, non_blocking=True)
             with torch.no_grad():
-                x = frontend(wave.to(device, non_blocking=True))      # fp32 log-mel
+                wave = wave.to(device, non_blocking=True).float()
+                if mixer is not None:                              # DEMAND train-env noise
+                    wave = mixer(wave)
+                x = frontend(wave)                                 # fp32 log-mel / fbank
 
             if mixup_alpha > 0:
                 lam = float(rng.beta(mixup_alpha, mixup_alpha))
@@ -298,7 +310,8 @@ def train_torch(cfg: dict, seed: int, run_dir: Path, ckpt_path: Path, fast: bool
             best_score, best_epoch, best_val, bad_epochs = score, epoch, val, 0
             torch.save({"model_name": mcfg["name"], "model_params": mcfg.get("params", {}),
                         "n_classes": n_classes, "state_dict": model.state_dict(),
-                        "frontend": cfg.get("frontend", {}), "frontend_source": frontend.source,
+                        "frontend": fcfg, "frontend_source": frontend.source,
+                        "sample_rate": sample_rate, "model_arch": getattr(model, "arch_config", None),
                         "epoch": epoch, "val_metrics": val, "seed": seed, "config": cfg}, ckpt_path)
         else:
             bad_epochs += 1
@@ -330,7 +343,8 @@ def train_torch(cfg: dict, seed: int, run_dir: Path, ckpt_path: Path, fast: bool
 
     return {
         "model": mcfg["name"], "seed": seed, "best_epoch": best_epoch, "val": best_val,
-        f"val_mean_{metric}": best_score, "n_params": n_params,
+        f"val_mean_{metric}": best_score, "n_params": n_params, "n_params_total": n_params_total,
+        "pretrained": bool(mcfg.get("params", {}).get("pretrained", False)),
         "model_size_mb": round(sum(p.numel() * p.element_size() for p in model.parameters()) / 1024**2, 3),
         "checkpoint_size_mb": round(file_size_mb(ckpt_path), 3),
         "train_time_s": round(train_time, 1), "epochs_run": len(rows),

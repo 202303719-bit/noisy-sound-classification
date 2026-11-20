@@ -1,0 +1,40 @@
+# Advanced model: Conformer (own implementation) on log-mel + noise-mixing augmentation.
+# This is the "full" model of the ablation study (configs/studies/ablation.yaml).
+base: base.yaml
+name: conformer_full
+
+noise_aug:
+  enabled: true             # DEMAND TRAIN environments, SNR ~ U(-5, 20) dB, p = 0.8
+
+model:
+  name: conformer
+  params:
+    n_mels: 128
+    d_model: 144
+    n_layers: 4
+    heads: 4
+    ff_mult: 4
+    kernel_size: 15
+    dropout: 0.1
+    subsample_channels: 64
+    head_dropout: 0.3
+    use_mhsa: true
+    use_conv_module: true
+    pooling: attention
+    spec_augment: {enabled: true, freq_mask: 24, time_mask: 40, n_freq_masks: 2, n_time_masks: 2}
+
+train:
+  optimizer: adamw
+  lr: 0.001
+  weight_decay: 0.05
+  batch_size: 32
+  epochs: 120
+  warmup_epochs: 10
+  scheduler: cosine
+  min_lr_ratio: 0.01
+  label_smoothing: 0.1
+  mixup_alpha: 0.0
+  grad_clip: 5.0
+  amp: true
+  early_stopping_patience: 30
+  select_metric: macro_f1
