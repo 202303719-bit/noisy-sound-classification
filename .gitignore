@@ -13,3 +13,6 @@ checkpoints/*.joblib
 
 # debug runs from --fast-dev-run
 experiments/*_debug/
+kaggle_upload/
+kaggle_upload.zip
+DEMAND.zip

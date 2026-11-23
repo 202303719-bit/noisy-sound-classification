@@ -1,0 +1,97 @@
+data:
+  root: data/ESC-50
+  demand_dir: data/DEMAND
+  sample_rate: 16000
+  n_classes: 50
+  num_workers: 4
+  train:
+    split: train
+    snr_db: null
+  val:
+  - split: val
+    snr_db: null
+  - split: val
+    snr_db: 5
+demand_envs:
+  train:
+  - DKITCHEN
+  - DLIVING
+  - DWASHING
+  - NFIELD
+  - NPARK
+  - OHALLWAY
+  - OOFFICE
+  - PSTATION
+  - SPSQUARE
+  - TCAR
+  val:
+  - NRIVER
+  - OMEETING
+  - PRESTO
+  test:
+  - PCAFETER
+  - STRAFFIC
+  - TBUS
+  - TMETRO
+noise_aug:
+  enabled: false
+  envs: null
+  channels:
+  - 1
+  snr_range:
+  - -5
+  - 20
+  p: 0.8
+frontend:
+  type: logmel
+  use_dataset_logmel: true
+  n_mels: 128
+  n_fft: 2048
+  hop_length: 512
+seeds:
+- 0
+- 1
+- 2
+device: auto
+deterministic: false
+output:
+  checkpoint_dir: checkpoints
+  experiment_dir: experiments
+eval:
+  snrs:
+  - null
+  - 20
+  - 10
+  - 5
+  - 0
+  - -5
+  error_snr: 0
+name: baseline_rf
+features:
+  n_mfcc: 40
+  n_mels: 128
+  win_ms: 46.0
+  hop_ms: 23.0
+model:
+  name: rf
+  params:
+    n_estimators: 500
+    max_depth: null
+    max_features: sqrt
+    min_samples_leaf: 1
+    class_weight: null
+    n_jobs: -1
+  search:
+    n_estimators:
+    - 300
+    - 500
+    - 1000
+    max_features:
+    - sqrt
+    - log2
+    min_samples_leaf:
+    - 1
+    - 2
+train:
+  batch_size: 64
+  select_metric: macro_f1

@@ -1,0 +1,920 @@
+seed,idx,file,true,pred,confidence,p_true,type,same_major_category
+1,70,5-181458-A-33.wav,door_wood_creaks,cat,0.319,0.076,inherent (wrong also on clean),False
+0,85,5-187201-B-4.wav,frog,chirping_birds,0.313,0.052,inherent (wrong also on clean),False
+0,84,5-187201-A-4.wav,frog,chirping_birds,0.309,0.06,inherent (wrong also on clean),False
+2,70,5-181458-A-33.wav,door_wood_creaks,cat,0.308,0.074,inherent (wrong also on clean),False
+0,70,5-181458-A-33.wav,door_wood_creaks,cat,0.306,0.07,inherent (wrong also on clean),False
+1,84,5-187201-A-4.wav,frog,chirping_birds,0.305,0.062,inherent (wrong also on clean),False
+2,84,5-187201-A-4.wav,frog,chirping_birds,0.302,0.05,inherent (wrong also on clean),False
+1,85,5-187201-B-4.wav,frog,chirping_birds,0.283,0.033,inherent (wrong also on clean),False
+0,388,5-262957-A-22.wav,clapping,rain,0.272,0.015,inherent (wrong also on clean),False
+2,85,5-187201-B-4.wav,frog,chirping_birds,0.27,0.046,inherent (wrong also on clean),False
+0,164,5-204352-A-13.wav,crickets,chirping_birds,0.264,0.015,noise-induced (correct on clean),True
+1,164,5-204352-A-13.wav,crickets,chirping_birds,0.256,0.015,noise-induced (correct on clean),True
+1,86,5-187444-A-33.wav,door_wood_creaks,chainsaw,0.252,0.007,inherent (wrong also on clean),False
+0,86,5-187444-A-33.wav,door_wood_creaks,chainsaw,0.247,0.006,inherent (wrong also on clean),False
+1,191,5-210540-A-13.wav,crickets,chirping_birds,0.245,0.009,noise-induced (correct on clean),True
+1,388,5-262957-A-22.wav,clapping,rain,0.244,0.013,inherent (wrong also on clean),False
+0,227,5-216214-A-13.wav,crickets,chirping_birds,0.236,0.073,inherent (wrong also on clean),True
+2,164,5-204352-A-13.wav,crickets,chirping_birds,0.232,0.006,noise-induced (correct on clean),True
+1,227,5-216214-A-13.wav,crickets,chirping_birds,0.228,0.092,inherent (wrong also on clean),True
+1,393,5-263775-B-26.wav,laughing,frog,0.228,0.095,noise-induced (correct on clean),False
+2,86,5-187444-A-33.wav,door_wood_creaks,chainsaw,0.228,0.012,inherent (wrong also on clean),False
+2,202,5-212734-A-17.wav,pouring_water,chirping_birds,0.226,0.036,inherent (wrong also on clean),True
+2,350,5-251957-A-47.wav,airplane,helicopter,0.226,0.032,inherent (wrong also on clean),True
+2,388,5-262957-A-22.wav,clapping,rain,0.226,0.016,inherent (wrong also on clean),False
+1,202,5-212734-A-17.wav,pouring_water,chirping_birds,0.223,0.028,inherent (wrong also on clean),True
+0,191,5-210540-A-13.wav,crickets,chirping_birds,0.222,0.01,noise-induced (correct on clean),True
+0,226,5-216213-A-13.wav,crickets,chirping_birds,0.222,0.05,inherent (wrong also on clean),True
+0,202,5-212734-A-17.wav,pouring_water,chirping_birds,0.219,0.03,inherent (wrong also on clean),True
+2,393,5-263775-B-26.wav,laughing,frog,0.218,0.116,noise-induced (correct on clean),False
+1,140,5-199284-A-45.wav,train,wind,0.216,0.068,inherent (wrong also on clean),False
+2,203,5-212736-A-17.wav,pouring_water,brushing_teeth,0.216,0.124,noise-induced (correct on clean),False
+0,6,5-117118-A-42.wav,siren,chainsaw,0.214,0.204,noise-induced (correct on clean),True
+1,165,5-204352-B-13.wav,crickets,chirping_birds,0.21,0.012,noise-induced (correct on clean),True
+2,132,5-198411-E-20.wav,crying_baby,cow,0.21,0.02,noise-induced (correct on clean),False
+2,227,5-216214-A-13.wav,crickets,chirping_birds,0.21,0.084,inherent (wrong also on clean),True
+0,393,5-263775-B-26.wav,laughing,frog,0.209,0.12,noise-induced (correct on clean),False
+1,226,5-216213-A-13.wav,crickets,chirping_birds,0.208,0.024,inherent (wrong also on clean),True
+2,149,5-200461-B-11.wav,sea_waves,rain,0.208,0.174,noise-induced (correct on clean),True
+2,6,5-117118-A-42.wav,siren,chainsaw,0.206,0.186,noise-induced (correct on clean),True
+2,226,5-216213-A-13.wav,crickets,chirping_birds,0.206,0.032,inherent (wrong also on clean),True
+0,204,5-213077-A-11.wav,sea_waves,wind,0.205,0.086,inherent (wrong also on clean),True
+1,277,5-233260-A-23.wav,breathing,chirping_birds,0.205,0.011,inherent (wrong also on clean),False
+0,140,5-199284-A-45.wav,train,wind,0.204,0.071,inherent (wrong also on clean),False
+2,174,5-207811-A-35.wav,washing_machine,engine,0.204,0.124,inherent (wrong also on clean),False
+2,201,5-212730-A-17.wav,pouring_water,brushing_teeth,0.204,0.094,noise-induced (correct on clean),False
+2,191,5-210540-A-13.wav,crickets,chirping_birds,0.202,0.008,noise-induced (correct on clean),True
+1,350,5-251957-A-47.wav,airplane,helicopter,0.201,0.03,inherent (wrong also on clean),True
+1,132,5-198411-E-20.wav,crying_baby,cow,0.2,0.011,noise-induced (correct on clean),False
+1,149,5-200461-B-11.wav,sea_waves,rain,0.2,0.14,noise-induced (correct on clean),True
+1,313,5-242932-A-26.wav,laughing,chirping_birds,0.199,0.016,noise-induced (correct on clean),False
+2,140,5-199284-A-45.wav,train,wind,0.198,0.086,inherent (wrong also on clean),False
+1,174,5-207811-A-35.wav,washing_machine,engine,0.197,0.169,noise-induced (correct on clean),False
+2,165,5-204352-B-13.wav,crickets,chirping_birds,0.196,0.008,noise-induced (correct on clean),True
+0,165,5-204352-B-13.wav,crickets,chirping_birds,0.192,0.01,noise-induced (correct on clean),True
+2,204,5-213077-A-11.wav,sea_waves,wind,0.192,0.094,inherent (wrong also on clean),True
+0,181,5-208624-A-38.wav,clock_tick,frog,0.19,0.106,inherent (wrong also on clean),False
+0,307,5-240671-A-44.wav,engine,wind,0.189,0.172,inherent (wrong also on clean),False
+1,204,5-213077-A-11.wav,sea_waves,wind,0.189,0.094,inherent (wrong also on clean),True
+2,181,5-208624-A-38.wav,clock_tick,frog,0.188,0.082,inherent (wrong also on clean),False
+0,324,5-243773-B-44.wav,engine,helicopter,0.186,0.134,noise-induced (correct on clean),True
+0,24,5-156999-B-19.wav,thunderstorm,rain,0.185,0.017,noise-induced (correct on clean),True
+1,307,5-240671-A-44.wav,engine,wind,0.182,0.17,inherent (wrong also on clean),False
+2,173,5-207781-A-17.wav,pouring_water,toilet_flush,0.182,0.062,inherent (wrong also on clean),True
+2,307,5-240671-A-44.wav,engine,wind,0.182,0.164,inherent (wrong also on clean),False
+0,277,5-233260-A-23.wav,breathing,chirping_birds,0.181,0.009,inherent (wrong also on clean),False
+0,350,5-251957-A-47.wav,airplane,helicopter,0.181,0.027,inherent (wrong also on clean),True
+1,201,5-212730-A-17.wav,pouring_water,brushing_teeth,0.18,0.075,noise-induced (correct on clean),False
+2,24,5-156999-B-19.wav,thunderstorm,rain,0.18,0.016,noise-induced (correct on clean),True
+2,220,5-215447-A-47.wav,airplane,wind,0.18,0.072,noise-induced (correct on clean),False
+2,352,5-251963-A-47.wav,airplane,helicopter,0.18,0.052,inherent (wrong also on clean),True
+1,253,5-221518-A-21.wav,sneezing,frog,0.179,0.023,noise-induced (correct on clean),False
+1,324,5-243773-B-44.wav,engine,helicopter,0.178,0.144,noise-induced (correct on clean),True
+2,65,5-179868-A-43.wav,car_horn,cow,0.178,0.034,inherent (wrong also on clean),False
+0,132,5-198411-E-20.wav,crying_baby,cow,0.177,0.009,noise-induced (correct on clean),False
+0,203,5-212736-A-17.wav,pouring_water,brushing_teeth,0.176,0.102,noise-induced (correct on clean),False
+0,313,5-242932-A-26.wav,laughing,chirping_birds,0.176,0.01,noise-induced (correct on clean),False
+2,291,5-235507-A-44.wav,engine,rain,0.176,0.054,inherent (wrong also on clean),False
+2,313,5-242932-A-26.wav,laughing,chirping_birds,0.176,0.018,inherent (wrong also on clean),False
+0,201,5-212730-A-17.wav,pouring_water,brushing_teeth,0.175,0.069,noise-induced (correct on clean),False
+0,174,5-207811-A-35.wav,washing_machine,engine,0.174,0.144,noise-induced (correct on clean),False
+1,65,5-179868-A-43.wav,car_horn,cow,0.174,0.028,inherent (wrong also on clean),False
+1,327,5-244310-A-25.wav,footsteps,crackling_fire,0.174,0.05,noise-induced (correct on clean),False
+2,277,5-233260-A-23.wav,breathing,chirping_birds,0.174,0.024,inherent (wrong also on clean),False
+0,3,5-103420-A-2.wav,pig,chainsaw,0.172,0.002,inherent (wrong also on clean),False
+1,220,5-215447-A-47.wav,airplane,wind,0.172,0.097,noise-induced (correct on clean),False
+1,256,5-221567-A-22.wav,clapping,train,0.172,0.011,inherent (wrong also on clean),False
+0,149,5-200461-B-11.wav,sea_waves,rain,0.17,0.169,noise-induced (correct on clean),True
+2,303,5-238021-A-35.wav,washing_machine,helicopter,0.17,0.168,inherent (wrong also on clean),False
+2,324,5-243773-B-44.wav,engine,helicopter,0.17,0.168,inherent (wrong also on clean),True
+0,214,5-214759-B-5.wav,cat,chirping_birds,0.169,0.1,inherent (wrong also on clean),False
+1,123,5-198278-A-7.wav,insects,chainsaw,0.169,0.082,inherent (wrong also on clean),False
+1,303,5-238021-A-35.wav,washing_machine,engine,0.169,0.136,inherent (wrong also on clean),False
+1,181,5-208624-A-38.wav,clock_tick,frog,0.168,0.113,inherent (wrong also on clean),False
+2,48,5-173568-A-33.wav,door_wood_creaks,cow,0.168,0.038,inherent (wrong also on clean),False
+2,141,5-199284-B-45.wav,train,rain,0.168,0.108,inherent (wrong also on clean),False
+2,311,5-242492-A-3.wav,cow,helicopter,0.168,0.0,inherent (wrong also on clean),False
+2,351,5-251962-A-47.wav,airplane,helicopter,0.168,0.08,inherent (wrong also on clean),True
+0,48,5-173568-A-33.wav,door_wood_creaks,cow,0.166,0.028,inherent (wrong also on clean),False
+0,65,5-179868-A-43.wav,car_horn,cow,0.166,0.031,inherent (wrong also on clean),False
+0,123,5-198278-A-7.wav,insects,chainsaw,0.166,0.087,inherent (wrong also on clean),False
+1,3,5-103420-A-2.wav,pig,chainsaw,0.166,0.003,inherent (wrong also on clean),False
+1,58,5-179294-A-46.wav,church_bells,insects,0.166,0.159,noise-induced (correct on clean),False
+1,203,5-212736-A-17.wav,pouring_water,brushing_teeth,0.166,0.114,noise-induced (correct on clean),False
+2,145,5-200334-A-1.wav,rooster,hen,0.166,0.148,noise-induced (correct on clean),True
+2,327,5-244310-A-25.wav,footsteps,crackling_fire,0.166,0.08,noise-induced (correct on clean),False
+0,173,5-207781-A-17.wav,pouring_water,toilet_flush,0.165,0.038,inherent (wrong also on clean),True
+0,372,5-257839-A-14.wav,chirping_birds,frog,0.165,0.104,inherent (wrong also on clean),False
+0,374,5-259180-A-15.wav,water_drops,crickets,0.165,0.004,inherent (wrong also on clean),True
+1,352,5-251963-A-47.wav,airplane,sea_waves,0.165,0.047,inherent (wrong also on clean),False
+1,173,5-207781-A-17.wav,pouring_water,toilet_flush,0.164,0.041,inherent (wrong also on clean),True
+1,351,5-251962-A-47.wav,airplane,helicopter,0.164,0.053,inherent (wrong also on clean),True
+2,3,5-103420-A-2.wav,pig,chainsaw,0.164,0.004,inherent (wrong also on clean),False
+2,123,5-198278-A-7.wav,insects,chainsaw,0.164,0.08,inherent (wrong also on clean),False
+2,263,5-222894-A-32.wav,keyboard_typing,toilet_flush,0.164,0.05,noise-induced (correct on clean),False
+2,272,5-232272-A-44.wav,engine,helicopter,0.164,0.104,inherent (wrong also on clean),True
+2,374,5-259180-A-15.wav,water_drops,crickets,0.164,0.006,inherent (wrong also on clean),True
+0,263,5-222894-A-32.wav,keyboard_typing,toilet_flush,0.163,0.042,noise-induced (correct on clean),False
+1,214,5-214759-B-5.wav,cat,chirping_birds,0.163,0.109,inherent (wrong also on clean),False
+1,263,5-222894-A-32.wav,keyboard_typing,toilet_flush,0.163,0.05,noise-induced (correct on clean),False
+0,253,5-221518-A-21.wav,sneezing,frog,0.162,0.019,inherent (wrong also on clean),False
+1,212,5-214362-A-17.wav,pouring_water,brushing_teeth,0.162,0.033,noise-induced (correct on clean),False
+1,234,5-217186-B-16.wav,wind,helicopter,0.162,0.1,noise-induced (correct on clean),False
+2,171,5-205898-A-40.wav,helicopter,wind,0.162,0.156,noise-induced (correct on clean),False
+0,341,5-249937-A-22.wav,clapping,rain,0.161,0.031,inherent (wrong also on clean),False
+1,60,5-179496-B-16.wav,wind,chirping_birds,0.161,0.024,inherent (wrong also on clean),True
+0,281,5-233645-A-37.wav,clock_alarm,cat,0.16,0.061,noise-induced (correct on clean),False
+2,28,5-157204-A-16.wav,wind,insects,0.16,0.018,inherent (wrong also on clean),False
+2,73,5-182007-A-36.wav,vacuum_cleaner,helicopter,0.16,0.144,inherent (wrong also on clean),False
+2,175,5-207811-B-35.wav,washing_machine,wind,0.16,0.104,inherent (wrong also on clean),False
+2,211,5-213855-A-0.wav,dog,chirping_birds,0.16,0.044,noise-induced (correct on clean),False
+0,220,5-215447-A-47.wav,airplane,wind,0.159,0.074,noise-induced (correct on clean),False
+0,352,5-251963-A-47.wav,airplane,sea_waves,0.158,0.045,inherent (wrong also on clean),False
+1,48,5-173568-A-33.wav,door_wood_creaks,cow,0.158,0.031,inherent (wrong also on clean),False
+2,212,5-214362-A-17.wav,pouring_water,brushing_teeth,0.158,0.046,noise-induced (correct on clean),False
+1,374,5-259180-A-15.wav,water_drops,crickets,0.157,0.001,inherent (wrong also on clean),True
+0,141,5-199284-B-45.wav,train,rain,0.156,0.094,inherent (wrong also on clean),False
+0,291,5-235507-A-44.wav,engine,rain,0.156,0.058,inherent (wrong also on clean),False
+1,28,5-157204-A-16.wav,wind,insects,0.156,0.023,inherent (wrong also on clean),False
+1,195,5-211408-A-37.wav,clock_alarm,washing_machine,0.156,0.014,inherent (wrong also on clean),True
+1,291,5-235507-A-44.wav,engine,rain,0.156,0.057,inherent (wrong also on clean),False
+1,325,5-243783-A-44.wav,engine,helicopter,0.156,0.052,noise-induced (correct on clean),True
+2,245,5-219342-A-38.wav,clock_tick,footsteps,0.156,0.038,inherent (wrong also on clean),False
+0,54,5-177957-C-40.wav,helicopter,rain,0.155,0.14,noise-induced (correct on clean),False
+0,58,5-179294-A-46.wav,church_bells,insects,0.155,0.154,noise-induced (correct on clean),False
+1,341,5-249937-A-22.wav,clapping,rain,0.155,0.033,inherent (wrong also on clean),False
+1,54,5-177957-C-40.wav,helicopter,engine,0.154,0.128,noise-induced (correct on clean),True
+2,253,5-221518-A-21.wav,sneezing,frog,0.154,0.016,noise-induced (correct on clean),False
+2,341,5-249937-A-22.wav,clapping,sea_waves,0.154,0.03,inherent (wrong also on clean),False
+2,355,5-253085-A-3.wav,cow,sea_waves,0.154,0.006,noise-induced (correct on clean),False
+0,175,5-207811-B-35.wav,washing_machine,wind,0.153,0.116,inherent (wrong also on clean),False
+1,56,5-177957-E-40.wav,helicopter,wind,0.153,0.138,inherent (wrong also on clean),False
+0,98,5-191131-A-40.wav,helicopter,rain,0.152,0.146,inherent (wrong also on clean),False
+0,276,5-233160-A-1.wav,rooster,cat,0.152,0.08,noise-induced (correct on clean),True
+1,50,5-177614-A-5.wav,cat,cow,0.152,0.138,noise-induced (correct on clean),True
+2,199,5-212181-A-38.wav,clock_tick,crackling_fire,0.152,0.042,inherent (wrong also on clean),False
+2,372,5-257839-A-14.wav,chirping_birds,frog,0.152,0.108,inherent (wrong also on clean),False
+1,221,5-215449-A-47.wav,airplane,wind,0.15,0.069,inherent (wrong also on clean),False
+2,25,5-156999-C-19.wav,thunderstorm,crackling_fire,0.15,0.056,noise-induced (correct on clean),True
+2,92,5-188716-A-46.wav,church_bells,insects,0.15,0.118,noise-induced (correct on clean),False
+2,195,5-211408-A-37.wav,clock_alarm,helicopter,0.15,0.006,inherent (wrong also on clean),False
+1,211,5-213855-A-0.wav,dog,chirping_birds,0.149,0.033,noise-induced (correct on clean),False
+1,281,5-233645-A-37.wav,clock_alarm,cat,0.149,0.057,noise-induced (correct on clean),False
+0,327,5-244310-A-25.wav,footsteps,crackling_fire,0.148,0.063,noise-induced (correct on clean),False
+1,24,5-156999-B-19.wav,thunderstorm,rain,0.148,0.014,noise-induced (correct on clean),True
+2,214,5-214759-B-5.wav,cat,chirping_birds,0.148,0.1,inherent (wrong also on clean),False
+2,237,5-218196-B-27.wav,brushing_teeth,toilet_flush,0.148,0.056,noise-induced (correct on clean),False
+2,261,5-222041-A-9.wav,crow,sea_waves,0.148,0.01,inherent (wrong also on clean),False
+0,67,5-180156-B-43.wav,car_horn,chainsaw,0.147,0.06,inherent (wrong also on clean),True
+0,145,5-200334-A-1.wav,rooster,hen,0.147,0.128,noise-induced (correct on clean),True
+0,325,5-243783-A-44.wav,engine,helicopter,0.147,0.06,noise-induced (correct on clean),True
+0,351,5-251962-A-47.wav,airplane,helicopter,0.147,0.049,inherent (wrong also on clean),True
+1,158,5-202795-A-3.wav,cow,train,0.147,0.005,inherent (wrong also on clean),False
+1,261,5-222041-A-9.wav,crow,sea_waves,0.147,0.015,inherent (wrong also on clean),False
+1,372,5-257839-A-14.wav,chirping_birds,frog,0.147,0.122,inherent (wrong also on clean),False
+0,234,5-217186-B-16.wav,wind,helicopter,0.146,0.091,inherent (wrong also on clean),False
+1,139,5-198891-D-8.wav,sheep,insects,0.146,0.114,inherent (wrong also on clean),True
+1,145,5-200334-A-1.wav,rooster,hen,0.146,0.129,noise-induced (correct on clean),True
+1,171,5-205898-A-40.wav,helicopter,wind,0.146,0.144,noise-induced (correct on clean),False
+0,211,5-213855-A-0.wav,dog,chirping_birds,0.145,0.034,noise-induced (correct on clean),False
+1,276,5-233160-A-1.wav,rooster,cat,0.145,0.077,noise-induced (correct on clean),True
+2,139,5-198891-D-8.wav,sheep,insects,0.144,0.128,noise-induced (correct on clean),True
+1,52,5-177957-A-40.wav,helicopter,rain,0.143,0.074,inherent (wrong also on clean),False
+0,195,5-211408-A-37.wav,clock_alarm,washing_machine,0.142,0.015,inherent (wrong also on clean),True
+1,175,5-207811-B-35.wav,washing_machine,wind,0.142,0.139,inherent (wrong also on clean),False
+1,308,5-241846-A-15.wav,water_drops,frog,0.142,0.039,inherent (wrong also on clean),False
+2,4,5-103421-A-2.wav,pig,laughing,0.142,0.058,noise-induced (correct on clean),False
+2,60,5-179496-B-16.wav,wind,chirping_birds,0.142,0.014,inherent (wrong also on clean),True
+2,325,5-243783-A-44.wav,engine,rain,0.142,0.06,noise-induced (correct on clean),False
+0,28,5-157204-A-16.wav,wind,insects,0.141,0.023,inherent (wrong also on clean),False
+0,158,5-202795-A-3.wav,cow,train,0.141,0.004,inherent (wrong also on clean),False
+1,25,5-156999-C-19.wav,thunderstorm,crackling_fire,0.141,0.049,noise-induced (correct on clean),True
+0,1,5-103416-A-2.wav,pig,chainsaw,0.14,0.009,inherent (wrong also on clean),False
+0,30,5-160551-A-42.wav,siren,cow,0.14,0.082,noise-induced (correct on clean),False
+0,60,5-179496-B-16.wav,wind,chirping_birds,0.14,0.023,inherent (wrong also on clean),True
+0,261,5-222041-A-9.wav,crow,sea_waves,0.14,0.013,inherent (wrong also on clean),False
+1,4,5-103421-A-2.wav,pig,laughing,0.14,0.061,inherent (wrong also on clean),False
+1,311,5-242492-A-3.wav,cow,helicopter,0.14,0.002,inherent (wrong also on clean),False
+2,308,5-241846-A-15.wav,water_drops,frog,0.14,0.044,inherent (wrong also on clean),False
+0,355,5-253085-A-3.wav,cow,sea_waves,0.139,0.009,noise-induced (correct on clean),False
+1,272,5-232272-A-44.wav,engine,rain,0.139,0.088,noise-induced (correct on clean),False
+1,133,5-198411-F-20.wav,crying_baby,hen,0.138,0.065,noise-induced (correct on clean),False
+1,385,5-261439-A-15.wav,water_drops,thunderstorm,0.138,0.005,inherent (wrong also on clean),True
+2,30,5-160551-A-42.wav,siren,cow,0.138,0.07,noise-induced (correct on clean),False
+2,50,5-177614-A-5.wav,cat,cow,0.138,0.122,noise-induced (correct on clean),True
+2,156,5-202220-A-21.wav,sneezing,frog,0.138,0.022,inherent (wrong also on clean),False
+2,254,5-221528-A-39.wav,glass_breaking,crackling_fire,0.138,0.014,noise-induced (correct on clean),False
+2,385,5-261439-A-15.wav,water_drops,thunderstorm,0.138,0.012,inherent (wrong also on clean),True
+0,212,5-214362-A-17.wav,pouring_water,brushing_teeth,0.137,0.036,noise-induced (correct on clean),False
+0,272,5-232272-A-44.wav,engine,wind,0.137,0.083,noise-induced (correct on clean),False
+1,245,5-219342-A-38.wav,clock_tick,footsteps,0.137,0.051,inherent (wrong also on clean),False
+0,221,5-215449-A-47.wav,airplane,wind,0.136,0.055,inherent (wrong also on clean),False
+0,256,5-221567-A-22.wav,clapping,train,0.136,0.006,inherent (wrong also on clean),False
+1,237,5-218196-B-27.wav,brushing_teeth,toilet_flush,0.136,0.063,noise-induced (correct on clean),False
+2,234,5-217186-B-16.wav,wind,helicopter,0.136,0.1,noise-induced (correct on clean),False
+2,262,5-222524-A-41.wav,chainsaw,rain,0.136,0.008,inherent (wrong also on clean),False
+0,399,5-9032-A-0.wav,dog,footsteps,0.135,0.016,inherent (wrong also on clean),False
+1,30,5-160551-A-42.wav,siren,cow,0.135,0.077,noise-induced (correct on clean),False
+1,57,5-178997-A-24.wav,coughing,pig,0.135,0.023,inherent (wrong also on clean),False
+1,97,5-189795-A-4.wav,frog,pig,0.135,0.128,noise-induced (correct on clean),True
+1,168,5-205090-A-32.wav,keyboard_typing,crickets,0.135,0.005,inherent (wrong also on clean),False
+1,189,5-209992-A-44.wav,engine,wind,0.135,0.06,inherent (wrong also on clean),False
+0,245,5-219342-A-38.wav,clock_tick,footsteps,0.134,0.061,inherent (wrong also on clean),False
+0,308,5-241846-A-15.wav,water_drops,frog,0.134,0.046,inherent (wrong also on clean),False
+1,262,5-222524-A-41.wav,chainsaw,rain,0.134,0.01,inherent (wrong also on clean),False
+1,392,5-263775-A-26.wav,laughing,hen,0.134,0.084,noise-induced (correct on clean),False
+2,189,5-209992-A-44.wav,engine,crickets,0.134,0.068,inherent (wrong also on clean),False
+2,281,5-233645-A-37.wav,clock_alarm,cat,0.134,0.074,noise-induced (correct on clean),False
+0,139,5-198891-D-8.wav,sheep,insects,0.133,0.102,noise-induced (correct on clean),True
+0,230,5-216370-A-41.wav,chainsaw,sea_waves,0.133,0.007,inherent (wrong also on clean),False
+0,189,5-209992-A-44.wav,engine,rain,0.132,0.066,inherent (wrong also on clean),False
+0,199,5-212181-A-38.wav,clock_tick,crackling_fire,0.132,0.032,inherent (wrong also on clean),False
+2,36,5-160614-F-48.wav,fireworks,footsteps,0.132,0.02,inherent (wrong also on clean),False
+2,158,5-202795-A-3.wav,cow,train,0.132,0.006,inherent (wrong also on clean),False
+2,198,5-212059-A-36.wav,vacuum_cleaner,train,0.132,0.11,noise-induced (correct on clean),False
+2,333,5-244526-A-26.wav,laughing,frog,0.132,0.054,noise-induced (correct on clean),False
+1,89,5-188495-A-19.wav,thunderstorm,sheep,0.131,0.011,noise-induced (correct on clean),False
+1,199,5-212181-A-38.wav,clock_tick,crackling_fire,0.131,0.048,inherent (wrong also on clean),False
+1,399,5-9032-A-0.wav,dog,footsteps,0.131,0.017,inherent (wrong also on clean),False
+0,25,5-156999-C-19.wav,thunderstorm,crackling_fire,0.13,0.045,noise-induced (correct on clean),True
+0,50,5-177614-A-5.wav,cat,cow,0.13,0.121,noise-induced (correct on clean),True
+0,361,5-253101-A-49.wav,hand_saw,keyboard_typing,0.13,0.071,inherent (wrong also on clean),False
+1,53,5-177957-B-40.wav,helicopter,rain,0.13,0.098,inherent (wrong also on clean),False
+2,52,5-177957-A-40.wav,helicopter,rain,0.13,0.066,noise-induced (correct on clean),False
+2,89,5-188495-A-19.wav,thunderstorm,sheep,0.13,0.016,noise-induced (correct on clean),False
+2,392,5-263775-A-26.wav,laughing,hen,0.13,0.092,noise-induced (correct on clean),False
+2,399,5-9032-A-0.wav,dog,footsteps,0.13,0.016,inherent (wrong also on clean),False
+1,95,5-189212-A-12.wav,crackling_fire,wind,0.129,0.113,noise-induced (correct on clean),True
+1,333,5-244526-A-26.wav,laughing,frog,0.129,0.045,noise-induced (correct on clean),False
+0,77,5-184323-A-42.wav,siren,church_bells,0.128,0.027,noise-induced (correct on clean),True
+0,133,5-198411-F-20.wav,crying_baby,hen,0.128,0.066,noise-induced (correct on clean),False
+1,178,5-207836-C-29.wav,drinking_sipping,toilet_flush,0.128,0.033,inherent (wrong also on clean),False
+2,59,5-179496-A-16.wav,wind,train,0.128,0.044,inherent (wrong also on clean),False
+2,192,5-210571-A-38.wav,clock_tick,footsteps,0.128,0.05,inherent (wrong also on clean),False
+0,23,5-156999-A-19.wav,thunderstorm,chainsaw,0.127,0.005,inherent (wrong also on clean),False
+0,78,5-184871-A-24.wav,coughing,laughing,0.127,0.031,inherent (wrong also on clean),True
+0,280,5-233607-A-39.wav,glass_breaking,crackling_fire,0.127,0.014,noise-induced (correct on clean),False
+1,59,5-179496-A-16.wav,wind,train,0.127,0.035,inherent (wrong also on clean),False
+1,78,5-184871-A-24.wav,coughing,laughing,0.127,0.041,inherent (wrong also on clean),True
+1,141,5-199284-B-45.wav,train,rain,0.127,0.119,inherent (wrong also on clean),False
+1,170,5-205589-B-17.wav,pouring_water,chirping_birds,0.127,0.056,noise-induced (correct on clean),True
+1,355,5-253085-A-3.wav,cow,sea_waves,0.127,0.007,noise-induced (correct on clean),False
+0,57,5-178997-A-24.wav,coughing,pig,0.126,0.016,inherent (wrong also on clean),False
+0,63,5-179865-A-43.wav,car_horn,chainsaw,0.126,0.106,inherent (wrong also on clean),True
+0,79,5-185516-A-27.wav,brushing_teeth,toilet_flush,0.126,0.122,noise-induced (correct on clean),False
+0,121,5-197913-A-18.wav,toilet_flush,sea_waves,0.126,0.031,noise-induced (correct on clean),True
+0,170,5-205589-B-17.wav,pouring_water,chirping_birds,0.126,0.079,noise-induced (correct on clean),True
+2,79,5-185516-A-27.wav,brushing_teeth,toilet_flush,0.126,0.122,noise-induced (correct on clean),False
+2,221,5-215449-A-47.wav,airplane,wind,0.126,0.064,noise-induced (correct on clean),False
+2,305,5-238926-A-31.wav,mouse_click,thunderstorm,0.126,0.024,inherent (wrong also on clean),False
+2,394,5-263831-A-6.wav,hen,cat,0.126,0.016,inherent (wrong also on clean),True
+0,237,5-218196-B-27.wav,brushing_teeth,toilet_flush,0.125,0.07,noise-induced (correct on clean),False
+0,311,5-242492-A-3.wav,cow,helicopter,0.125,0.003,inherent (wrong also on clean),False
+1,92,5-188716-A-46.wav,church_bells,insects,0.125,0.093,noise-induced (correct on clean),False
+1,223,5-215658-A-12.wav,crackling_fire,rain,0.124,0.046,noise-induced (correct on clean),True
+1,250,5-220027-A-21.wav,sneezing,footsteps,0.124,0.002,inherent (wrong also on clean),True
+2,19,5-156026-B-4.wav,frog,footsteps,0.124,0.024,inherent (wrong also on clean),False
+2,63,5-179865-A-43.wav,car_horn,chainsaw,0.124,0.114,inherent (wrong also on clean),True
+2,114,5-195518-A-7.wav,insects,chirping_birds,0.124,0.056,inherent (wrong also on clean),False
+2,129,5-198411-B-20.wav,crying_baby,laughing,0.124,0.088,noise-induced (correct on clean),True
+2,134,5-198411-G-20.wav,crying_baby,hen,0.124,0.052,inherent (wrong also on clean),False
+0,52,5-177957-A-40.wav,helicopter,rain,0.123,0.076,inherent (wrong also on clean),False
+0,89,5-188495-A-19.wav,thunderstorm,sheep,0.123,0.017,noise-induced (correct on clean),False
+0,129,5-198411-B-20.wav,crying_baby,cat,0.123,0.106,noise-induced (correct on clean),False
+0,267,5-223176-A-37.wav,clock_alarm,cat,0.123,0.079,inherent (wrong also on clean),False
+1,1,5-103416-A-2.wav,pig,chainsaw,0.123,0.006,inherent (wrong also on clean),False
+1,129,5-198411-B-20.wav,crying_baby,cat,0.123,0.12,noise-induced (correct on clean),False
+0,385,5-261439-A-15.wav,water_drops,thunderstorm,0.122,0.007,inherent (wrong also on clean),True
+1,134,5-198411-G-20.wav,crying_baby,hen,0.122,0.044,noise-induced (correct on clean),False
+1,210,5-213836-D-9.wav,crow,sheep,0.122,0.038,noise-induced (correct on clean),True
+2,1,5-103416-A-2.wav,pig,church_bells,0.122,0.018,inherent (wrong also on clean),False
+2,20,5-156026-C-4.wav,frog,footsteps,0.122,0.004,inherent (wrong also on clean),False
+2,133,5-198411-F-20.wav,crying_baby,hen,0.122,0.052,inherent (wrong also on clean),False
+2,250,5-220027-A-21.wav,sneezing,footsteps,0.122,0.008,inherent (wrong also on clean),True
+2,280,5-233607-A-39.wav,glass_breaking,crackling_fire,0.122,0.012,noise-induced (correct on clean),False
+2,318,5-243449-A-14.wav,chirping_birds,laughing,0.122,0.05,inherent (wrong also on clean),False
+2,361,5-253101-A-49.wav,hand_saw,keyboard_typing,0.122,0.098,noise-induced (correct on clean),False
+2,398,5-61635-A-8.wav,sheep,brushing_teeth,0.122,0.026,inherent (wrong also on clean),False
+0,4,5-103421-A-2.wav,pig,laughing,0.121,0.086,inherent (wrong also on clean),False
+1,67,5-180156-B-43.wav,car_horn,chainsaw,0.121,0.06,inherent (wrong also on clean),True
+0,16,5-150409-A-42.wav,siren,car_horn,0.12,0.026,inherent (wrong also on clean),True
+0,95,5-189212-A-12.wav,crackling_fire,thunderstorm,0.12,0.092,noise-induced (correct on clean),True
+1,72,5-181977-A-35.wav,washing_machine,train,0.12,0.042,inherent (wrong also on clean),False
+1,271,5-231762-A-0.wav,dog,chirping_birds,0.12,0.021,inherent (wrong also on clean),False
+2,53,5-177957-B-40.wav,helicopter,wind,0.12,0.08,inherent (wrong also on clean),False
+2,275,5-233019-A-31.wav,mouse_click,toilet_flush,0.12,0.014,inherent (wrong also on clean),False
+2,387,5-262641-A-15.wav,water_drops,airplane,0.12,0.0,inherent (wrong also on clean),False
+0,134,5-198411-G-20.wav,crying_baby,hen,0.119,0.053,noise-induced (correct on clean),False
+0,163,5-204114-A-29.wav,drinking_sipping,brushing_teeth,0.119,0.017,noise-induced (correct on clean),True
+1,77,5-184323-A-42.wav,siren,church_bells,0.119,0.036,noise-induced (correct on clean),True
+1,299,5-236299-A-34.wav,can_opening,pig,0.119,0.0,noise-induced (correct on clean),False
+1,361,5-253101-A-49.wav,hand_saw,keyboard_typing,0.119,0.083,inherent (wrong also on clean),False
+0,20,5-156026-C-4.wav,frog,footsteps,0.118,0.01,inherent (wrong also on clean),False
+0,193,5-210612-A-37.wav,clock_alarm,cat,0.118,0.085,inherent (wrong also on clean),False
+0,394,5-263831-A-6.wav,hen,cat,0.118,0.02,inherent (wrong also on clean),True
+0,395,5-263831-B-6.wav,hen,cat,0.118,0.069,noise-induced (correct on clean),True
+1,23,5-156999-A-19.wav,thunderstorm,chainsaw,0.118,0.001,inherent (wrong also on clean),False
+1,193,5-210612-A-37.wav,clock_alarm,cat,0.118,0.088,inherent (wrong also on clean),False
+2,57,5-178997-A-24.wav,coughing,pig,0.118,0.018,inherent (wrong also on clean),False
+2,78,5-184871-A-24.wav,coughing,laughing,0.118,0.04,inherent (wrong also on clean),True
+2,117,5-197118-A-45.wav,train,toilet_flush,0.118,0.036,inherent (wrong also on clean),False
+2,267,5-223176-A-37.wav,clock_alarm,cat,0.118,0.066,inherent (wrong also on clean),False
+2,276,5-233160-A-1.wav,rooster,cat,0.118,0.068,noise-induced (correct on clean),True
+0,59,5-179496-A-16.wav,wind,train,0.117,0.038,inherent (wrong also on clean),False
+0,250,5-220027-A-21.wav,sneezing,footsteps,0.117,0.008,inherent (wrong also on clean),True
+1,69,5-180229-A-27.wav,brushing_teeth,pig,0.117,0.066,inherent (wrong also on clean),False
+1,131,5-198411-D-20.wav,crying_baby,sheep,0.117,0.004,noise-induced (correct on clean),False
+1,254,5-221528-A-39.wav,glass_breaking,crackling_fire,0.117,0.017,noise-induced (correct on clean),False
+1,356,5-253085-B-3.wav,cow,chirping_birds,0.117,0.04,noise-induced (correct on clean),False
+0,31,5-160614-A-48.wav,fireworks,toilet_flush,0.116,0.013,inherent (wrong also on clean),False
+0,146,5-200334-B-1.wav,rooster,cat,0.116,0.058,noise-induced (correct on clean),True
+1,20,5-156026-C-4.wav,frog,footsteps,0.116,0.007,inherent (wrong also on clean),False
+1,63,5-179865-A-43.wav,car_horn,chainsaw,0.116,0.113,inherent (wrong also on clean),True
+1,122,5-197988-A-46.wav,church_bells,toilet_flush,0.116,0.066,inherent (wrong also on clean),False
+1,302,5-237795-A-34.wav,can_opening,hand_saw,0.116,0.02,inherent (wrong also on clean),False
+1,349,5-251489-A-24.wav,coughing,toilet_flush,0.116,0.005,inherent (wrong also on clean),False
+1,394,5-263831-A-6.wav,hen,cat,0.116,0.019,inherent (wrong also on clean),True
+2,33,5-160614-C-48.wav,fireworks,chirping_birds,0.116,0.006,inherent (wrong also on clean),False
+2,193,5-210612-A-37.wav,clock_alarm,hen,0.116,0.066,inherent (wrong also on clean),False
+2,206,5-213802-A-12.wav,crackling_fire,insects,0.116,0.014,inherent (wrong also on clean),False
+2,289,5-234879-B-1.wav,rooster,laughing,0.116,0.05,noise-induced (correct on clean),False
+2,353,5-251971-A-47.wav,airplane,insects,0.116,0.038,inherent (wrong also on clean),False
+2,367,5-254832-B-15.wav,water_drops,keyboard_typing,0.116,0.046,inherent (wrong also on clean),False
+2,382,5-260875-A-35.wav,washing_machine,train,0.116,0.048,noise-induced (correct on clean),False
+0,116,5-195710-A-10.wav,rain,wind,0.115,0.092,noise-induced (correct on clean),True
+0,156,5-202220-A-21.wav,sneezing,frog,0.115,0.011,inherent (wrong also on clean),False
+0,223,5-215658-A-12.wav,crackling_fire,rain,0.115,0.038,noise-induced (correct on clean),True
+0,262,5-222524-A-41.wav,chainsaw,rain,0.115,0.01,inherent (wrong also on clean),False
+0,392,5-263775-A-26.wav,laughing,hen,0.115,0.102,noise-induced (correct on clean),False
+1,125,5-198278-C-7.wav,insects,chainsaw,0.115,0.033,noise-induced (correct on clean),False
+1,156,5-202220-A-21.wav,sneezing,frog,0.115,0.01,inherent (wrong also on clean),False
+0,122,5-197988-A-46.wav,church_bells,toilet_flush,0.114,0.065,inherent (wrong also on clean),False
+0,333,5-244526-A-26.wav,laughing,frog,0.114,0.04,noise-induced (correct on clean),False
+1,120,5-197446-A-7.wav,insects,train,0.114,0.025,noise-induced (correct on clean),False
+1,279,5-233605-A-39.wav,glass_breaking,clock_tick,0.114,0.018,noise-induced (correct on clean),True
+2,0,5-103415-A-2.wav,pig,toilet_flush,0.114,0.036,noise-induced (correct on clean),False
+2,16,5-150409-A-42.wav,siren,train,0.114,0.03,inherent (wrong also on clean),True
+2,23,5-156999-A-19.wav,thunderstorm,chainsaw,0.114,0.0,inherent (wrong also on clean),False
+2,95,5-189212-A-12.wav,crackling_fire,thunderstorm,0.114,0.104,noise-induced (correct on clean),True
+2,108,5-194899-C-3.wav,cow,laughing,0.114,0.08,inherent (wrong also on clean),False
+2,116,5-195710-A-10.wav,rain,wind,0.114,0.056,inherent (wrong also on clean),True
+2,124,5-198278-B-7.wav,insects,chainsaw,0.114,0.054,inherent (wrong also on clean),False
+2,205,5-213293-A-23.wav,breathing,keyboard_typing,0.114,0.044,inherent (wrong also on clean),False
+2,223,5-215658-A-12.wav,crackling_fire,helicopter,0.114,0.03,noise-induced (correct on clean),False
+2,379,5-260432-A-39.wav,glass_breaking,keyboard_typing,0.114,0.006,inherent (wrong also on clean),True
+2,383,5-261325-A-9.wav,crow,toilet_flush,0.114,0.076,inherent (wrong also on clean),False
+0,19,5-156026-B-4.wav,frog,footsteps,0.113,0.02,inherent (wrong also on clean),False
+0,87,5-187979-A-21.wav,sneezing,keyboard_typing,0.113,0.03,noise-induced (correct on clean),False
+0,131,5-198411-D-20.wav,crying_baby,sheep,0.113,0.006,noise-induced (correct on clean),False
+0,161,5-203128-B-0.wav,dog,hen,0.113,0.047,noise-induced (correct on clean),True
+1,161,5-203128-B-0.wav,dog,hen,0.113,0.032,noise-induced (correct on clean),True
+1,370,5-257349-A-15.wav,water_drops,brushing_teeth,0.113,0.045,inherent (wrong also on clean),False
+0,295,5-235874-A-28.wav,snoring,cow,0.112,0.014,inherent (wrong also on clean),False
+0,376,5-259640-A-29.wav,drinking_sipping,crackling_fire,0.112,0.027,inherent (wrong also on clean),False
+1,19,5-156026-B-4.wav,frog,footsteps,0.112,0.022,inherent (wrong also on clean),False
+1,288,5-234879-A-1.wav,rooster,laughing,0.112,0.016,noise-induced (correct on clean),False
+1,301,5-237499-A-4.wav,frog,chirping_birds,0.112,0.058,inherent (wrong also on clean),False
+2,9,5-117250-A-2.wav,pig,train,0.112,0.0,inherent (wrong also on clean),False
+2,72,5-181977-A-35.wav,washing_machine,train,0.112,0.044,inherent (wrong also on clean),False
+2,87,5-187979-A-21.wav,sneezing,keyboard_typing,0.112,0.028,noise-induced (correct on clean),False
+2,111,5-194930-B-1.wav,rooster,chainsaw,0.112,0.012,noise-induced (correct on clean),False
+2,302,5-237795-A-34.wav,can_opening,hand_saw,0.112,0.024,inherent (wrong also on clean),False
+2,349,5-251489-A-24.wav,coughing,toilet_flush,0.112,0.008,inherent (wrong also on clean),False
+0,192,5-210571-A-38.wav,clock_tick,footsteps,0.111,0.034,inherent (wrong also on clean),False
+0,198,5-212059-A-36.wav,vacuum_cleaner,train,0.111,0.109,noise-induced (correct on clean),False
+0,289,5-234879-B-1.wav,rooster,laughing,0.111,0.051,noise-induced (correct on clean),False
+0,353,5-251971-A-47.wav,airplane,insects,0.111,0.024,inherent (wrong also on clean),False
+1,42,5-170338-A-41.wav,chainsaw,sheep,0.111,0.11,noise-induced (correct on clean),False
+1,116,5-195710-A-10.wav,rain,wind,0.111,0.068,noise-induced (correct on clean),True
+1,217,5-215172-A-13.wav,crickets,church_bells,0.111,0.025,noise-induced (correct on clean),False
+1,230,5-216370-A-41.wav,chainsaw,sea_waves,0.111,0.005,inherent (wrong also on clean),False
+1,280,5-233607-A-39.wav,glass_breaking,crackling_fire,0.111,0.017,noise-induced (correct on clean),False
+0,53,5-177957-B-40.wav,helicopter,rain,0.11,0.085,noise-induced (correct on clean),False
+0,349,5-251489-A-24.wav,coughing,toilet_flush,0.11,0.007,inherent (wrong also on clean),False
+1,16,5-150409-A-42.wav,siren,train,0.11,0.021,inherent (wrong also on clean),True
+1,124,5-198278-B-7.wav,insects,chainsaw,0.11,0.08,inherent (wrong also on clean),False
+1,192,5-210571-A-38.wav,clock_tick,footsteps,0.11,0.031,inherent (wrong also on clean),False
+1,305,5-238926-A-31.wav,mouse_click,thunderstorm,0.11,0.033,inherent (wrong also on clean),False
+2,77,5-184323-A-42.wav,siren,church_bells,0.11,0.028,noise-induced (correct on clean),True
+2,104,5-194533-A-21.wav,sneezing,pig,0.11,0.012,inherent (wrong also on clean),False
+2,161,5-203128-B-0.wav,dog,hen,0.11,0.042,noise-induced (correct on clean),True
+2,225,5-216131-A-32.wav,keyboard_typing,snoring,0.11,0.036,noise-induced (correct on clean),False
+2,279,5-233605-A-39.wav,glass_breaking,clock_tick,0.11,0.028,noise-induced (correct on clean),True
+2,343,5-250026-B-30.wav,door_wood_knock,hand_saw,0.11,0.006,inherent (wrong also on clean),False
+1,5,5-103422-A-2.wav,pig,laughing,0.109,0.097,inherent (wrong also on clean),False
+1,121,5-197913-A-18.wav,toilet_flush,sea_waves,0.109,0.033,noise-induced (correct on clean),True
+1,179,5-207836-D-29.wav,drinking_sipping,keyboard_typing,0.109,0.022,inherent (wrong also on clean),False
+1,206,5-213802-A-12.wav,crackling_fire,sheep,0.109,0.021,inherent (wrong also on clean),False
+1,367,5-254832-B-15.wav,water_drops,drinking_sipping,0.109,0.058,inherent (wrong also on clean),False
+0,92,5-188716-A-46.wav,church_bells,insects,0.108,0.099,noise-induced (correct on clean),False
+0,183,5-208810-A-11.wav,sea_waves,chainsaw,0.108,0.05,noise-induced (correct on clean),False
+0,205,5-213293-A-23.wav,breathing,keyboard_typing,0.108,0.04,inherent (wrong also on clean),False
+0,265,5-223099-B-32.wav,keyboard_typing,frog,0.108,0.087,noise-induced (correct on clean),False
+1,111,5-194930-B-1.wav,rooster,chainsaw,0.108,0.006,noise-induced (correct on clean),False
+1,146,5-200334-B-1.wav,rooster,cat,0.108,0.063,noise-induced (correct on clean),True
+1,283,5-234145-A-28.wav,snoring,brushing_teeth,0.108,0.052,inherent (wrong also on clean),True
+1,289,5-234879-B-1.wav,rooster,hen,0.108,0.04,noise-induced (correct on clean),True
+2,122,5-197988-A-46.wav,church_bells,toilet_flush,0.108,0.082,inherent (wrong also on clean),False
+2,172,5-207681-A-24.wav,coughing,keyboard_typing,0.108,0.008,noise-induced (correct on clean),False
+2,178,5-207836-C-29.wav,drinking_sipping,toilet_flush,0.108,0.038,inherent (wrong also on clean),False
+2,208,5-213836-B-9.wav,crow,laughing,0.108,0.036,inherent (wrong also on clean),False
+2,257,5-221568-A-22.wav,clapping,thunderstorm,0.108,0.018,inherent (wrong also on clean),False
+2,265,5-223099-B-32.wav,keyboard_typing,frog,0.108,0.096,noise-induced (correct on clean),False
+0,72,5-181977-A-35.wav,washing_machine,train,0.107,0.045,inherent (wrong also on clean),False
+0,114,5-195518-A-7.wav,insects,church_bells,0.107,0.072,inherent (wrong also on clean),False
+0,208,5-213836-B-9.wav,crow,laughing,0.107,0.035,inherent (wrong also on clean),False
+1,87,5-187979-A-21.wav,sneezing,keyboard_typing,0.107,0.03,noise-induced (correct on clean),False
+1,104,5-194533-A-21.wav,sneezing,pig,0.107,0.014,noise-induced (correct on clean),False
+1,117,5-197118-A-45.wav,train,toilet_flush,0.107,0.026,inherent (wrong also on clean),False
+0,138,5-198891-C-8.wav,sheep,cow,0.106,0.091,inherent (wrong also on clean),True
+0,168,5-205090-A-32.wav,keyboard_typing,crickets,0.106,0.006,inherent (wrong also on clean),False
+1,114,5-195518-A-7.wav,insects,church_bells,0.106,0.064,inherent (wrong also on clean),False
+1,267,5-223176-A-37.wav,clock_alarm,cat,0.106,0.059,noise-induced (correct on clean),False
+2,38,5-160614-H-48.wav,fireworks,toilet_flush,0.106,0.01,inherent (wrong also on clean),False
+2,67,5-180156-B-43.wav,car_horn,chainsaw,0.106,0.062,inherent (wrong also on clean),True
+2,125,5-198278-C-7.wav,insects,train,0.106,0.054,inherent (wrong also on clean),False
+2,166,5-204604-A-24.wav,coughing,hen,0.106,0.026,inherent (wrong also on clean),False
+2,229,5-216368-A-28.wav,snoring,toilet_flush,0.106,0.068,inherent (wrong also on clean),False
+2,249,5-220026-A-21.wav,sneezing,frog,0.106,0.01,inherent (wrong also on clean),False
+2,376,5-259640-A-29.wav,drinking_sipping,crackling_fire,0.106,0.01,inherent (wrong also on clean),False
+0,180,5-208030-A-0.wav,dog,pig,0.105,0.053,noise-induced (correct on clean),True
+0,259,5-221878-A-34.wav,can_opening,toilet_flush,0.105,0.01,noise-induced (correct on clean),False
+1,9,5-117250-A-2.wav,pig,train,0.105,0.001,inherent (wrong also on clean),False
+1,138,5-198891-C-8.wav,sheep,cow,0.105,0.093,inherent (wrong also on clean),True
+1,163,5-204114-A-29.wav,drinking_sipping,crackling_fire,0.105,0.026,inherent (wrong also on clean),False
+1,233,5-217186-A-16.wav,wind,train,0.105,0.037,noise-induced (correct on clean),False
+0,124,5-198278-B-7.wav,insects,chainsaw,0.104,0.077,inherent (wrong also on clean),False
+0,125,5-198278-C-7.wav,insects,chainsaw,0.104,0.045,inherent (wrong also on clean),False
+0,275,5-233019-A-31.wav,mouse_click,toilet_flush,0.104,0.014,inherent (wrong also on clean),False
+0,370,5-257349-A-15.wav,water_drops,brushing_teeth,0.104,0.046,inherent (wrong also on clean),False
+1,10,5-117773-A-16.wav,wind,chirping_birds,0.104,0.001,noise-induced (correct on clean),True
+1,259,5-221878-A-34.wav,can_opening,toilet_flush,0.104,0.004,inherent (wrong also on clean),False
+1,336,5-245040-A-35.wav,washing_machine,crickets,0.104,0.045,inherent (wrong also on clean),False
+1,353,5-251971-A-47.wav,airplane,sheep,0.104,0.028,inherent (wrong also on clean),False
+1,379,5-260432-A-39.wav,glass_breaking,keyboard_typing,0.104,0.007,noise-induced (correct on clean),True
+1,395,5-263831-B-6.wav,hen,cat,0.104,0.066,noise-induced (correct on clean),True
+2,10,5-117773-A-16.wav,wind,hen,0.104,0.002,noise-induced (correct on clean),False
+2,42,5-170338-A-41.wav,chainsaw,sheep,0.104,0.09,noise-induced (correct on clean),False
+2,120,5-197446-A-7.wav,insects,train,0.104,0.032,noise-induced (correct on clean),False
+2,121,5-197913-A-18.wav,toilet_flush,sea_waves,0.104,0.022,noise-induced (correct on clean),True
+2,170,5-205589-B-17.wav,pouring_water,chirping_birds,0.104,0.068,noise-induced (correct on clean),True
+2,222,5-215634-A-17.wav,pouring_water,snoring,0.104,0.004,inherent (wrong also on clean),False
+2,241,5-219044-A-46.wav,church_bells,car_horn,0.104,0.024,inherent (wrong also on clean),True
+2,336,5-245040-A-35.wav,washing_machine,rain,0.104,0.04,inherent (wrong also on clean),False
+2,377,5-260011-A-34.wav,can_opening,keyboard_typing,0.104,0.034,noise-induced (correct on clean),True
+0,69,5-180229-A-27.wav,brushing_teeth,pig,0.103,0.057,inherent (wrong also on clean),False
+0,233,5-217186-A-16.wav,wind,train,0.103,0.046,noise-induced (correct on clean),False
+0,305,5-238926-A-31.wav,mouse_click,thunderstorm,0.103,0.03,inherent (wrong also on clean),False
+1,36,5-160614-F-48.wav,fireworks,footsteps,0.103,0.017,inherent (wrong also on clean),False
+1,38,5-160614-H-48.wav,fireworks,toilet_flush,0.103,0.016,inherent (wrong also on clean),False
+1,183,5-208810-A-11.wav,sea_waves,chainsaw,0.103,0.057,noise-induced (correct on clean),False
+1,222,5-215634-A-17.wav,pouring_water,snoring,0.103,0.009,noise-induced (correct on clean),False
+0,206,5-213802-A-12.wav,crackling_fire,insects,0.102,0.02,inherent (wrong also on clean),False
+0,367,5-254832-B-15.wav,water_drops,drinking_sipping,0.102,0.057,inherent (wrong also on clean),False
+0,383,5-261325-A-9.wav,crow,toilet_flush,0.102,0.077,inherent (wrong also on clean),False
+1,2,5-103418-A-2.wav,pig,laughing,0.102,0.089,inherent (wrong also on clean),False
+1,147,5-200339-A-1.wav,rooster,hen,0.102,0.021,noise-induced (correct on clean),True
+1,169,5-205589-A-17.wav,pouring_water,laughing,0.102,0.016,noise-induced (correct on clean),False
+1,275,5-233019-A-31.wav,mouse_click,toilet_flush,0.102,0.012,inherent (wrong also on clean),False
+2,130,5-198411-C-20.wav,crying_baby,chirping_birds,0.102,0.036,inherent (wrong also on clean),False
+2,131,5-198411-D-20.wav,crying_baby,sheep,0.102,0.004,noise-induced (correct on clean),False
+2,243,5-219242-B-37.wav,clock_alarm,church_bells,0.102,0.03,noise-induced (correct on clean),False
+2,259,5-221878-A-34.wav,can_opening,toilet_flush,0.102,0.004,inherent (wrong also on clean),False
+2,301,5-237499-A-4.wav,frog,brushing_teeth,0.102,0.064,inherent (wrong also on clean),False
+2,328,5-244315-A-6.wav,hen,church_bells,0.102,0.03,noise-induced (correct on clean),False
+0,5,5-103422-A-2.wav,pig,laughing,0.101,0.08,inherent (wrong also on clean),False
+0,36,5-160614-F-48.wav,fireworks,footsteps,0.101,0.019,inherent (wrong also on clean),False
+0,147,5-200339-A-1.wav,rooster,hen,0.101,0.027,noise-induced (correct on clean),True
+0,178,5-207836-C-29.wav,drinking_sipping,toilet_flush,0.101,0.041,inherent (wrong also on clean),False
+0,268,5-223317-A-31.wav,mouse_click,church_bells,0.101,0.007,inherent (wrong also on clean),False
+0,356,5-253085-B-3.wav,cow,chirping_birds,0.101,0.042,noise-induced (correct on clean),False
+1,55,5-177957-D-40.wav,helicopter,sheep,0.101,0.015,inherent (wrong also on clean),False
+1,166,5-204604-A-24.wav,coughing,hen,0.101,0.02,inherent (wrong also on clean),False
+1,208,5-213836-B-9.wav,crow,laughing,0.101,0.029,inherent (wrong also on clean),False
+1,329,5-244315-B-6.wav,hen,laughing,0.101,0.073,inherent (wrong also on clean),False
+0,210,5-213836-D-9.wav,crow,sheep,0.1,0.045,noise-induced (correct on clean),True
+2,138,5-198891-C-8.wav,sheep,cow,0.1,0.098,inherent (wrong also on clean),True
+2,152,5-201194-A-38.wav,clock_tick,frog,0.1,0.098,inherent (wrong also on clean),False
+2,168,5-205090-A-32.wav,keyboard_typing,crickets,0.1,0.004,inherent (wrong also on clean),False
+2,176,5-207836-A-29.wav,drinking_sipping,keyboard_typing,0.1,0.016,inherent (wrong also on clean),False
+2,183,5-208810-A-11.wav,sea_waves,vacuum_cleaner,0.1,0.072,noise-induced (correct on clean),False
+2,217,5-215172-A-13.wav,crickets,insects,0.1,0.03,noise-induced (correct on clean),False
+2,230,5-216370-A-41.wav,chainsaw,rain,0.1,0.006,inherent (wrong also on clean),False
+2,251,5-220939-A-27.wav,brushing_teeth,hand_saw,0.1,0.044,inherent (wrong also on clean),False
+2,391,5-263501-A-25.wav,footsteps,hand_saw,0.1,0.078,inherent (wrong also on clean),False
+2,395,5-263831-B-6.wav,hen,cat,0.1,0.088,noise-induced (correct on clean),True
+0,243,5-219242-B-37.wav,clock_alarm,church_bells,0.099,0.039,noise-induced (correct on clean),False
+0,249,5-220026-A-21.wav,sneezing,frog,0.099,0.009,inherent (wrong also on clean),False
+0,283,5-234145-A-28.wav,snoring,brushing_teeth,0.099,0.072,noise-induced (correct on clean),True
+1,29,5-157204-B-16.wav,wind,train,0.099,0.032,inherent (wrong also on clean),False
+1,252,5-220955-A-40.wav,helicopter,airplane,0.099,0.054,inherent (wrong also on clean),True
+1,331,5-244327-A-34.wav,can_opening,pig,0.099,0.01,inherent (wrong also on clean),False
+1,387,5-262641-A-15.wav,water_drops,airplane,0.099,0.01,inherent (wrong also on clean),False
+0,179,5-207836-D-29.wav,drinking_sipping,keyboard_typing,0.098,0.021,inherent (wrong also on clean),False
+0,222,5-215634-A-17.wav,pouring_water,snoring,0.098,0.005,inherent (wrong also on clean),False
+0,254,5-221528-A-39.wav,glass_breaking,crackling_fire,0.098,0.011,noise-induced (correct on clean),False
+0,279,5-233605-A-39.wav,glass_breaking,clock_tick,0.098,0.022,noise-induced (correct on clean),True
+0,331,5-244327-A-34.wav,can_opening,hand_saw,0.098,0.008,inherent (wrong also on clean),False
+1,33,5-160614-C-48.wav,fireworks,brushing_teeth,0.098,0.009,inherent (wrong also on clean),False
+1,107,5-194899-B-3.wav,cow,toilet_flush,0.098,0.063,inherent (wrong also on clean),False
+1,238,5-218494-A-22.wav,clapping,toilet_flush,0.098,0.019,inherent (wrong also on clean),False
+1,312,5-242711-A-9.wav,crow,sheep,0.098,0.056,inherent (wrong also on clean),True
+1,376,5-259640-A-29.wav,drinking_sipping,crackling_fire,0.098,0.018,inherent (wrong also on clean),False
+2,163,5-204114-A-29.wav,drinking_sipping,brushing_teeth,0.098,0.014,inherent (wrong also on clean),True
+2,180,5-208030-A-0.wav,dog,pig,0.098,0.058,inherent (wrong also on clean),True
+2,256,5-221567-A-22.wav,clapping,train,0.098,0.006,inherent (wrong also on clean),False
+2,266,5-223103-A-31.wav,mouse_click,sea_waves,0.098,0.026,inherent (wrong also on clean),False
+2,285,5-234263-A-25.wav,footsteps,clock_tick,0.098,0.028,inherent (wrong also on clean),False
+2,288,5-234879-A-1.wav,rooster,hen,0.098,0.02,noise-induced (correct on clean),True
+2,334,5-244651-A-31.wav,mouse_click,cat,0.098,0.008,noise-induced (correct on clean),False
+2,342,5-250026-A-30.wav,door_wood_knock,snoring,0.098,0.0,inherent (wrong also on clean),False
+2,345,5-250629-A-37.wav,clock_alarm,wind,0.098,0.052,noise-induced (correct on clean),False
+0,166,5-204604-A-24.wav,coughing,hen,0.097,0.02,inherent (wrong also on clean),False
+0,257,5-221568-A-22.wav,clapping,thunderstorm,0.097,0.031,inherent (wrong also on clean),False
+0,258,5-221593-A-21.wav,sneezing,laughing,0.097,0.01,noise-induced (correct on clean),True
+0,271,5-231762-A-0.wav,dog,chirping_birds,0.097,0.021,noise-induced (correct on clean),False
+0,288,5-234879-A-1.wav,rooster,laughing,0.097,0.018,noise-induced (correct on clean),False
+0,302,5-237795-A-34.wav,can_opening,hand_saw,0.097,0.027,inherent (wrong also on clean),False
+0,314,5-242932-B-26.wav,laughing,chirping_birds,0.097,0.05,inherent (wrong also on clean),False
+0,346,5-250753-A-34.wav,can_opening,snoring,0.097,0.021,inherent (wrong also on clean),False
+0,398,5-61635-A-8.wav,sheep,brushing_teeth,0.097,0.022,inherent (wrong also on clean),False
+1,31,5-160614-A-48.wav,fireworks,pig,0.097,0.011,inherent (wrong also on clean),False
+1,35,5-160614-E-48.wav,fireworks,keyboard_typing,0.097,0.015,inherent (wrong also on clean),False
+1,96,5-189237-A-12.wav,crackling_fire,keyboard_typing,0.097,0.025,inherent (wrong also on clean),False
+1,177,5-207836-B-29.wav,drinking_sipping,pig,0.097,0.013,inherent (wrong also on clean),False
+1,268,5-223317-A-31.wav,mouse_click,church_bells,0.097,0.004,inherent (wrong also on clean),False
+1,318,5-243449-A-14.wav,chirping_birds,laughing,0.097,0.077,inherent (wrong also on clean),False
+1,335,5-244933-A-34.wav,can_opening,hand_saw,0.097,0.004,inherent (wrong also on clean),False
+1,346,5-250753-A-34.wav,can_opening,snoring,0.097,0.021,inherent (wrong also on clean),False
+1,398,5-61635-A-8.wav,sheep,brushing_teeth,0.097,0.017,inherent (wrong also on clean),False
+0,93,5-188796-A-45.wav,train,footsteps,0.096,0.082,noise-induced (correct on clean),False
+0,336,5-245040-A-35.wav,washing_machine,train,0.096,0.046,inherent (wrong also on clean),False
+1,62,5-179863-A-43.wav,car_horn,train,0.096,0.062,inherent (wrong also on clean),True
+1,118,5-197121-A-45.wav,train,crackling_fire,0.096,0.04,inherent (wrong also on clean),False
+1,130,5-198411-C-20.wav,crying_baby,hen,0.096,0.04,inherent (wrong also on clean),False
+1,258,5-221593-A-21.wav,sneezing,laughing,0.096,0.011,noise-induced (correct on clean),True
+1,269,5-223810-A-35.wav,washing_machine,footsteps,0.096,0.016,inherent (wrong also on clean),False
+1,314,5-242932-B-26.wav,laughing,chirping_birds,0.096,0.049,noise-induced (correct on clean),False
+2,29,5-157204-B-16.wav,wind,insects,0.096,0.046,inherent (wrong also on clean),False
+2,55,5-177957-D-40.wav,helicopter,sheep,0.096,0.02,noise-induced (correct on clean),False
+2,147,5-200339-A-1.wav,rooster,cat,0.096,0.024,noise-induced (correct on clean),True
+2,169,5-205589-A-17.wav,pouring_water,toilet_flush,0.096,0.02,noise-induced (correct on clean),True
+2,200,5-212454-A-0.wav,dog,hand_saw,0.096,0.038,noise-induced (correct on clean),False
+2,210,5-213836-D-9.wav,crow,sheep,0.096,0.054,noise-induced (correct on clean),True
+2,216,5-215005-A-32.wav,keyboard_typing,brushing_teeth,0.096,0.06,inherent (wrong also on clean),False
+0,29,5-157204-B-16.wav,wind,train,0.095,0.045,inherent (wrong also on clean),False
+0,120,5-197446-A-7.wav,insects,train,0.095,0.031,noise-induced (correct on clean),False
+0,169,5-205589-A-17.wav,pouring_water,laughing,0.095,0.022,noise-induced (correct on clean),False
+0,266,5-223103-A-31.wav,mouse_click,crackling_fire,0.095,0.035,inherent (wrong also on clean),False
+0,269,5-223810-A-35.wav,washing_machine,footsteps,0.095,0.01,inherent (wrong also on clean),False
+0,292,5-235593-A-23.wav,breathing,toilet_flush,0.095,0.03,inherent (wrong also on clean),False
+0,318,5-243449-A-14.wav,chirping_birds,laughing,0.095,0.066,inherent (wrong also on clean),False
+1,159,5-202898-A-10.wav,rain,sea_waves,0.095,0.038,inherent (wrong also on clean),True
+1,185,5-209698-A-38.wav,clock_tick,keyboard_typing,0.095,0.034,inherent (wrong also on clean),True
+1,243,5-219242-B-37.wav,clock_alarm,church_bells,0.095,0.035,noise-induced (correct on clean),False
+1,354,5-252248-A-34.wav,can_opening,keyboard_typing,0.095,0.009,inherent (wrong also on clean),True
+0,96,5-189237-A-12.wav,crackling_fire,keyboard_typing,0.094,0.031,inherent (wrong also on clean),False
+0,217,5-215172-A-13.wav,crickets,chirping_birds,0.094,0.031,noise-induced (correct on clean),True
+1,0,5-103415-A-2.wav,pig,toilet_flush,0.094,0.044,noise-induced (correct on clean),False
+1,172,5-207681-A-24.wav,coughing,keyboard_typing,0.094,0.007,noise-induced (correct on clean),False
+1,205,5-213293-A-23.wav,breathing,keyboard_typing,0.094,0.038,inherent (wrong also on clean),False
+1,332,5-244459-A-28.wav,snoring,crickets,0.094,0.06,noise-induced (correct on clean),False
+1,334,5-244651-A-31.wav,mouse_click,cat,0.094,0.003,noise-induced (correct on clean),False
+1,345,5-250629-A-37.wav,clock_alarm,vacuum_cleaner,0.094,0.04,noise-induced (correct on clean),True
+2,27,5-156999-E-19.wav,thunderstorm,chainsaw,0.094,0.002,noise-induced (correct on clean),False
+2,41,5-169983-A-5.wav,cat,hen,0.094,0.066,inherent (wrong also on clean),True
+2,51,5-177779-A-33.wav,door_wood_creaks,sea_waves,0.094,0.008,inherent (wrong also on clean),False
+2,71,5-181766-A-10.wav,rain,insects,0.094,0.026,noise-induced (correct on clean),False
+2,283,5-234145-A-28.wav,snoring,brushing_teeth,0.094,0.066,noise-induced (correct on clean),True
+2,329,5-244315-B-6.wav,hen,laughing,0.094,0.05,inherent (wrong also on clean),False
+2,331,5-244327-A-34.wav,can_opening,hand_saw,0.094,0.002,inherent (wrong also on clean),False
+0,55,5-177957-D-40.wav,helicopter,sheep,0.093,0.022,inherent (wrong also on clean),False
+0,172,5-207681-A-24.wav,coughing,keyboard_typing,0.093,0.012,noise-induced (correct on clean),False
+0,299,5-236299-A-34.wav,can_opening,pig,0.093,0.0,noise-induced (correct on clean),False
+0,329,5-244315-B-6.wav,hen,laughing,0.093,0.064,noise-induced (correct on clean),False
+1,241,5-219044-A-46.wav,church_bells,train,0.093,0.028,inherent (wrong also on clean),True
+1,295,5-235874-A-28.wav,snoring,laughing,0.093,0.011,inherent (wrong also on clean),True
+1,328,5-244315-A-6.wav,hen,church_bells,0.093,0.059,noise-induced (correct on clean),False
+1,330,5-244315-C-6.wav,hen,toilet_flush,0.093,0.068,noise-induced (correct on clean),False
+1,386,5-261464-A-23.wav,breathing,sea_waves,0.093,0.037,inherent (wrong also on clean),False
+0,27,5-156999-E-19.wav,thunderstorm,chainsaw,0.092,0.007,noise-induced (correct on clean),False
+0,241,5-219044-A-46.wav,church_bells,train,0.092,0.03,inherent (wrong also on clean),True
+0,328,5-244315-A-6.wav,hen,church_bells,0.092,0.054,noise-induced (correct on clean),False
+0,391,5-263501-A-25.wav,footsteps,hand_saw,0.092,0.073,inherent (wrong also on clean),False
+1,229,5-216368-A-28.wav,snoring,toilet_flush,0.092,0.061,inherent (wrong also on clean),False
+1,383,5-261325-A-9.wav,crow,brushing_teeth,0.092,0.076,inherent (wrong also on clean),False
+1,389,5-263490-A-25.wav,footsteps,crackling_fire,0.092,0.042,inherent (wrong also on clean),False
+2,14,5-141683-A-35.wav,washing_machine,church_bells,0.092,0.006,inherent (wrong also on clean),False
+2,64,5-179866-A-43.wav,car_horn,cow,0.092,0.048,noise-induced (correct on clean),False
+2,90,5-188606-A-33.wav,door_wood_creaks,snoring,0.092,0.034,inherent (wrong also on clean),False
+2,118,5-197121-A-45.wav,train,crackling_fire,0.092,0.05,inherent (wrong also on clean),False
+2,146,5-200334-B-1.wav,rooster,cat,0.092,0.052,noise-induced (correct on clean),True
+2,300,5-237315-A-31.wav,mouse_click,snoring,0.092,0.022,inherent (wrong also on clean),False
+2,326,5-244178-A-32.wav,keyboard_typing,chirping_birds,0.092,0.04,inherent (wrong also on clean),False
+2,370,5-257349-A-15.wav,water_drops,brushing_teeth,0.092,0.046,inherent (wrong also on clean),False
+2,386,5-261464-A-23.wav,breathing,sea_waves,0.092,0.03,inherent (wrong also on clean),False
+0,0,5-103415-A-2.wav,pig,toilet_flush,0.091,0.05,noise-induced (correct on clean),False
+0,9,5-117250-A-2.wav,pig,train,0.091,0.001,inherent (wrong also on clean),False
+0,130,5-198411-C-20.wav,crying_baby,laughing,0.091,0.047,inherent (wrong also on clean),True
+0,160,5-203128-A-0.wav,dog,hand_saw,0.091,0.043,noise-induced (correct on clean),False
+0,274,5-232816-A-23.wav,breathing,airplane,0.091,0.009,inherent (wrong also on clean),False
+0,371,5-257642-A-39.wav,glass_breaking,snoring,0.091,0.014,inherent (wrong also on clean),False
+1,51,5-177779-A-33.wav,door_wood_creaks,sea_waves,0.091,0.01,inherent (wrong also on clean),False
+1,160,5-203128-A-0.wav,dog,hand_saw,0.091,0.033,noise-induced (correct on clean),False
+1,180,5-208030-A-0.wav,dog,pig,0.091,0.057,noise-induced (correct on clean),True
+1,200,5-212454-A-0.wav,dog,hand_saw,0.091,0.049,noise-induced (correct on clean),False
+1,273,5-232802-A-31.wav,mouse_click,toilet_flush,0.091,0.017,inherent (wrong also on clean),False
+1,337,5-248341-A-6.wav,hen,sheep,0.091,0.01,inherent (wrong also on clean),True
+1,368,5-256452-A-5.wav,cat,church_bells,0.091,0.086,noise-induced (correct on clean),False
+0,21,5-156026-D-4.wav,frog,brushing_teeth,0.09,0.037,inherent (wrong also on clean),False
+0,64,5-179866-A-43.wav,car_horn,cow,0.09,0.045,inherent (wrong also on clean),False
+0,176,5-207836-A-29.wav,drinking_sipping,keyboard_typing,0.09,0.024,inherent (wrong also on clean),False
+0,252,5-220955-A-40.wav,helicopter,airplane,0.09,0.055,inherent (wrong also on clean),True
+0,332,5-244459-A-28.wav,snoring,crickets,0.09,0.048,noise-induced (correct on clean),False
+0,386,5-261464-A-23.wav,breathing,sea_waves,0.09,0.032,inherent (wrong also on clean),False
+1,21,5-156026-D-4.wav,frog,brushing_teeth,0.09,0.056,inherent (wrong also on clean),False
+1,99,5-191497-A-33.wav,door_wood_creaks,hen,0.09,0.046,inherent (wrong also on clean),False
+1,176,5-207836-A-29.wav,drinking_sipping,keyboard_typing,0.09,0.031,inherent (wrong also on clean),False
+1,228,5-216216-A-13.wav,crickets,frog,0.09,0.035,inherent (wrong also on clean),False
+2,26,5-156999-D-19.wav,thunderstorm,sheep,0.09,0.01,noise-induced (correct on clean),False
+2,96,5-189237-A-12.wav,crackling_fire,keyboard_typing,0.09,0.03,inherent (wrong also on clean),False
+2,177,5-207836-B-29.wav,drinking_sipping,pig,0.09,0.012,inherent (wrong also on clean),False
+2,228,5-216216-A-13.wav,crickets,chirping_birds,0.09,0.024,inherent (wrong also on clean),True
+2,232,5-217158-A-0.wav,dog,sheep,0.09,0.016,inherent (wrong also on clean),True
+2,233,5-217186-A-16.wav,wind,train,0.09,0.046,noise-induced (correct on clean),False
+2,269,5-223810-A-35.wav,washing_machine,footsteps,0.09,0.01,inherent (wrong also on clean),False
+2,274,5-232816-A-23.wav,breathing,airplane,0.09,0.01,inherent (wrong also on clean),False
+2,295,5-235874-A-28.wav,snoring,cow,0.09,0.014,inherent (wrong also on clean),False
+2,312,5-242711-A-9.wav,crow,insects,0.09,0.054,inherent (wrong also on clean),True
+2,335,5-244933-A-34.wav,can_opening,hand_saw,0.09,0.0,inherent (wrong also on clean),False
+2,373,5-259169-A-5.wav,cat,cow,0.09,0.074,inherent (wrong also on clean),True
+0,285,5-234263-A-25.wav,footsteps,clock_tick,0.089,0.025,inherent (wrong also on clean),False
+0,301,5-237499-A-4.wav,frog,toilet_flush,0.089,0.048,inherent (wrong also on clean),False
+0,335,5-244933-A-34.wav,can_opening,hand_saw,0.089,0.006,inherent (wrong also on clean),False
+1,61,5-179860-A-43.wav,car_horn,airplane,0.089,0.064,inherent (wrong also on clean),True
+1,369,5-256512-A-30.wav,door_wood_knock,insects,0.089,0.007,inherent (wrong also on clean),False
+0,10,5-117773-A-16.wav,wind,chirping_birds,0.088,0.003,noise-induced (correct on clean),True
+1,26,5-156999-D-19.wav,thunderstorm,insects,0.088,0.01,noise-induced (correct on clean),False
+1,64,5-179866-A-43.wav,car_horn,snoring,0.088,0.033,noise-induced (correct on clean),False
+1,110,5-194930-A-1.wav,rooster,laughing,0.088,0.024,inherent (wrong also on clean),False
+2,17,5-151085-A-20.wav,crying_baby,laughing,0.088,0.024,noise-induced (correct on clean),True
+2,160,5-203128-A-0.wav,dog,hand_saw,0.088,0.048,noise-induced (correct on clean),False
+2,252,5-220955-A-40.wav,helicopter,wind,0.088,0.048,inherent (wrong also on clean),False
+2,258,5-221593-A-21.wav,sneezing,hen,0.088,0.01,noise-induced (correct on clean),False
+2,260,5-221950-A-22.wav,clapping,footsteps,0.088,0.016,inherent (wrong also on clean),True
+2,268,5-223317-A-31.wav,mouse_click,insects,0.088,0.014,inherent (wrong also on clean),False
+2,356,5-253085-B-3.wav,cow,church_bells,0.088,0.03,noise-induced (correct on clean),False
+2,366,5-254832-A-15.wav,water_drops,hen,0.088,0.018,inherent (wrong also on clean),False
+2,384,5-261433-A-15.wav,water_drops,hand_saw,0.088,0.024,inherent (wrong also on clean),False
+0,35,5-160614-E-48.wav,fireworks,keyboard_typing,0.087,0.013,inherent (wrong also on clean),False
+0,111,5-194930-B-1.wav,rooster,chainsaw,0.087,0.007,noise-induced (correct on clean),False
+0,337,5-248341-A-6.wav,hen,sheep,0.087,0.003,noise-induced (correct on clean),True
+0,354,5-252248-A-34.wav,can_opening,keyboard_typing,0.087,0.005,inherent (wrong also on clean),True
+1,39,5-161270-A-33.wav,door_wood_creaks,snoring,0.087,0.014,inherent (wrong also on clean),False
+1,274,5-232816-A-23.wav,breathing,thunderstorm,0.087,0.011,inherent (wrong also on clean),False
+1,373,5-259169-A-5.wav,cat,cow,0.087,0.061,inherent (wrong also on clean),True
+0,38,5-160614-H-48.wav,fireworks,toilet_flush,0.086,0.009,inherent (wrong also on clean),False
+0,118,5-197121-A-45.wav,train,crackling_fire,0.086,0.041,inherent (wrong also on clean),False
+0,187,5-209833-A-38.wav,clock_tick,pig,0.086,0.079,inherent (wrong also on clean),False
+0,228,5-216216-A-13.wav,crickets,frog,0.086,0.027,inherent (wrong also on clean),False
+1,83,5-186924-A-12.wav,crackling_fire,snoring,0.086,0.074,noise-induced (correct on clean),False
+1,187,5-209833-A-38.wav,clock_tick,frog,0.086,0.071,inherent (wrong also on clean),False
+1,232,5-217158-A-0.wav,dog,sheep,0.086,0.01,inherent (wrong also on clean),True
+1,251,5-220939-A-27.wav,brushing_teeth,pig,0.086,0.035,inherent (wrong also on clean),False
+1,255,5-221529-A-39.wav,glass_breaking,hand_saw,0.086,0.009,inherent (wrong also on clean),False
+1,382,5-260875-A-35.wav,washing_machine,train,0.086,0.043,noise-induced (correct on clean),False
+2,31,5-160614-A-48.wav,fireworks,pig,0.086,0.01,inherent (wrong also on clean),False
+2,35,5-160614-E-48.wav,fireworks,keyboard_typing,0.086,0.012,inherent (wrong also on clean),False
+2,93,5-188796-A-45.wav,train,footsteps,0.086,0.08,noise-induced (correct on clean),False
+2,109,5-194899-D-3.wav,cow,toilet_flush,0.086,0.054,inherent (wrong also on clean),False
+2,186,5-209719-A-24.wav,coughing,church_bells,0.086,0.012,inherent (wrong also on clean),False
+2,224,5-215658-B-12.wav,crackling_fire,church_bells,0.086,0.01,noise-induced (correct on clean),False
+2,264,5-223099-A-32.wav,keyboard_typing,pig,0.086,0.034,noise-induced (correct on clean),False
+2,271,5-231762-A-0.wav,dog,chirping_birds,0.086,0.034,inherent (wrong also on clean),False
+2,299,5-236299-A-34.wav,can_opening,hand_saw,0.086,0.002,noise-induced (correct on clean),False
+2,314,5-242932-B-26.wav,laughing,brushing_teeth,0.086,0.06,noise-induced (correct on clean),True
+2,330,5-244315-C-6.wav,hen,toilet_flush,0.086,0.076,noise-induced (correct on clean),False
+2,332,5-244459-A-28.wav,snoring,crickets,0.086,0.05,noise-induced (correct on clean),False
+2,354,5-252248-A-34.wav,can_opening,keyboard_typing,0.086,0.002,inherent (wrong also on clean),True
+2,365,5-254160-A-22.wav,clapping,toilet_flush,0.086,0.034,inherent (wrong also on clean),False
+2,368,5-256452-A-5.wav,cat,church_bells,0.086,0.084,noise-induced (correct on clean),False
+0,33,5-160614-C-48.wav,fireworks,brushing_teeth,0.085,0.008,inherent (wrong also on clean),False
+0,104,5-194533-A-21.wav,sneezing,clock_tick,0.085,0.014,noise-induced (correct on clean),False
+0,107,5-194899-B-3.wav,cow,toilet_flush,0.085,0.058,noise-induced (correct on clean),False
+0,224,5-215658-B-12.wav,crackling_fire,church_bells,0.085,0.013,noise-induced (correct on clean),False
+1,34,5-160614-D-48.wav,fireworks,hand_saw,0.085,0.003,inherent (wrong also on clean),True
+1,257,5-221568-A-22.wav,clapping,sea_waves,0.085,0.022,inherent (wrong also on clean),False
+1,285,5-234263-A-25.wav,footsteps,clock_tick,0.085,0.026,inherent (wrong also on clean),False
+1,322,5-243635-A-29.wav,drinking_sipping,chirping_birds,0.085,0.015,inherent (wrong also on clean),False
+0,17,5-151085-A-20.wav,crying_baby,hand_saw,0.084,0.037,noise-induced (correct on clean),False
+0,90,5-188606-A-33.wav,door_wood_creaks,snoring,0.084,0.02,inherent (wrong also on clean),False
+0,159,5-202898-A-10.wav,rain,sea_waves,0.084,0.045,inherent (wrong also on clean),True
+0,229,5-216368-A-28.wav,snoring,brushing_teeth,0.084,0.075,inherent (wrong also on clean),True
+0,235,5-217186-C-16.wav,wind,airplane,0.084,0.082,noise-induced (correct on clean),False
+0,284,5-234247-A-37.wav,clock_alarm,pig,0.084,0.036,inherent (wrong also on clean),False
+0,312,5-242711-A-9.wav,crow,chirping_birds,0.084,0.076,inherent (wrong also on clean),False
+0,373,5-259169-A-5.wav,cat,cow,0.084,0.076,inherent (wrong also on clean),True
+0,387,5-262641-A-15.wav,water_drops,airplane,0.084,0.004,inherent (wrong also on clean),False
+1,260,5-221950-A-22.wav,clapping,toilet_flush,0.084,0.019,inherent (wrong also on clean),False
+1,300,5-237315-A-31.wav,mouse_click,snoring,0.084,0.016,inherent (wrong also on clean),False
+1,371,5-257642-A-39.wav,glass_breaking,toilet_flush,0.084,0.031,inherent (wrong also on clean),False
+2,32,5-160614-B-48.wav,fireworks,footsteps,0.084,0.032,inherent (wrong also on clean),False
+2,179,5-207836-D-29.wav,drinking_sipping,keyboard_typing,0.084,0.024,inherent (wrong also on clean),False
+2,185,5-209698-A-38.wav,clock_tick,keyboard_typing,0.084,0.05,inherent (wrong also on clean),True
+2,293,5-235644-A-30.wav,door_wood_knock,crow,0.084,0.006,noise-induced (correct on clean),False
+2,346,5-250753-A-34.wav,can_opening,snoring,0.084,0.018,inherent (wrong also on clean),False
+2,371,5-257642-A-39.wav,glass_breaking,hand_saw,0.084,0.036,inherent (wrong also on clean),False
+0,32,5-160614-B-48.wav,fireworks,sea_waves,0.083,0.023,inherent (wrong also on clean),False
+0,71,5-181766-A-10.wav,rain,insects,0.083,0.023,noise-induced (correct on clean),False
+0,117,5-197118-A-45.wav,train,toilet_flush,0.083,0.03,inherent (wrong also on clean),False
+0,177,5-207836-B-29.wav,drinking_sipping,pig,0.083,0.012,inherent (wrong also on clean),False
+0,368,5-256452-A-5.wav,cat,cow,0.083,0.076,noise-induced (correct on clean),True
+0,377,5-260011-A-34.wav,can_opening,keyboard_typing,0.083,0.026,inherent (wrong also on clean),True
+0,382,5-260875-A-35.wav,washing_machine,train,0.083,0.026,noise-induced (correct on clean),False
+1,93,5-188796-A-45.wav,train,thunderstorm,0.083,0.07,noise-induced (correct on clean),False
+1,162,5-203739-A-10.wav,rain,sea_waves,0.083,0.07,inherent (wrong also on clean),True
+1,266,5-223103-A-31.wav,mouse_click,crackling_fire,0.083,0.042,inherent (wrong also on clean),False
+0,26,5-156999-D-19.wav,thunderstorm,sheep,0.082,0.015,noise-induced (correct on clean),False
+0,200,5-212454-A-0.wav,dog,hen,0.082,0.059,noise-induced (correct on clean),True
+0,240,5-218981-A-30.wav,door_wood_knock,crickets,0.082,0.004,noise-induced (correct on clean),False
+0,260,5-221950-A-22.wav,clapping,toilet_flush,0.082,0.034,inherent (wrong also on clean),False
+1,27,5-156999-E-19.wav,thunderstorm,church_bells,0.082,0.007,noise-induced (correct on clean),False
+1,109,5-194899-D-3.wav,cow,toilet_flush,0.082,0.058,inherent (wrong also on clean),False
+1,249,5-220026-A-21.wav,sneezing,frog,0.082,0.015,inherent (wrong also on clean),False
+2,44,5-171118-A-26.wav,laughing,toilet_flush,0.082,0.074,inherent (wrong also on clean),False
+2,239,5-218980-A-30.wav,door_wood_knock,footsteps,0.082,0.014,noise-induced (correct on clean),False
+2,375,5-259514-A-26.wav,laughing,toilet_flush,0.082,0.046,inherent (wrong also on clean),False
+0,300,5-237315-A-31.wav,mouse_click,snoring,0.081,0.021,inherent (wrong also on clean),False
+0,330,5-244315-C-6.wav,hen,toilet_flush,0.081,0.067,noise-induced (correct on clean),False
+1,391,5-263501-A-25.wav,footsteps,hand_saw,0.081,0.058,inherent (wrong also on clean),False
+0,62,5-179863-A-43.wav,car_horn,train,0.08,0.054,inherent (wrong also on clean),True
+0,326,5-244178-A-32.wav,keyboard_typing,pig,0.08,0.044,inherent (wrong also on clean),False
+1,264,5-223099-A-32.wav,keyboard_typing,hand_saw,0.08,0.041,noise-induced (correct on clean),False
+1,293,5-235644-A-30.wav,door_wood_knock,church_bells,0.08,0.003,noise-induced (correct on clean),False
+1,377,5-260011-A-34.wav,can_opening,keyboard_typing,0.08,0.027,noise-induced (correct on clean),True
+2,21,5-156026-D-4.wav,frog,brushing_teeth,0.08,0.05,inherent (wrong also on clean),False
+2,69,5-180229-A-27.wav,brushing_teeth,chirping_birds,0.08,0.07,inherent (wrong also on clean),False
+2,107,5-194899-B-3.wav,cow,toilet_flush,0.08,0.058,noise-induced (correct on clean),False
+2,167,5-204741-A-46.wav,church_bells,train,0.08,0.042,noise-induced (correct on clean),True
+2,297,5-235956-A-47.wav,airplane,toilet_flush,0.08,0.034,noise-induced (correct on clean),False
+2,369,5-256512-A-30.wav,door_wood_knock,insects,0.08,0.004,inherent (wrong also on clean),False
+0,51,5-177779-A-33.wav,door_wood_creaks,sea_waves,0.079,0.016,inherent (wrong also on clean),False
+0,61,5-179860-A-43.wav,car_horn,train,0.079,0.066,inherent (wrong also on clean),True
+0,110,5-194930-A-1.wav,rooster,laughing,0.079,0.027,inherent (wrong also on clean),False
+0,334,5-244651-A-31.wav,mouse_click,cat,0.079,0.007,noise-induced (correct on clean),False
+0,379,5-260432-A-39.wav,glass_breaking,clock_tick,0.079,0.011,noise-induced (correct on clean),True
+1,17,5-151085-A-20.wav,crying_baby,hand_saw,0.079,0.042,noise-induced (correct on clean),False
+1,240,5-218981-A-30.wav,door_wood_knock,crickets,0.079,0.001,noise-induced (correct on clean),False
+0,99,5-191497-A-33.wav,door_wood_creaks,church_bells,0.078,0.038,inherent (wrong also on clean),False
+0,293,5-235644-A-30.wav,door_wood_knock,toilet_flush,0.078,0.005,noise-induced (correct on clean),False
+0,389,5-263490-A-25.wav,footsteps,crackling_fire,0.078,0.04,inherent (wrong also on clean),False
+1,90,5-188606-A-33.wav,door_wood_creaks,snoring,0.078,0.031,inherent (wrong also on clean),False
+1,106,5-194899-A-3.wav,cow,crow,0.078,0.048,inherent (wrong also on clean),True
+1,188,5-209989-A-22.wav,clapping,crackling_fire,0.078,0.037,inherent (wrong also on clean),False
+1,225,5-216131-A-32.wav,keyboard_typing,snoring,0.078,0.052,noise-induced (correct on clean),False
+1,286,5-234335-A-23.wav,breathing,keyboard_typing,0.078,0.059,inherent (wrong also on clean),False
+2,106,5-194899-A-3.wav,cow,sheep,0.078,0.052,inherent (wrong also on clean),True
+2,187,5-209833-A-38.wav,clock_tick,frog,0.078,0.07,inherent (wrong also on clean),False
+2,188,5-209989-A-22.wav,clapping,keyboard_typing,0.078,0.046,inherent (wrong also on clean),False
+2,215,5-214869-A-9.wav,crow,church_bells,0.078,0.042,inherent (wrong also on clean),False
+2,337,5-248341-A-6.wav,hen,sheep,0.078,0.004,inherent (wrong also on clean),True
+0,186,5-209719-A-24.wav,coughing,hand_saw,0.077,0.006,inherent (wrong also on clean),False
+0,239,5-218980-A-30.wav,door_wood_knock,footsteps,0.077,0.007,noise-induced (correct on clean),False
+0,264,5-223099-A-32.wav,keyboard_typing,pig,0.077,0.035,noise-induced (correct on clean),False
+0,270,5-231551-A-36.wav,vacuum_cleaner,snoring,0.077,0.036,inherent (wrong also on clean),False
+0,304,5-238492-A-23.wav,breathing,toilet_flush,0.077,0.029,inherent (wrong also on clean),False
+0,343,5-250026-B-30.wav,door_wood_knock,toilet_flush,0.077,0.004,inherent (wrong also on clean),False
+1,270,5-231551-A-36.wav,vacuum_cleaner,car_horn,0.077,0.043,inherent (wrong also on clean),False
+1,304,5-238492-A-23.wav,breathing,toilet_flush,0.077,0.026,inherent (wrong also on clean),False
+1,343,5-250026-B-30.wav,door_wood_knock,toilet_flush,0.077,0.005,inherent (wrong also on clean),False
+1,366,5-254832-A-15.wav,water_drops,hen,0.077,0.05,inherent (wrong also on clean),False
+1,380,5-260433-A-39.wav,glass_breaking,clock_tick,0.077,0.018,noise-induced (correct on clean),True
+0,238,5-218494-A-22.wav,clapping,toilet_flush,0.076,0.025,inherent (wrong also on clean),False
+0,294,5-235671-A-38.wav,clock_tick,crow,0.076,0.045,inherent (wrong also on clean),False
+0,384,5-261433-A-15.wav,water_drops,hand_saw,0.076,0.012,inherent (wrong also on clean),False
+1,363,5-253101-C-49.wav,hand_saw,church_bells,0.076,0.064,noise-induced (correct on clean),True
+1,375,5-259514-A-26.wav,laughing,toilet_flush,0.076,0.034,inherent (wrong also on clean),False
+2,34,5-160614-D-48.wav,fireworks,pig,0.076,0.006,inherent (wrong also on clean),False
+2,110,5-194930-A-1.wav,rooster,hen,0.076,0.042,inherent (wrong also on clean),True
+2,153,5-201274-A-21.wav,sneezing,sheep,0.076,0.002,noise-induced (correct on clean),False
+2,240,5-218981-A-30.wav,door_wood_knock,wind,0.076,0.01,noise-induced (correct on clean),False
+2,290,5-234923-A-32.wav,keyboard_typing,car_horn,0.076,0.008,noise-induced (correct on clean),False
+0,162,5-203739-A-10.wav,rain,footsteps,0.075,0.066,inherent (wrong also on clean),False
+0,185,5-209698-A-38.wav,clock_tick,brushing_teeth,0.075,0.044,inherent (wrong also on clean),False
+0,342,5-250026-A-30.wav,door_wood_knock,footsteps,0.075,0.005,inherent (wrong also on clean),False
+0,369,5-256512-A-30.wav,door_wood_knock,church_bells,0.075,0.004,inherent (wrong also on clean),False
+1,14,5-141683-A-35.wav,washing_machine,church_bells,0.075,0.008,inherent (wrong also on clean),False
+1,71,5-181766-A-10.wav,rain,vacuum_cleaner,0.074,0.02,noise-induced (correct on clean),False
+1,224,5-215658-B-12.wav,crackling_fire,church_bells,0.074,0.009,noise-induced (correct on clean),False
+1,284,5-234247-A-37.wav,clock_alarm,pig,0.074,0.032,inherent (wrong also on clean),False
+1,292,5-235593-A-23.wav,breathing,toilet_flush,0.074,0.03,inherent (wrong also on clean),False
+2,39,5-161270-A-33.wav,door_wood_creaks,snoring,0.074,0.018,inherent (wrong also on clean),False
+2,159,5-202898-A-10.wav,rain,sea_waves,0.074,0.054,inherent (wrong also on clean),True
+2,244,5-219318-A-31.wav,mouse_click,car_horn,0.074,0.012,inherent (wrong also on clean),False
+2,255,5-221529-A-39.wav,glass_breaking,hand_saw,0.074,0.008,inherent (wrong also on clean),False
+2,292,5-235593-A-23.wav,breathing,toilet_flush,0.074,0.022,inherent (wrong also on clean),False
+2,294,5-235671-A-38.wav,clock_tick,toilet_flush,0.074,0.046,inherent (wrong also on clean),False
+2,296,5-235893-A-28.wav,snoring,laughing,0.074,0.03,inherent (wrong also on clean),True
+2,304,5-238492-A-23.wav,breathing,toilet_flush,0.074,0.032,inherent (wrong also on clean),False
+2,380,5-260433-A-39.wav,glass_breaking,clock_tick,0.074,0.024,noise-induced (correct on clean),True
+0,18,5-156026-A-4.wav,frog,toilet_flush,0.073,0.048,inherent (wrong also on clean),False
+0,188,5-209989-A-22.wav,clapping,crackling_fire,0.073,0.038,inherent (wrong also on clean),False
+0,216,5-215005-A-32.wav,keyboard_typing,brushing_teeth,0.073,0.065,inherent (wrong also on clean),False
+0,225,5-216131-A-32.wav,keyboard_typing,footsteps,0.073,0.047,noise-induced (correct on clean),False
+0,378,5-260164-A-23.wav,breathing,snoring,0.073,0.026,inherent (wrong also on clean),True
+1,40,5-161270-B-33.wav,door_wood_creaks,snoring,0.073,0.013,inherent (wrong also on clean),False
+1,209,5-213836-C-9.wav,crow,sheep,0.073,0.069,inherent (wrong also on clean),True
+1,216,5-215005-A-32.wav,keyboard_typing,brushing_teeth,0.073,0.068,inherent (wrong also on clean),False
+1,290,5-234923-A-32.wav,keyboard_typing,crackling_fire,0.073,0.008,noise-induced (correct on clean),False
+0,83,5-186924-A-12.wav,crackling_fire,snoring,0.072,0.066,noise-induced (correct on clean),False
+0,251,5-220939-A-27.wav,brushing_teeth,hand_saw,0.072,0.036,inherent (wrong also on clean),False
+0,273,5-232802-A-31.wav,mouse_click,toilet_flush,0.072,0.015,inherent (wrong also on clean),False
+0,286,5-234335-A-23.wav,breathing,footsteps,0.072,0.051,inherent (wrong also on clean),True
+0,322,5-243635-A-29.wav,drinking_sipping,chirping_birds,0.072,0.011,inherent (wrong also on clean),False
+1,37,5-160614-G-48.wav,fireworks,hand_saw,0.072,0.004,inherent (wrong also on clean),True
+1,153,5-201274-A-21.wav,sneezing,clock_tick,0.072,0.005,noise-induced (correct on clean),False
+1,167,5-204741-A-46.wav,church_bells,train,0.072,0.045,inherent (wrong also on clean),True
+1,194,5-211197-A-24.wav,coughing,brushing_teeth,0.072,0.023,inherent (wrong also on clean),True
+1,378,5-260164-A-23.wav,breathing,snoring,0.072,0.029,inherent (wrong also on clean),True
+2,18,5-156026-A-4.wav,frog,brushing_teeth,0.072,0.048,noise-induced (correct on clean),False
+2,83,5-186924-A-12.wav,crackling_fire,snoring,0.072,0.066,noise-induced (correct on clean),False
+2,270,5-231551-A-36.wav,vacuum_cleaner,sheep,0.072,0.05,inherent (wrong also on clean),False
+2,286,5-234335-A-23.wav,breathing,footsteps,0.072,0.042,inherent (wrong also on clean),True
+2,340,5-249748-A-28.wav,snoring,pig,0.072,0.03,noise-induced (correct on clean),False
+2,348,5-251426-B-30.wav,door_wood_knock,sheep,0.072,0.004,noise-induced (correct on clean),False
+2,378,5-260164-A-23.wav,breathing,snoring,0.072,0.034,inherent (wrong also on clean),True
+2,389,5-263490-A-25.wav,footsteps,crackling_fire,0.072,0.046,inherent (wrong also on clean),False
+1,215,5-214869-A-9.wav,crow,sheep,0.071,0.037,inherent (wrong also on clean),True
+1,348,5-251426-B-30.wav,door_wood_knock,hand_saw,0.071,0.006,noise-induced (correct on clean),False
+0,194,5-211197-A-24.wav,coughing,toilet_flush,0.07,0.028,inherent (wrong also on clean),False
+0,215,5-214869-A-9.wav,crow,church_bells,0.07,0.047,inherent (wrong also on clean),False
+0,232,5-217158-A-0.wav,dog,sheep,0.07,0.015,inherent (wrong also on clean),True
+0,365,5-254160-A-22.wav,clapping,toilet_flush,0.07,0.025,inherent (wrong also on clean),False
+1,186,5-209719-A-24.wav,coughing,hand_saw,0.07,0.006,inherent (wrong also on clean),False
+1,296,5-235893-A-28.wav,snoring,toilet_flush,0.07,0.033,inherent (wrong also on clean),False
+2,162,5-203739-A-10.wav,rain,sea_waves,0.07,0.062,inherent (wrong also on clean),True
+2,194,5-211197-A-24.wav,coughing,keyboard_typing,0.07,0.028,inherent (wrong also on clean),False
+0,34,5-160614-D-48.wav,fireworks,toilet_flush,0.069,0.005,inherent (wrong also on clean),False
+0,167,5-204741-A-46.wav,church_bells,train,0.069,0.034,inherent (wrong also on clean),True
+0,296,5-235893-A-28.wav,snoring,toilet_flush,0.069,0.042,inherent (wrong also on clean),False
+0,366,5-254832-A-15.wav,water_drops,laughing,0.069,0.046,inherent (wrong also on clean),False
+1,294,5-235671-A-38.wav,clock_tick,hand_saw,0.069,0.04,inherent (wrong also on clean),False
+1,365,5-254160-A-22.wav,clapping,toilet_flush,0.069,0.03,inherent (wrong also on clean),False
+0,109,5-194899-D-3.wav,cow,sheep,0.068,0.063,inherent (wrong also on clean),True
+0,244,5-219318-A-31.wav,mouse_click,snoring,0.068,0.013,inherent (wrong also on clean),False
+0,290,5-234923-A-32.wav,keyboard_typing,crackling_fire,0.068,0.012,noise-induced (correct on clean),False
+0,298,5-236288-A-28.wav,snoring,airplane,0.068,0.051,noise-induced (correct on clean),False
+0,345,5-250629-A-37.wav,clock_alarm,train,0.068,0.047,noise-induced (correct on clean),False
+1,100,5-192191-A-19.wav,thunderstorm,sheep,0.068,0.03,noise-induced (correct on clean),False
+1,326,5-244178-A-32.wav,keyboard_typing,toilet_flush,0.068,0.041,inherent (wrong also on clean),False
+2,61,5-179860-A-43.wav,car_horn,crickets,0.068,0.068,inherent (wrong also on clean),False
+2,99,5-191497-A-33.wav,door_wood_creaks,church_bells,0.068,0.038,inherent (wrong also on clean),False
+2,238,5-218494-A-22.wav,clapping,toilet_flush,0.068,0.024,inherent (wrong also on clean),False
+0,39,5-161270-A-33.wav,door_wood_creaks,snoring,0.067,0.019,inherent (wrong also on clean),False
+0,106,5-194899-A-3.wav,cow,sheep,0.067,0.051,inherent (wrong also on clean),True
+1,239,5-218980-A-30.wav,door_wood_knock,footsteps,0.067,0.011,noise-induced (correct on clean),False
+1,282,5-233787-A-7.wav,insects,crickets,0.067,0.052,noise-induced (correct on clean),False
+1,297,5-235956-A-47.wav,airplane,footsteps,0.067,0.025,noise-induced (correct on clean),False
+1,316,5-243036-A-29.wav,drinking_sipping,chirping_birds,0.067,0.011,inherent (wrong also on clean),False
+1,340,5-249748-A-28.wav,snoring,pig,0.067,0.021,noise-induced (correct on clean),False
+0,297,5-235956-A-47.wav,airplane,footsteps,0.066,0.021,noise-induced (correct on clean),False
+0,380,5-260433-A-39.wav,glass_breaking,clock_tick,0.066,0.018,noise-induced (correct on clean),True
+0,381,5-260434-A-39.wav,glass_breaking,toilet_flush,0.066,0.024,noise-induced (correct on clean),False
+1,18,5-156026-A-4.wav,frog,toilet_flush,0.066,0.047,noise-induced (correct on clean),False
+2,37,5-160614-G-48.wav,fireworks,toilet_flush,0.066,0.006,inherent (wrong also on clean),False
+2,40,5-161270-B-33.wav,door_wood_creaks,snoring,0.066,0.018,inherent (wrong also on clean),False
+2,273,5-232802-A-31.wav,mouse_click,hand_saw,0.066,0.012,inherent (wrong also on clean),False
+2,322,5-243635-A-29.wav,drinking_sipping,crow,0.066,0.012,noise-induced (correct on clean),False
+0,14,5-141683-A-35.wav,washing_machine,church_bells,0.065,0.005,inherent (wrong also on clean),False
+0,40,5-161270-B-33.wav,door_wood_creaks,snoring,0.065,0.014,inherent (wrong also on clean),False
+1,32,5-160614-B-48.wav,fireworks,footsteps,0.065,0.017,inherent (wrong also on clean),False
+1,381,5-260434-A-39.wav,glass_breaking,toilet_flush,0.065,0.025,noise-induced (correct on clean),False
+1,342,5-250026-A-30.wav,door_wood_knock,snoring,0.064,0.005,inherent (wrong also on clean),False
+2,196,5-212050-A-27.wav,brushing_teeth,crow,0.064,0.032,inherent (wrong also on clean),False
+2,282,5-233787-A-7.wav,insects,crickets,0.064,0.044,noise-induced (correct on clean),False
+2,284,5-234247-A-37.wav,clock_alarm,pig,0.064,0.032,inherent (wrong also on clean),False
+0,100,5-192191-A-19.wav,thunderstorm,sheep,0.063,0.031,noise-induced (correct on clean),False
+0,340,5-249748-A-28.wav,snoring,laughing,0.063,0.035,noise-induced (correct on clean),True
+1,287,5-234855-A-25.wav,footsteps,snoring,0.063,0.05,inherent (wrong also on clean),True
+0,37,5-160614-G-48.wav,fireworks,toilet_flush,0.062,0.006,inherent (wrong also on clean),False
+1,182,5-208761-A-24.wav,coughing,pig,0.062,0.029,inherent (wrong also on clean),False
+1,384,5-261433-A-15.wav,water_drops,chirping_birds,0.062,0.014,inherent (wrong also on clean),True
+0,153,5-201274-A-21.wav,sneezing,clock_tick,0.061,0.006,noise-induced (correct on clean),False
+0,282,5-233787-A-7.wav,insects,car_horn,0.061,0.05,noise-induced (correct on clean),False
+0,375,5-259514-A-26.wav,laughing,toilet_flush,0.061,0.034,inherent (wrong also on clean),False
+0,182,5-208761-A-24.wav,coughing,pig,0.06,0.031,inherent (wrong also on clean),False
+0,316,5-243036-A-29.wav,drinking_sipping,toilet_flush,0.06,0.012,inherent (wrong also on clean),False
+0,348,5-251426-B-30.wav,door_wood_knock,hand_saw,0.06,0.006,noise-induced (correct on clean),False
+1,244,5-219318-A-31.wav,mouse_click,sheep,0.06,0.018,inherent (wrong also on clean),False
+2,316,5-243036-A-29.wav,drinking_sipping,toilet_flush,0.06,0.012,inherent (wrong also on clean),False
+1,347,5-251426-A-30.wav,door_wood_knock,keyboard_typing,0.059,0.026,inherent (wrong also on clean),True
+0,196,5-212050-A-27.wav,brushing_teeth,crow,0.058,0.049,inherent (wrong also on clean),False
+0,255,5-221529-A-39.wav,glass_breaking,hand_saw,0.058,0.015,noise-induced (correct on clean),False
+2,100,5-192191-A-19.wav,thunderstorm,sheep,0.058,0.032,noise-induced (correct on clean),False
+2,182,5-208761-A-24.wav,coughing,brushing_teeth,0.058,0.022,inherent (wrong also on clean),True
+0,347,5-251426-A-30.wav,door_wood_knock,clock_tick,0.056,0.019,inherent (wrong also on clean),True
+0,219,5-215445-A-47.wav,airplane,sheep,0.055,0.046,noise-induced (correct on clean),False
+1,219,5-215445-A-47.wav,airplane,toilet_flush,0.054,0.046,noise-induced (correct on clean),False
+2,347,5-251426-A-30.wav,door_wood_knock,clock_tick,0.054,0.024,inherent (wrong also on clean),True
+2,381,5-260434-A-39.wav,glass_breaking,toilet_flush,0.054,0.024,noise-induced (correct on clean),False

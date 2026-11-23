@@ -1,0 +1,28 @@
+{
+  "n_seeds": 3,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "val_mean_macro_f1": {
+    "mean": 0.28521262670694814,
+    "std": 0.0
+  },
+  "val_clean_acc": {
+    "mean": 0.4475,
+    "std": 0.0
+  },
+  "val_clean_macro_f1": {
+    "mean": 0.42857366398078484,
+    "std": 6.798699777552591e-17
+  },
+  "val_snr5_acc": {
+    "mean": 0.16,
+    "std": 0.0
+  },
+  "val_snr5_macro_f1": {
+    "mean": 0.1418515894331115,
+    "std": 0.0
+  }
+}

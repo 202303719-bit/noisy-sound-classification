@@ -1,0 +1,25 @@
+{
+  "runs": [
+    "baseline_svm",
+    "baseline_rf"
+  ],
+  "snrs": [
+    "clean",
+    "20dB",
+    "10dB",
+    "5dB",
+    "0dB",
+    "-5dB"
+  ],
+  "error_snr": "0dB",
+  "avg_noisy_f1": {
+    "baseline_svm": [
+      0.1809724199529633,
+      3.3993498887762956e-17
+    ],
+    "baseline_rf": [
+      0.24736781319128673,
+      0.0028433550665920523
+    ]
+  }
+}

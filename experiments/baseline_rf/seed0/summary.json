@@ -1,0 +1,36 @@
+{
+  "model": "rf",
+  "seed": 0,
+  "best_params": {
+    "n_estimators": 1000,
+    "max_depth": null,
+    "max_features": "sqrt",
+    "min_samples_leaf": 2,
+    "class_weight": null,
+    "n_jobs": -1
+  },
+  "val": {
+    "val_clean": {
+      "acc": 0.4925,
+      "macro_f1": 0.459672441294665
+    },
+    "val_snr5": {
+      "acc": 0.215,
+      "macro_f1": 0.16722067545615638
+    }
+  },
+  "val_mean_macro_f1": 0.3134465583754107,
+  "feature_dim": 240,
+  "n_params": 549154,
+  "train_time_s": 57.7,
+  "best_fit_time_s": 2.46,
+  "inference_ms_per_clip": 112.63,
+  "model_size_mb": 243.745,
+  "checkpoint": "D:\\dl_project\\checkpoints\\baseline_rf_seed0.joblib",
+  "hardware": {
+    "platform": "Windows-10-10.0.26300-SP0",
+    "cpu": "Intel64 Family 6 Model 141 Stepping 1, GenuineIntel",
+    "torch": "2.15.0+cpu",
+    "gpu": null
+  }
+}
