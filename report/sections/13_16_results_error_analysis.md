@@ -1,16 +1,19 @@
 # 13–14 & 16. Experimental Results, Model Comparison, Error Analysis, and Computational Cost
 
-The final tables and figures in these sections were generated from the saved checkpoints by a single command that touches the **test split** (`PCAFETER`, `STRAFFIC`, `TBUS`, `TMETRO`) across $\text{SNR} \in \{\text{clean}, 20, 10, 5, 0, -5\}\text{ dB}$. Only the two baselines were evaluated:
+The test-split results were generated from the saved checkpoints by `src/evaluate.py`. The test split uses unseen DEMAND noise environments (`PCAFETER`, `STRAFFIC`, `TBUS`, `TMETRO`) at $\text{SNR} \in \{\text{clean}, 20, 10, 5, 0, -5\}\text{ dB}$. The two baselines were evaluated locally (CPU) and the four deep models on a Colab T4 GPU:
 
 ```bash
 python src/evaluate.py --runs baseline_svm baseline_rf --out experiments/eval_baselines
+python src/evaluate.py --runs cnn_scratch crnn_scratch conformer_full ast_pretrained --out experiments/eval_deep
 ```
+
+Both runs use the same fixed noisy test set (400 clips), so the numbers are directly comparable. The baselines were evaluated separately because the saved SVM/RF checkpoints were produced with a newer scikit-learn version than the one available on Colab.
 
 ---
 
-## 13. Main Experimental Results (`experiments/eval_baselines/table4_main.md`)
+## 13. Main Experimental Results (`experiments/eval_baselines/table4_main.md`, `experiments/eval_deep/table4_main.md`)
 
-Following Core Requirement 9, we report **macro-averaged F1** as our primary metric (alongside accuracy and per-class F1 in `experiments/eval_baselines/per_class_f1.csv`), with **mean ± SD** and 95% $t$-confidence intervals over 3 random seeds (`0, 1, 2`).
+Following Core Requirement 9, we report **macro-averaged F1** as our primary metric (alongside accuracy and per-class F1 in `per_class_f1.csv`), with **mean ± SD** over 3 random seeds (`0, 1, 2`).
 
 ### Table 4: Main Experimental Results on the Test Split (Macro-F1 & Accuracy, %)
 
@@ -18,24 +21,38 @@ Following Core Requirement 9, we report **macro-averaged F1** as our primary met
 |---|---|---|---|---|---|---|---|---|---|---|
 | MFCC + SVM (`baseline_svm`) | 3 | 37.4 ± 0.0 | 28.6 ± 0.0 | 24.9 ± 0.0 | 18.4 ± 0.0 | 11.7 ± 0.0 | 6.8 ± 0.0 | **18.1 ± 0.0** | 39.0 ± 0.0 | 14.2 ± 0.0 |
 | MFCC + RF (`baseline_rf`) | 3 | 43.5 ± 0.6 | 35.9 ± 0.9 | 31.0 ± 0.3 | 24.6 ± 0.3 | 18.6 ± 0.3 | 13.6 ± 0.2 | **24.7 ± 0.3** | 46.0 ± 0.8 | 23.4 ± 0.1 |
-| 2-D CNN (`cnn_scratch`) | 3 | trained on Kaggle (val macro-F1 55.8 ± 0.2); checkpoints lost, not evaluated on test | - | - | - | - | - | - | - | - |
-| CRNN + Attn (`crnn_scratch`) | 0 | not trained | not trained | not trained | not trained | not trained | not trained | **not trained** | not trained | not trained |
+| 2-D CNN (`cnn_scratch`) | 3 | 70.3 ± 0.7 | 67.3 ± 1.1 | 58.8 ± 1.2 | 52.7 ± 1.3 | 43.5 ± 2.7 | 33.1 ± 1.5 | **51.1 ± 1.4** | 71.8 ± 0.6 | 45.2 ± 2.5 |
+| CRNN + Attn (`crnn_scratch`) | 3 | 70.2 ± 1.5 | 68.3 ± 1.4 | 61.4 ± 2.0 | 55.6 ± 2.2 | 46.3 ± 1.8 | 35.3 ± 2.0 | **53.4 ± 1.4** | 71.5 ± 1.4 | 47.9 ± 1.8 |
+| Conformer + Noise Aug (`conformer_full`) | 3 | 65.3 ± 0.4 | 64.6 ± 2.1 | 62.4 ± 1.3 | 60.2 ± 0.8 | 55.3 ± 1.9 | 46.6 ± 1.2 | **57.8 ± 1.3** | 66.9 ± 0.6 | 56.9 ± 1.8 |
+| AST Pretrained (`ast_pretrained`) | 3 | 92.0 ± 2.4 | 91.9 ± 2.7 | 90.7 ± 2.3 | 87.4 ± 3.4 | 81.8 ± 2.4 | 76.3 ± 2.8 | **85.6 ± 2.7** | 92.4 ± 1.9 | 82.8 ± 2.1 |
 | AST Scratch (`ast_scratch`) | 0 | not trained | not trained | not trained | not trained | not trained | not trained | **not trained** | not trained | not trained |
-| AST Pretrained (`ast_pretrained`) | 0 | not trained | not trained | not trained | not trained | not trained | not trained | **not trained** | not trained | not trained |
-| Conformer + Noise Aug (`conformer_full`) | 0 | not trained | not trained | not trained | not trained | not trained | not trained | **not trained** | not trained | not trained |
 
-Only the two baselines were evaluated on the test split. Both degrade monotonically as the SNR decreases: the Random Forest falls from 43.5% macro-F1 on clean audio to 13.6% at -5 dB, and the SVM from 37.4% to 6.8% (see `experiments/eval_baselines/f1_vs_snr.png` and `acc_vs_snr.png`). The SVM has no standard deviation across seeds because it is deterministic (same features and same hyperparameter grid in every seed). The CNN was trained on Kaggle, reaching a validation macro-F1 of 55.8 ± 0.2 over 3 seeds, which is well above both baselines on validation, but its checkpoints were lost with the Kaggle session, so it has no test results. The remaining deep models (CRNN, AST, Conformer) were not trained within the project time, so the hypotheses that compare them could not be tested.
+95% t-confidence interval half-widths of F1 avg noisy: CNN ±3.5, CRNN ±3.5, Conformer ±3.2, AST pretrained ±6.6 (the baselines' are in their own `table4_main.md`).
+
+### Discussion
+
+All models degrade as the SNR decreases. The pretrained AST is the best model at every noise level, with 92.0% macro-F1 on clean audio and 76.3% at -5 dB. The three models trained from scratch are clearly better than the MFCC baselines (the best baseline, the Random Forest, reaches 24.7% average noisy F1 against 51.1–57.8% for the from-scratch deep models).
+
+The Conformer is weaker than the CNN and CRNN on clean audio (65.3% vs about 70%) but degrades much more slowly: at 0 dB it reaches 55.3% against 43.5% (CNN) and 46.3% (CRNN). We cannot attribute this to the architecture alone: the Conformer was the only from-scratch model trained with noise-mixing augmentation (`noise_aug` on, SpecAugment on), whereas the CNN and CRNN were trained without it. No ablation was run to separate the two factors, so the difference is better explained by the augmentation than by the architecture, but this is not proven.
+
+The CNN and CRNN differ by less than their confidence intervals (51.1 vs 53.4 average noisy F1, CI ±3.5), so we do not claim that either is better. The pretrained AST was trained without noise augmentation and is still the most robust model, which is consistent with the hypothesis that pretraining helps under noise. However, the scratch counterpart (`ast_scratch`) was not trained because of time, so the pretrained-vs-scratch comparison required by the project was not run, and we cannot say that pretraining alone is the cause. The model sizes also differ widely (85.76 M parameters for AST against 1.3–2.3 M for the others), which is a confounder in all comparisons with the AST.
+
+The data-strategy study and the ablation study were not run either, so the hypotheses that depend on them (effect of noise augmentation, of pretraining, of the attention component) are not tested.
+
+Validation macro-F1 (fold 4, clean audio) is reported by `train.py`: CNN 0.5655 ± 0.0062, CRNN 0.5751 ± 0.0115, Conformer 0.6634 ± 0.0061, AST pretrained 0.9163 ± 0.0054 over the first two seeds in the final log, and 0.9236, 0.9202, 0.9125 for seeds 0, 1, 2. These were used only for model selection; the test split was used only for the final evaluation. The SVM has no standard deviation across seeds because it is deterministic (same features and same hyperparameter grid in every seed).
 
 ---
 
 ## 16. Error Analysis (`experiments/eval_baselines/table6_errors.md`)
 
-For the best baseline (Random Forest) at `eval.error_snr = 0 dB`, `src/evaluate.py` produces:
+The error analysis below was produced only for the best baseline (Random Forest). It was not produced for the deep models. At `eval.error_snr = 0 dB`, `src/evaluate.py` produces:
 
 * **Normalized 50×50 Confusion Matrix:** `experiments/eval_baselines/confusion_baseline_rf.png`.
-* **Full Misclassification Log:** `experiments/eval_baselines/errors_baseline_rf.csv`, tagging every error as either **noise-induced** (correctly classified on clean audio, broken by $0\text{ dB}$ noise) or **inherent** (already misclassified on clean audio), and recording whether the confusion occurs within the same ESC-50 major category.
+* **Full Misclassification Log:** `experiments/eval_baselines/errors_baseline_rf.csv`, tagging every error as either **noise-induced** (correctly classified on clean audio, broken by 0 dB noise) or **inherent** (already misclassified on clean audio).
 * **Exported Audio Failure Cases:** `experiments/eval_baselines/error_examples/*.wav` (8 failure clips saved for listening).
-* **Per-Class Degradation:** `experiments/eval_baselines/per_class_f1.csv` (`f1_clean_mean`, `f1_0dB_mean`, and `drop`).
+* **Per-Class Degradation:** `experiments/eval_baselines/per_class_f1.csv`.
+
+The same files exist for the deep models in `experiments/eval_deep/` and can be inspected there.
 
 ### Table 6: Error Analysis on Test Split @ 0 dB SNR (best baseline, MFCC + Random Forest, mean over 3 seeds)
 
@@ -51,17 +68,18 @@ We analysed the errors of the best baseline, Random Forest, on the test split at
 
 ---
 
-## 16.2 Table 7: Computational Cost (`experiments/eval_baselines/table7_cost.md`)
+## 16.2 Table 7: Computational Cost
 
-`src/train.py` records parameter counts, model file sizes, wall-clock training time, single-clip inference latency, peak CUDA memory, and hardware specs into `experiments/<run>/seed*/summary.json`. `src/evaluate.py` compiles them into `table7_cost.md`:
+Parameter counts are measured from the training runs (`trainable params` printed by `train.py`). Training time, inference latency and peak GPU memory for the deep models are recorded in `experiments/<run>/seed*/summary.json` and compiled in `experiments/eval_deep/table7_cost.md`; they must be copied from that file (marked below).
 
-| Model | Trainable Params | Model Size (MB) | Train Time / Seed | Inference (ms / 5-s clip) | Peak GPU Mem (MB) | Hardware |
-|---|---|---|---|---|---|---|
-| MFCC + SVM (`baseline_svm`) | 0.35 M | 3.14 | 0.8 min | 2.7 | — (CPU) | 11th Gen Intel Core i5-11400H @ 2.70 GHz |
-| MFCC + RF (`baseline_rf`) | 0.55 M | 243.7 | 1.0 min | 96.7 | — (CPU) | 11th Gen Intel Core i5-11400H @ 2.70 GHz |
-| 2-D CNN (`cnn_scratch`) | 1.32 M | 5.02 | not measured | not measured | not measured | Kaggle GPU (Tesla T4), checkpoints lost |
-| CRNN + Attn (`crnn_scratch`) | 1.49 M | 5.67 | not trained | not trained | not trained | not trained |
-| Conformer (`conformer_full`) | 2.29 M | 8.75 | not trained | not trained | not trained | not trained |
-| AST (`ast_pretrained` / `ast_scratch`) | 85.76 M | 327.1 | not trained | not trained | not trained | not trained |
+| Model | Trainable Params | Train Time / Seed | Inference (ms / 5-s clip) | Hardware |
+|---|---|---|---|---|
+| MFCC + SVM (`baseline_svm`) | 0.35 M | 0.8 min | 2.7 | 11th Gen Intel Core i5-11400H @ 2.70 GHz (CPU) |
+| MFCC + RF (`baseline_rf`) | 0.55 M | 1.0 min | 96.7 | 11th Gen Intel Core i5-11400H @ 2.70 GHz (CPU) |
+| 2-D CNN (`cnn_scratch`) | 1.32 M (1,316,820) | see table7_cost.md | see table7_cost.md | Colab GPU (Tesla T4) |
+| CRNN + Attn (`crnn_scratch`) | 1.49 M (1,487,476) | see table7_cost.md | see table7_cost.md | Colab GPU (Tesla T4) |
+| Conformer (`conformer_full`) | 2.15 M (2,147,076; seed 0 ran with a mis-sized config, 2,294,532) | see table7_cost.md | see table7_cost.md | Colab GPU (Tesla T4) |
+| AST (`ast_pretrained`) | 85.76 M (85,757,234) | about 19–30 min (observed ~72 s/epoch, early stopping at 13–25 epochs) | see table7_cost.md | Colab GPU (Tesla T4) |
+| AST scratch (`ast_scratch`) | not trained | not trained | not trained | not trained |
 
-Parameter counts and sizes for the models that were not evaluated are architecture estimates from the code, not measured values. The SVM has 0.35 M parameters and a 3.1 MB checkpoint; training took 0.8 min per seed and inference 2.7 ms per clip. The Random Forest has 0.55 M parameters and a 244 MB checkpoint and trains in 1.0 min per seed, but inference takes 97 ms per clip. Both ran on CPU (11th Gen Intel Core i5-11400H, 2.70 GHz, no GPU).
+The SVM has 0.35 M parameters and a 3.1 MB checkpoint; training took 0.8 min per seed and inference 2.7 ms per clip. The Random Forest has 0.55 M parameters and a 244 MB checkpoint and trains in 1.0 min per seed, but inference takes 97 ms per clip. Both ran on CPU (11th Gen Intel Core i5-11400H, 2.70 GHz, no GPU).
