@@ -55,15 +55,18 @@ config) to `checkpoints/baseline_*_seed*.joblib`. The SVM is almost deterministi
 variance is close to zero. For the RF the seed changes bootstrap sampling and feature
 sub-sampling, so we report mean ± SD over 3 seeds, as for the deep models.
 
-## 9.5 Results (validation; filled from `experiments/*/summary_seeds.json`)
+## 9.5 Results (validation; from `experiments/baseline_*/summary_seeds.json`)
 
-| Model | Val clean macro-F1 | Val 5 dB macro-F1 | Val clean acc | Val 5 dB acc | Best params |
-|---|---|---|---|---|---|
-| MFCC + SVM | _xx.x ± x.x_ | _xx.x ± x.x_ | _xx.x ± x.x_ | _xx.x ± x.x_ | _C=…, γ=…_ |
-| MFCC + RF | _xx.x ± x.x_ | _xx.x ± x.x_ | _xx.x ± x.x_ | _xx.x ± x.x_ | _n=…, max_f=…_ |
+Mean ± SD over 3 seeds (%). The validation set uses unseen DEMAND environments (NRIVER, OMEETING, PRESTO) for the 5 dB condition.
+
+| Model | Val clean macro-F1 | Val 5 dB macro-F1 | Val clean acc | Val 5 dB acc | Val mean macro-F1 | Best params (seed 0) |
+|---|---|---|---|---|---|---|
+| MFCC + SVM | 42.9 ± 0.0 | 14.2 ± 0.0 | 44.8 ± 0.0 | 16.0 ± 0.0 | 28.5 ± 0.0 | C=10, γ=scale |
+| MFCC + RF | 45.4 ± 0.7 | 18.0 ± 1.5 | 48.7 ± 0.8 | 22.0 ± 1.1 | 31.7 ± 0.4 | n_estimators=1000, max_features=sqrt, min_samples_leaf=2 |
+
+The SVM has zero standard deviation because it is deterministic: the features and the hyperparameter grid are the same in every seed, so the same configuration is selected each time. The best parameters are reported for seed 0 only. Both baselines lose more than half of their macro-F1 between clean and 5 dB validation audio (SVM 42.9 → 14.2, RF 45.4 → 18.0), which already shows the sensitivity of MFCC features to additive noise before the test evaluation.
 
 > Test-set results across SNRs are reported together with all models in Table 4 (Section 13).
-
 ## References
 
 [1] K. J. Piczak, "ESC: Dataset for Environmental Sound Classification," *Proc. ACM Multimedia*, 2015.
