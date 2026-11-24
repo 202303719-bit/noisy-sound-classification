@@ -1,0 +1,101 @@
+data:
+  root: data/ESC-50
+  demand_dir: data/DEMAND
+  sample_rate: 16000
+  n_classes: 50
+  num_workers: 4
+  train:
+    split: train
+    snr_db: null
+  val:
+  - split: val
+    snr_db: null
+  - split: val
+    snr_db: 5
+demand_envs:
+  train:
+  - DKITCHEN
+  - DLIVING
+  - DWASHING
+  - NFIELD
+  - NPARK
+  - OHALLWAY
+  - OOFFICE
+  - PSTATION
+  - SPSQUARE
+  - TCAR
+  val:
+  - NRIVER
+  - OMEETING
+  - PRESTO
+  test:
+  - PCAFETER
+  - STRAFFIC
+  - TBUS
+  - TMETRO
+noise_aug:
+  enabled: false
+  envs: null
+  channels:
+  - 1
+  snr_range:
+  - -5
+  - 20
+  p: 0.8
+frontend:
+  type: logmel
+  use_dataset_logmel: true
+  n_mels: 128
+  n_fft: 2048
+  hop_length: 512
+seeds:
+- 0
+- 1
+- 2
+device: auto
+deterministic: false
+output:
+  checkpoint_dir: checkpoints
+  experiment_dir: experiments
+eval:
+  snrs:
+  - null
+  - 20
+  - 10
+  - 5
+  - 0
+  - -5
+  error_snr: 0
+name: cnn_scratch
+model:
+  name: cnn
+  params:
+    channels:
+    - 32
+    - 64
+    - 128
+    - 256
+    dropout: 0.3
+    block_dropout: 0.1
+    head_hidden: 256
+    spec_augment:
+      enabled: true
+      freq_mask: 24
+      time_mask: 40
+      n_freq_masks: 2
+      n_time_masks: 2
+train:
+  optimizer: adamw
+  lr: 0.001
+  weight_decay: 0.01
+  batch_size: 32
+  epochs: 100
+  warmup_epochs: 5
+  scheduler: cosine
+  min_lr_ratio: 0.01
+  label_smoothing: 0.1
+  mixup_alpha: 0.0
+  grad_clip: 5.0
+  amp: true
+  early_stopping_patience: 20
+  select_metric: macro_f1

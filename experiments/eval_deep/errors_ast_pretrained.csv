@@ -1,0 +1,208 @@
+seed,idx,file,true,pred,confidence,p_true,type,same_major_category
+0,382,5-260875-A-35.wav,washing_machine,train,0.849,0.005,noise-induced (correct on clean),False
+1,204,5-213077-A-11.wav,sea_waves,wind,0.823,0.027,inherent (wrong also on clean),True
+1,382,5-260875-A-35.wav,washing_machine,train,0.82,0.004,inherent (wrong also on clean),False
+2,54,5-177957-C-40.wav,helicopter,engine,0.819,0.022,inherent (wrong also on clean),True
+0,303,5-238021-A-35.wav,washing_machine,helicopter,0.764,0.052,inherent (wrong also on clean),False
+2,171,5-205898-A-40.wav,helicopter,washing_machine,0.753,0.02,inherent (wrong also on clean),False
+0,393,5-263775-B-26.wav,laughing,dog,0.732,0.031,inherent (wrong also on clean),False
+2,388,5-262957-A-22.wav,clapping,rain,0.724,0.152,noise-induced (correct on clean),False
+2,98,5-191131-A-40.wav,helicopter,wind,0.705,0.009,inherent (wrong also on clean),False
+2,204,5-213077-A-11.wav,sea_waves,wind,0.689,0.132,inherent (wrong also on clean),True
+2,382,5-260875-A-35.wav,washing_machine,train,0.687,0.038,noise-induced (correct on clean),False
+1,303,5-238021-A-35.wav,washing_machine,helicopter,0.686,0.116,noise-induced (correct on clean),False
+1,54,5-177957-C-40.wav,helicopter,engine,0.653,0.137,noise-induced (correct on clean),True
+0,204,5-213077-A-11.wav,sea_waves,wind,0.63,0.144,inherent (wrong also on clean),True
+2,393,5-263775-B-26.wav,laughing,dog,0.629,0.039,inherent (wrong also on clean),False
+2,386,5-261464-A-23.wav,breathing,snoring,0.621,0.165,inherent (wrong also on clean),True
+0,285,5-234263-A-25.wav,footsteps,door_wood_knock,0.62,0.116,inherent (wrong also on clean),False
+0,174,5-207811-A-35.wav,washing_machine,engine,0.609,0.169,noise-induced (correct on clean),False
+1,220,5-215447-A-47.wav,airplane,wind,0.608,0.064,noise-induced (correct on clean),False
+1,393,5-263775-B-26.wav,laughing,dog,0.606,0.052,inherent (wrong also on clean),False
+1,26,5-156999-D-19.wav,thunderstorm,train,0.602,0.009,noise-induced (correct on clean),False
+2,190,5-209992-B-44.wav,engine,washing_machine,0.601,0.069,noise-induced (correct on clean),False
+0,24,5-156999-B-19.wav,thunderstorm,sea_waves,0.597,0.008,noise-induced (correct on clean),True
+2,188,5-209989-A-22.wav,clapping,crackling_fire,0.589,0.085,noise-induced (correct on clean),False
+2,220,5-215447-A-47.wav,airplane,wind,0.588,0.064,noise-induced (correct on clean),False
+2,375,5-259514-A-26.wav,laughing,hen,0.581,0.096,noise-induced (correct on clean),False
+1,32,5-160614-B-48.wav,fireworks,clapping,0.578,0.207,noise-induced (correct on clean),False
+1,375,5-259514-A-26.wav,laughing,hen,0.574,0.076,noise-induced (correct on clean),False
+0,26,5-156999-D-19.wav,thunderstorm,train,0.57,0.005,noise-induced (correct on clean),False
+2,378,5-260164-A-23.wav,breathing,snoring,0.558,0.133,noise-induced (correct on clean),True
+2,57,5-178997-A-24.wav,coughing,crow,0.545,0.039,noise-induced (correct on clean),False
+1,369,5-256512-A-30.wav,door_wood_knock,car_horn,0.543,0.016,noise-induced (correct on clean),False
+0,224,5-215658-B-12.wav,crackling_fire,car_horn,0.539,0.015,noise-induced (correct on clean),False
+2,156,5-202220-A-21.wav,sneezing,dog,0.537,0.036,inherent (wrong also on clean),False
+1,285,5-234263-A-25.wav,footsteps,door_wood_knock,0.529,0.138,inherent (wrong also on clean),False
+0,54,5-177957-C-40.wav,helicopter,engine,0.516,0.271,inherent (wrong also on clean),True
+1,25,5-156999-C-19.wav,thunderstorm,train,0.513,0.017,noise-induced (correct on clean),False
+1,224,5-215658-B-12.wav,crackling_fire,car_horn,0.5,0.039,noise-induced (correct on clean),False
+1,83,5-186924-A-12.wav,crackling_fire,rain,0.494,0.025,inherent (wrong also on clean),True
+2,266,5-223103-A-31.wav,mouse_click,crackling_fire,0.483,0.104,noise-induced (correct on clean),False
+1,308,5-241846-A-15.wav,water_drops,pouring_water,0.473,0.066,inherent (wrong also on clean),True
+0,262,5-222524-A-41.wav,chainsaw,airplane,0.464,0.02,inherent (wrong also on clean),True
+2,251,5-220939-A-27.wav,brushing_teeth,hand_saw,0.464,0.2,inherent (wrong also on clean),False
+2,224,5-215658-B-12.wav,crackling_fire,car_horn,0.459,0.089,noise-induced (correct on clean),False
+0,119,5-197121-B-45.wav,train,thunderstorm,0.456,0.131,inherent (wrong also on clean),False
+1,24,5-156999-B-19.wav,thunderstorm,wind,0.455,0.006,noise-induced (correct on clean),True
+1,95,5-189212-A-12.wav,crackling_fire,mouse_click,0.452,0.117,noise-induced (correct on clean),False
+1,352,5-251963-A-47.wav,airplane,wind,0.446,0.035,noise-induced (correct on clean),False
+2,369,5-256512-A-30.wav,door_wood_knock,car_horn,0.445,0.042,noise-induced (correct on clean),False
+1,60,5-179496-B-16.wav,wind,train,0.444,0.049,noise-induced (correct on clean),False
+0,38,5-160614-H-48.wav,fireworks,clapping,0.443,0.14,noise-induced (correct on clean),False
+0,55,5-177957-D-40.wav,helicopter,cow,0.439,0.005,noise-induced (correct on clean),False
+0,175,5-207811-B-35.wav,washing_machine,vacuum_cleaner,0.434,0.355,inherent (wrong also on clean),True
+2,335,5-244933-A-34.wav,can_opening,crackling_fire,0.433,0.301,noise-induced (correct on clean),False
+0,69,5-180229-A-27.wav,brushing_teeth,hand_saw,0.426,0.28,inherent (wrong also on clean),False
+1,98,5-191131-A-40.wav,helicopter,wind,0.422,0.07,inherent (wrong also on clean),False
+2,48,5-173568-A-33.wav,door_wood_creaks,cat,0.421,0.024,inherent (wrong also on clean),False
+1,279,5-233605-A-39.wav,glass_breaking,can_opening,0.41,0.113,noise-induced (correct on clean),True
+0,378,5-260164-A-23.wav,breathing,snoring,0.407,0.246,noise-induced (correct on clean),True
+0,346,5-250753-A-34.wav,can_opening,insects,0.405,0.164,inherent (wrong also on clean),False
+2,36,5-160614-F-48.wav,fireworks,footsteps,0.405,0.035,noise-induced (correct on clean),False
+0,388,5-262957-A-22.wav,clapping,rain,0.401,0.329,noise-induced (correct on clean),False
+2,95,5-189212-A-12.wav,crackling_fire,mouse_click,0.396,0.161,noise-induced (correct on clean),False
+1,100,5-192191-A-19.wav,thunderstorm,train,0.394,0.092,noise-induced (correct on clean),False
+1,251,5-220939-A-27.wav,brushing_teeth,hand_saw,0.384,0.166,inherent (wrong also on clean),False
+2,78,5-184871-A-24.wav,coughing,laughing,0.383,0.242,inherent (wrong also on clean),True
+0,279,5-233605-A-39.wav,glass_breaking,can_opening,0.381,0.189,noise-induced (correct on clean),True
+2,279,5-233605-A-39.wav,glass_breaking,can_opening,0.376,0.058,inherent (wrong also on clean),True
+2,29,5-157204-B-16.wav,wind,car_horn,0.368,0.195,noise-induced (correct on clean),False
+2,350,5-251957-A-47.wav,airplane,wind,0.367,0.03,noise-induced (correct on clean),False
+0,72,5-181977-A-35.wav,washing_machine,vacuum_cleaner,0.364,0.288,noise-induced (correct on clean),True
+2,240,5-218981-A-30.wav,door_wood_knock,footsteps,0.356,0.061,inherent (wrong also on clean),False
+1,3,5-103420-A-2.wav,pig,cat,0.355,0.009,inherent (wrong also on clean),True
+1,388,5-262957-A-22.wav,clapping,rain,0.355,0.291,noise-induced (correct on clean),False
+1,59,5-179496-A-16.wav,wind,train,0.354,0.061,inherent (wrong also on clean),False
+2,35,5-160614-E-48.wav,fireworks,crackling_fire,0.353,0.007,inherent (wrong also on clean),False
+2,34,5-160614-D-48.wav,fireworks,crackling_fire,0.348,0.011,inherent (wrong also on clean),False
+2,272,5-232272-A-44.wav,engine,washing_machine,0.344,0.12,noise-induced (correct on clean),False
+0,9,5-117250-A-2.wav,pig,cow,0.338,0.31,noise-induced (correct on clean),True
+1,378,5-260164-A-23.wav,breathing,snoring,0.333,0.225,noise-induced (correct on clean),True
+0,99,5-191497-A-33.wav,door_wood_creaks,cow,0.322,0.19,noise-induced (correct on clean),False
+2,262,5-222524-A-41.wav,chainsaw,airplane,0.322,0.082,inherent (wrong also on clean),True
+0,307,5-240671-A-44.wav,engine,washing_machine,0.32,0.299,noise-induced (correct on clean),False
+1,272,5-232272-A-44.wav,engine,helicopter,0.32,0.129,noise-induced (correct on clean),True
+0,171,5-205898-A-40.wav,helicopter,washing_machine,0.312,0.217,noise-induced (correct on clean),False
+1,262,5-222524-A-41.wav,chainsaw,airplane,0.31,0.032,inherent (wrong also on clean),True
+2,24,5-156999-B-19.wav,thunderstorm,wind,0.309,0.022,noise-induced (correct on clean),True
+1,343,5-250026-B-30.wav,door_wood_knock,insects,0.307,0.019,noise-induced (correct on clean),False
+2,308,5-241846-A-15.wav,water_drops,pouring_water,0.307,0.057,inherent (wrong also on clean),True
+0,89,5-188495-A-19.wav,thunderstorm,train,0.298,0.027,noise-induced (correct on clean),False
+1,264,5-223099-A-32.wav,keyboard_typing,mouse_click,0.298,0.03,noise-induced (correct on clean),True
+0,130,5-198411-C-20.wav,crying_baby,dog,0.297,0.04,noise-induced (correct on clean),False
+2,26,5-156999-D-19.wav,thunderstorm,train,0.295,0.026,noise-induced (correct on clean),False
+1,53,5-177957-B-40.wav,helicopter,car_horn,0.292,0.013,noise-induced (correct on clean),True
+2,370,5-257349-A-15.wav,water_drops,mouse_click,0.292,0.037,inherent (wrong also on clean),False
+0,36,5-160614-F-48.wav,fireworks,footsteps,0.289,0.209,noise-induced (correct on clean),False
+0,240,5-218981-A-30.wav,door_wood_knock,fireworks,0.289,0.092,inherent (wrong also on clean),False
+2,53,5-177957-B-40.wav,helicopter,washing_machine,0.281,0.021,inherent (wrong also on clean),False
+2,307,5-240671-A-44.wav,engine,washing_machine,0.281,0.254,noise-induced (correct on clean),False
+0,131,5-198411-D-20.wav,crying_baby,cat,0.277,0.195,noise-induced (correct on clean),False
+0,37,5-160614-G-48.wav,fireworks,clapping,0.274,0.062,noise-induced (correct on clean),False
+2,1,5-103416-A-2.wav,pig,hen,0.264,0.036,inherent (wrong also on clean),True
+1,252,5-220955-A-40.wav,helicopter,cow,0.263,0.01,inherent (wrong also on clean),False
+2,37,5-160614-G-48.wav,fireworks,clapping,0.261,0.016,noise-induced (correct on clean),False
+2,206,5-213802-A-12.wav,crackling_fire,washing_machine,0.26,0.04,inherent (wrong also on clean),False
+2,352,5-251963-A-47.wav,airplane,wind,0.26,0.05,noise-induced (correct on clean),False
+0,251,5-220939-A-27.wav,brushing_teeth,hand_saw,0.258,0.136,inherent (wrong also on clean),False
+0,25,5-156999-C-19.wav,thunderstorm,train,0.251,0.043,noise-induced (correct on clean),False
+1,89,5-188495-A-19.wav,thunderstorm,train,0.251,0.022,noise-induced (correct on clean),False
+0,233,5-217186-A-16.wav,wind,train,0.25,0.162,noise-induced (correct on clean),False
+2,25,5-156999-C-19.wav,thunderstorm,train,0.249,0.013,noise-induced (correct on clean),False
+0,98,5-191131-A-40.wav,helicopter,wind,0.246,0.038,inherent (wrong also on clean),False
+2,274,5-232816-A-23.wav,breathing,car_horn,0.246,0.157,noise-induced (correct on clean),False
+0,29,5-157204-B-16.wav,wind,car_horn,0.243,0.145,noise-induced (correct on clean),False
+2,83,5-186924-A-12.wav,crackling_fire,rain,0.243,0.13,inherent (wrong also on clean),True
+1,266,5-223103-A-31.wav,mouse_click,crackling_fire,0.242,0.05,noise-induced (correct on clean),False
+2,3,5-103420-A-2.wav,pig,cat,0.242,0.041,inherent (wrong also on clean),True
+1,219,5-215445-A-47.wav,airplane,cat,0.24,0.004,inherent (wrong also on clean),False
+2,86,5-187444-A-33.wav,door_wood_creaks,chainsaw,0.236,0.179,inherent (wrong also on clean),False
+1,57,5-178997-A-24.wav,coughing,crow,0.23,0.137,noise-induced (correct on clean),False
+0,348,5-251426-B-30.wav,door_wood_knock,laughing,0.228,0.2,noise-induced (correct on clean),False
+2,318,5-243449-A-14.wav,chirping_birds,crickets,0.228,0.102,inherent (wrong also on clean),True
+1,233,5-217186-A-16.wav,wind,train,0.225,0.189,noise-induced (correct on clean),False
+0,57,5-178997-A-24.wav,coughing,crow,0.22,0.096,noise-induced (correct on clean),False
+1,239,5-218980-A-30.wav,door_wood_knock,cat,0.22,0.216,noise-induced (correct on clean),False
+0,178,5-207836-C-29.wav,drinking_sipping,water_drops,0.218,0.182,inherent (wrong also on clean),False
+2,346,5-250753-A-34.wav,can_opening,insects,0.217,0.067,inherent (wrong also on clean),False
+0,1,5-103416-A-2.wav,pig,hen,0.216,0.122,noise-induced (correct on clean),True
+1,48,5-173568-A-33.wav,door_wood_creaks,cat,0.215,0.069,inherent (wrong also on clean),False
+1,35,5-160614-E-48.wav,fireworks,footsteps,0.213,0.023,inherent (wrong also on clean),False
+2,252,5-220955-A-40.wav,helicopter,wind,0.211,0.008,inherent (wrong also on clean),False
+1,350,5-251957-A-47.wav,airplane,helicopter,0.21,0.008,inherent (wrong also on clean),True
+0,83,5-186924-A-12.wav,crackling_fire,rain,0.209,0.012,inherent (wrong also on clean),True
+2,219,5-215445-A-47.wav,airplane,cat,0.208,0.015,inherent (wrong also on clean),False
+1,156,5-202220-A-21.wav,sneezing,dog,0.206,0.101,noise-induced (correct on clean),False
+2,60,5-179496-B-16.wav,wind,washing_machine,0.206,0.031,noise-induced (correct on clean),False
+0,53,5-177957-B-40.wav,helicopter,train,0.204,0.005,inherent (wrong also on clean),True
+0,156,5-202220-A-21.wav,sneezing,dog,0.202,0.179,noise-induced (correct on clean),False
+2,56,5-177957-E-40.wav,helicopter,airplane,0.202,0.099,inherent (wrong also on clean),True
+1,37,5-160614-G-48.wav,fireworks,clapping,0.199,0.129,noise-induced (correct on clean),False
+0,86,5-187444-A-33.wav,door_wood_creaks,cow,0.198,0.186,noise-induced (correct on clean),False
+0,387,5-262641-A-15.wav,water_drops,chirping_birds,0.198,0.175,noise-induced (correct on clean),True
+2,100,5-192191-A-19.wav,thunderstorm,train,0.198,0.034,noise-induced (correct on clean),False
+0,369,5-256512-A-30.wav,door_wood_knock,car_horn,0.197,0.044,noise-induced (correct on clean),False
+2,116,5-195710-A-10.wav,rain,wind,0.196,0.159,noise-induced (correct on clean),True
+1,34,5-160614-D-48.wav,fireworks,crackling_fire,0.195,0.012,inherent (wrong also on clean),False
+0,59,5-179496-A-16.wav,wind,train,0.192,0.084,noise-induced (correct on clean),False
+1,290,5-234923-A-32.wav,keyboard_typing,rain,0.191,0.143,noise-induced (correct on clean),False
+2,52,5-177957-A-40.wav,helicopter,car_horn,0.191,0.009,inherent (wrong also on clean),True
+0,294,5-235671-A-38.wav,clock_tick,glass_breaking,0.19,0.025,noise-induced (correct on clean),True
+1,274,5-232816-A-23.wav,breathing,snoring,0.188,0.096,noise-induced (correct on clean),True
+2,31,5-160614-A-48.wav,fireworks,crackling_fire,0.188,0.101,noise-induced (correct on clean),False
+0,252,5-220955-A-40.wav,helicopter,cow,0.186,0.013,inherent (wrong also on clean),False
+1,223,5-215658-A-12.wav,crackling_fire,wind,0.185,0.122,noise-induced (correct on clean),True
+0,266,5-223103-A-31.wav,mouse_click,crackling_fire,0.184,0.054,noise-induced (correct on clean),False
+1,55,5-177957-D-40.wav,helicopter,train,0.182,0.015,noise-induced (correct on clean),True
+0,343,5-250026-B-30.wav,door_wood_knock,insects,0.179,0.025,noise-induced (correct on clean),False
+2,275,5-233019-A-31.wav,mouse_click,keyboard_typing,0.177,0.162,noise-induced (correct on clean),True
+1,10,5-117773-A-16.wav,wind,siren,0.173,0.103,inherent (wrong also on clean),False
+2,264,5-223099-A-32.wav,keyboard_typing,mouse_click,0.173,0.104,noise-induced (correct on clean),True
+1,168,5-205090-A-32.wav,keyboard_typing,mouse_click,0.172,0.01,noise-induced (correct on clean),True
+1,277,5-233260-A-23.wav,breathing,wind,0.172,0.007,noise-induced (correct on clean),False
+0,52,5-177957-A-40.wav,helicopter,wind,0.17,0.048,inherent (wrong also on clean),False
+0,56,5-177957-E-40.wav,helicopter,airplane,0.167,0.157,inherent (wrong also on clean),True
+1,86,5-187444-A-33.wav,door_wood_creaks,chainsaw,0.167,0.138,noise-induced (correct on clean),False
+2,291,5-235507-A-44.wav,engine,rain,0.166,0.135,noise-induced (correct on clean),False
+2,27,5-156999-E-19.wav,thunderstorm,washing_machine,0.159,0.023,noise-induced (correct on clean),False
+0,133,5-198411-F-20.wav,crying_baby,cat,0.158,0.156,noise-induced (correct on clean),False
+2,384,5-261433-A-15.wav,water_drops,crackling_fire,0.157,0.149,noise-induced (correct on clean),True
+0,304,5-238492-A-23.wav,breathing,sneezing,0.154,0.038,noise-induced (correct on clean),True
+2,168,5-205090-A-32.wav,keyboard_typing,mouse_click,0.152,0.02,noise-induced (correct on clean),True
+0,350,5-251957-A-47.wav,airplane,sea_waves,0.15,0.071,noise-induced (correct on clean),False
+2,387,5-262641-A-15.wav,water_drops,chirping_birds,0.15,0.084,inherent (wrong also on clean),True
+1,294,5-235671-A-38.wav,clock_tick,footsteps,0.148,0.009,noise-induced (correct on clean),False
+2,14,5-141683-A-35.wav,washing_machine,crackling_fire,0.147,0.015,inherent (wrong also on clean),False
+2,49,5-177034-A-18.wav,toilet_flush,washing_machine,0.143,0.023,noise-induced (correct on clean),False
+0,27,5-156999-E-19.wav,thunderstorm,pig,0.142,0.02,noise-induced (correct on clean),False
+2,158,5-202795-A-3.wav,cow,snoring,0.142,0.076,noise-induced (correct on clean),False
+2,277,5-233260-A-23.wav,breathing,car_horn,0.14,0.005,noise-induced (correct on clean),False
+0,34,5-160614-D-48.wav,fireworks,clapping,0.139,0.012,inherent (wrong also on clean),False
+0,100,5-192191-A-19.wav,thunderstorm,train,0.139,0.093,noise-induced (correct on clean),False
+2,38,5-160614-H-48.wav,fireworks,rain,0.137,0.113,noise-induced (correct on clean),False
+2,55,5-177957-D-40.wav,helicopter,train,0.136,0.009,inherent (wrong also on clean),True
+0,384,5-261433-A-15.wav,water_drops,glass_breaking,0.131,0.095,noise-induced (correct on clean),False
+2,10,5-117773-A-16.wav,wind,siren,0.122,0.048,noise-induced (correct on clean),False
+0,277,5-233260-A-23.wav,breathing,wind,0.121,0.003,noise-induced (correct on clean),False
+2,297,5-235956-A-47.wav,airplane,train,0.121,0.017,noise-induced (correct on clean),True
+0,219,5-215445-A-47.wav,airplane,wind,0.12,0.04,inherent (wrong also on clean),False
+1,297,5-235956-A-47.wav,airplane,train,0.12,0.026,noise-induced (correct on clean),True
+2,89,5-188495-A-19.wav,thunderstorm,train,0.118,0.027,noise-induced (correct on clean),False
+1,295,5-235874-A-28.wav,snoring,drinking_sipping,0.114,0.102,noise-induced (correct on clean),True
+0,264,5-223099-A-32.wav,keyboard_typing,clapping,0.113,0.102,noise-induced (correct on clean),False
+2,385,5-261439-A-15.wav,water_drops,crickets,0.113,0.039,inherent (wrong also on clean),True
+0,274,5-232816-A-23.wav,breathing,snoring,0.11,0.107,noise-induced (correct on clean),True
+2,258,5-221593-A-21.wav,sneezing,dog,0.105,0.075,inherent (wrong also on clean),False
+0,168,5-205090-A-32.wav,keyboard_typing,footsteps,0.104,0.075,noise-induced (correct on clean),False
+0,206,5-213802-A-12.wav,crackling_fire,laughing,0.104,0.034,inherent (wrong also on clean),False
+1,14,5-141683-A-35.wav,washing_machine,drinking_sipping,0.102,0.021,inherent (wrong also on clean),False
+1,348,5-251426-B-30.wav,door_wood_knock,sheep,0.101,0.093,noise-induced (correct on clean),False
+0,3,5-103420-A-2.wav,pig,vacuum_cleaner,0.097,0.033,noise-induced (correct on clean),False
+0,295,5-235874-A-28.wav,snoring,laughing,0.094,0.039,noise-induced (correct on clean),True
+2,294,5-235671-A-38.wav,clock_tick,crackling_fire,0.088,0.007,noise-induced (correct on clean),False
+0,35,5-160614-E-48.wav,fireworks,door_wood_creaks,0.085,0.016,inherent (wrong also on clean),False
+0,14,5-141683-A-35.wav,washing_machine,glass_breaking,0.083,0.034,inherent (wrong also on clean),True
+1,27,5-156999-E-19.wav,thunderstorm,train,0.081,0.014,noise-induced (correct on clean),False
+2,343,5-250026-B-30.wav,door_wood_knock,hen,0.076,0.069,noise-induced (correct on clean),False
+1,206,5-213802-A-12.wav,crackling_fire,sheep,0.075,0.049,inherent (wrong also on clean),False

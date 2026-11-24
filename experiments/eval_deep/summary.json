@@ -1,0 +1,35 @@
+{
+  "runs": [
+    "cnn_scratch",
+    "crnn_scratch",
+    "conformer_full",
+    "ast_pretrained"
+  ],
+  "snrs": [
+    "clean",
+    "20dB",
+    "10dB",
+    "5dB",
+    "0dB",
+    "-5dB"
+  ],
+  "error_snr": "0dB",
+  "avg_noisy_f1": {
+    "cnn_scratch": [
+      0.5109768636805795,
+      0.01416982645965036
+    ],
+    "crnn_scratch": [
+      0.5338822493297594,
+      0.01420076143901906
+    ],
+    "conformer_full": [
+      0.5784581291106567,
+      0.01269572384450345
+    ],
+    "ast_pretrained": [
+      0.8562172083167487,
+      0.02660814595133653
+    ]
+  }
+}

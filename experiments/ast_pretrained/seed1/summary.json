@@ -1,0 +1,34 @@
+{
+  "model": "ast",
+  "seed": 1,
+  "best_epoch": 19,
+  "val": {
+    "val_clean": {
+      "acc": 0.9525,
+      "macro_f1": 0.9531461251167133,
+      "loss": 0.85246835231781
+    },
+    "val_snr5": {
+      "acc": 0.8925,
+      "macro_f1": 0.8871637313494898,
+      "loss": 1.140955638885498
+    }
+  },
+  "val_mean_macro_f1": 0.9201549282331015,
+  "n_params": 85757234,
+  "n_params_total": 85757234,
+  "pretrained": true,
+  "model_size_mb": 327.138,
+  "checkpoint_size_mb": 327.226,
+  "train_time_s": 1861.6,
+  "epochs_run": 25,
+  "inference_ms_per_clip": 43.03,
+  "peak_gpu_mem_mb": 4984.60546875,
+  "checkpoint": "/content/proj/checkpoints/ast_pretrained_seed1.pt",
+  "hardware": {
+    "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+    "cpu": "x86_64",
+    "torch": "2.14.1+cu130",
+    "gpu": "Tesla T4"
+  }
+}

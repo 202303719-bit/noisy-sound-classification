@@ -1,0 +1,100 @@
+data:
+  root: data/ESC-50
+  demand_dir: data/DEMAND
+  sample_rate: 16000
+  n_classes: 50
+  num_workers: 2
+  train:
+    split: train
+    snr_db: null
+  val:
+  - split: val
+    snr_db: null
+  - split: val
+    snr_db: 5
+demand_envs:
+  train:
+  - DKITCHEN
+  - DLIVING
+  - DWASHING
+  - NFIELD
+  - NPARK
+  - OHALLWAY
+  - OOFFICE
+  - PSTATION
+  - SPSQUARE
+  - TCAR
+  val:
+  - NRIVER
+  - OMEETING
+  - PRESTO
+  test:
+  - PCAFETER
+  - STRAFFIC
+  - TBUS
+  - TMETRO
+noise_aug:
+  enabled: false
+  envs: null
+  channels:
+  - 1
+  snr_range:
+  - -5
+  - 20
+  p: 0.8
+frontend:
+  type: ast_fbank
+  use_dataset_logmel: true
+  n_mels: 128
+  n_fft: 2048
+  hop_length: 512
+  max_length: 512
+seeds:
+- 0
+- 1
+- 2
+device: auto
+deterministic: false
+output:
+  checkpoint_dir: checkpoints
+  experiment_dir: experiments
+eval:
+  snrs:
+  - null
+  - 20
+  - 10
+  - 5
+  - 0
+  - -5
+  error_snr: 0
+name: ast_pretrained
+model:
+  name: ast
+  params:
+    pretrained: true
+    checkpoint: MIT/ast-finetuned-audioset-10-10-0.4593
+    max_length: 512
+    hidden_dropout: 0.0
+    attention_dropout: 0.0
+    freeze_layers: 0
+    spec_augment:
+      enabled: true
+      freq_mask: 24
+      time_mask: 48
+      n_freq_masks: 2
+      n_time_masks: 2
+train:
+  optimizer: adamw
+  lr: 2.0e-05
+  weight_decay: 0.01
+  batch_size: 16
+  epochs: 25
+  warmup_epochs: 1
+  scheduler: cosine
+  min_lr_ratio: 0.01
+  label_smoothing: 0.1
+  mixup_alpha: 0.0
+  grad_clip: 5.0
+  amp: true
+  early_stopping_patience: 8
+  select_metric: macro_f1

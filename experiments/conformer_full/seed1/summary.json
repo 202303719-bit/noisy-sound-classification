@@ -1,0 +1,34 @@
+{
+  "model": "conformer",
+  "seed": 1,
+  "best_epoch": 102,
+  "val": {
+    "val_clean": {
+      "acc": 0.7225,
+      "macro_f1": 0.7127609638383632,
+      "loss": 1.5995048761367798
+    },
+    "val_snr5": {
+      "acc": 0.625,
+      "macro_f1": 0.6229306360650014,
+      "loss": 1.8995281219482423
+    }
+  },
+  "val_mean_macro_f1": 0.6678457999516823,
+  "n_params": 2147076,
+  "n_params_total": 2147076,
+  "pretrained": false,
+  "model_size_mb": 8.19,
+  "checkpoint_size_mb": 8.249,
+  "train_time_s": 480.5,
+  "epochs_run": 120,
+  "inference_ms_per_clip": 7.34,
+  "peak_gpu_mem_mb": 245.0791015625,
+  "checkpoint": "/content/proj/checkpoints/conformer_full_seed1.pt",
+  "hardware": {
+    "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+    "cpu": "x86_64",
+    "torch": "2.14.1+cu130",
+    "gpu": "Tesla T4"
+  }
+}

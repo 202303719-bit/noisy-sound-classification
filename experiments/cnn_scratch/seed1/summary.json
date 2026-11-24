@@ -1,0 +1,34 @@
+{
+  "model": "cnn",
+  "seed": 1,
+  "best_epoch": 89,
+  "val": {
+    "val_clean": {
+      "acc": 0.7525,
+      "macro_f1": 0.7388220960326223,
+      "loss": 1.4930858850479125
+    },
+    "val_snr5": {
+      "acc": 0.4175,
+      "macro_f1": 0.3847508792483291,
+      "loss": 2.5635730266571044
+    }
+  },
+  "val_mean_macro_f1": 0.5617864876404757,
+  "n_params": 1316820,
+  "n_params_total": 1316820,
+  "pretrained": false,
+  "model_size_mb": 5.023,
+  "checkpoint_size_mb": 5.053,
+  "train_time_s": 245.0,
+  "epochs_run": 100,
+  "inference_ms_per_clip": 1.66,
+  "peak_gpu_mem_mb": 322.14794921875,
+  "checkpoint": "/content/proj/checkpoints/cnn_scratch_seed1.pt",
+  "hardware": {
+    "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+    "cpu": "x86_64",
+    "torch": "2.14.1+cu130",
+    "gpu": "Tesla T4"
+  }
+}
