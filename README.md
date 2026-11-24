@@ -27,7 +27,7 @@ Idea 17: Environmental sound classification under noise.
 | AST from scratch (`ast_scratch`, pretrained vs scratch) | **Not run** |
 | Ablation study and data-strategy study | **Not run** |
 | Learning-rate / batch-size study | **Not run** |
-| Gradio demo | Code in `demo/app.py`, **not tested** |
+| Gradio demo | Done (tested locally with the CNN and baseline checkpoints) |
 
 Everything in the report comes from real runs. Items marked "Not run" are stated as such in the report.
 
@@ -128,7 +128,7 @@ Each output folder contains `table4_main.md` (mean ± SD, 95% CI), `acc_vs_snr.p
 
 ## Demo (`demo/app.py`)
 
-Gradio app: upload or record audio, choose a checkpoint, add DEMAND noise at a chosen SNR, and see the top-5 classes. The code is in the repo but **has not been tested**, and it needs a checkpoint, which is not stored in the repo.
+Gradio app: upload or record audio, choose a checkpoint, add DEMAND noise at a chosen SNR, and see the top-5 classes. The demo was run locally with the CNN and baseline checkpoints. It needs a checkpoint, which is not stored in the repo (train one first with `src/train.py`).
 
 ```bash
 python demo/app.py
