@@ -68,18 +68,20 @@ We analysed the errors of the best baseline, Random Forest, on the test split at
 
 ---
 
-## 16.2 Table 7: Computational Cost
+## 16.2 Table 7: Computational Cost (`experiments/eval_deep/table7_cost.md`)
 
-Parameter counts are measured from the training runs (`trainable params` printed by `train.py`). Training time, inference latency and peak GPU memory for the deep models are recorded in `experiments/<run>/seed*/summary.json` and compiled in `experiments/eval_deep/table7_cost.md`; they must be copied from that file (marked below).
+Parameter counts, checkpoint sizes, training time per seed, single-clip inference latency (5-s clip, including feature extraction) and peak GPU memory are recorded by `src/train.py` in `experiments/<run>/seed*/summary.json` and compiled by `src/evaluate.py`.
 
-| Model | Trainable Params | Train Time / Seed | Inference (ms / 5-s clip) | Hardware |
-|---|---|---|---|---|
-| MFCC + SVM (`baseline_svm`) | 0.35 M | 0.8 min | 2.7 | 11th Gen Intel Core i5-11400H @ 2.70 GHz (CPU) |
-| MFCC + RF (`baseline_rf`) | 0.55 M | 1.0 min | 96.7 | 11th Gen Intel Core i5-11400H @ 2.70 GHz (CPU) |
-| 2-D CNN (`cnn_scratch`) | 1.32 M (1,316,820) | see table7_cost.md | see table7_cost.md | Colab GPU (Tesla T4) |
-| CRNN + Attn (`crnn_scratch`) | 1.49 M (1,487,476) | see table7_cost.md | see table7_cost.md | Colab GPU (Tesla T4) |
-| Conformer (`conformer_full`) | 2.15 M (2,147,076; seed 0 ran with a mis-sized config, 2,294,532) | see table7_cost.md | see table7_cost.md | Colab GPU (Tesla T4) |
-| AST (`ast_pretrained`) | 85.76 M (85,757,234) | about 19–30 min (observed ~72 s/epoch, early stopping at 13–25 epochs) | see table7_cost.md | Colab GPU (Tesla T4) |
-| AST scratch (`ast_scratch`) | not trained | not trained | not trained | not trained |
+| Model | Params | Size (MB) | Train time / seed | Inference (ms/clip) | Peak GPU mem (MB) | Hardware |
+|---|---|---|---|---|---|---|
+| MFCC + SVM (`baseline_svm`) | 0.35 M | 3.14 | 0.8 min | 2.7 | - (CPU) | 11th Gen Intel Core i5-11400H @ 2.70 GHz |
+| MFCC + RF (`baseline_rf`) | 0.55 M | 243.7 | 1.0 min | 96.7 | - (CPU) | 11th Gen Intel Core i5-11400H @ 2.70 GHz |
+| 2-D CNN (`cnn_scratch`) | 1.32 M | 5.02 | 4.1 min | 2.1 | 633 | Tesla T4 (Colab) |
+| CRNN + Attn (`crnn_scratch`) | 1.49 M | 5.67 | 6.6 min | 1.9 | 1588 | Tesla T4 (Colab) |
+| Conformer (`conformer_full`) | 2.15 M | 8.19 | 8.4 min | 6.4 | 245 | Tesla T4 (Colab) |
+| AST pretrained (`ast_pretrained`) | 85.76 M | 327.1 | 22.3 min | 43.3 | 4987 | Tesla T4 (Colab) |
+| AST scratch (`ast_scratch`) | not trained | not trained | not trained | not trained | not trained | not trained |
 
-The SVM has 0.35 M parameters and a 3.1 MB checkpoint; training took 0.8 min per seed and inference 2.7 ms per clip. The Random Forest has 0.55 M parameters and a 244 MB checkpoint and trains in 1.0 min per seed, but inference takes 97 ms per clip. Both ran on CPU (11th Gen Intel Core i5-11400H, 2.70 GHz, no GPU).
+The AST is about 40 to 65 times larger than the other deep models (85.76 M against 1.3 to 2.3 M parameters) and takes about 5 times longer to train per seed than the CNN. Its inference is also slower (43.3 ms against about 2 to 6 ms per clip), but still far below real time for a 5-second clip, so it is usable in the demo. The Conformer has the lowest peak GPU memory (245 MB) in this measurement despite having more parameters than the CNN and CRNN; we did not investigate why. The SVM and Random Forest ran on CPU: the RF has a 244 MB checkpoint and 97 ms inference per clip, much slower than the SVM (2.7 ms). Training times were measured on a shared Colab T4, so they are indicative only.
+
+The Conformer seed 0 was trained with a mis-sized configuration (`n_mels` set to 128, 2.29 M parameters) before the configuration was corrected to 64 mel bands (2.15 M, used for seeds 1 and 2); the table reports the corrected configuration.
