@@ -14,7 +14,7 @@ e.g. `--set train.lr=0.0003 model.params.dropout=0.5`.
 |---|---|
 | Input | 5-s ESC-50 clip, mono, resampled to 16 kHz by the shared `datasets.esc50.ESC50` loader |
 | Deep-model input | 64-band log-mel ($1024$-pt FFT, hop $320 \to 64 \times 251$, shared `LogMel` transform) for CNN/CRNN/Conformer; 128-bin Kaldi fbank (16 kHz, AudioSet normalization) for AST |
-| Train audio | Clean ESC-50 train folds by default; on-the-fly DEMAND noise mixing (10 train envs, random SNR, $p = 0.8$) enabled only in `conformer.yaml` |
+| Train audio | Clean ESC-50 train folds by default; on-the-fly DEMAND noise mixing (10 train envs, $\text{SNR} \sim \mathcal{U}(-5, 20)\text{ dB}$, $p = 0.8$) enabled only in `conformer.yaml` |
 | Validation conditions | Val fold clean + val fold mixed with **val** DEMAND noise (`NRIVER`, `OMEETING`, `PRESTO`) at 5 dB |
 | Model selection | Highest mean macro-F1 over the validation conditions (best epoch / best grid point) |
 | Seeds | `0, 1, 2` for every final configuration, reported as mean ± SD |
@@ -44,7 +44,7 @@ e.g. `--set train.lr=0.0003 model.params.dropout=0.5`.
 | Max epochs | n/a | n/a | 100 (patience 20) | 100 (patience 20) | 25 (patience 8) | 60 (patience 15) | 120 (patience 30) |
 | Regularization / search | Grid on validation: $C \in \{1, 10, 100\}$, $\gamma \in \{\text{scale}, 10^{-3}, 10^{-2}\}$. Selected (seed 0): $C=10$, $\gamma=$ scale | Grid on validation: `max_features` $\in \{\text{sqrt}, \text{log2}\}$, `min_leaf` $\in \{1, 2\}$, $N \in \{300, 500, 1000\}$. Selected (seed 0): $N=1000$, sqrt, `min_leaf` 2 | WD $0.01$, drop $0.3$, drop2d $0.1$, clip $5.0$ | WD $0.01$, drop $0.3$, drop2d $0.1$, clip $5.0$ | WD $0.01$, drop $0.0$, clip $5.0$ | WD $0.05$, drop $0.1$, attn-drop $0.1$, clip $5.0$ | WD $0.05$, drop $0.1$, head-drop $0.3$, clip $5.0$ |
 | Loss | Hinge (SVM dual) | Gini impurity | CE (label smoothing $0.1$) | CE (label smoothing $0.1$) | CE (label smoothing $0.1$) | CE (label smoothing $0.1$) | CE (label smoothing $0.1$) |
-| Augmentation | None | None | SpecAugment ($2\times F\le 24$, $2\times T\le 40$) | SpecAugment ($2\times F\le 24$, $2\times T\le 40$) | SpecAugment ($2\times F\le 24$, $2\times T\le 48$) | SpecAugment ($2\times F\le 24$, $2\times T\le 48$) | SpecAugment + DEMAND train noise (random SNR, $p=0.8$) |
+| Augmentation | None | None | SpecAugment ($2\times F\le 24$, $2\times T\le 40$) | SpecAugment ($2\times F\le 24$, $2\times T\le 40$) | SpecAugment ($2\times F\le 24$, $2\times T\le 48$) | SpecAugment ($2\times F\le 24$, $2\times T\le 48$) | SpecAugment ($2\times F\le 24$, $2\times T\le 40$) + DEMAND train noise ($\mathcal{U}(-5, 20)\text{ dB}$, $p=0.8$) |
 | Config file | `configs/baseline_svm.yaml` | `configs/baseline_rf.yaml` | `configs/cnn.yaml` | `configs/crnn.yaml` | `configs/ast.yaml` | `configs/ast_scratch.yaml` | `configs/conformer.yaml` |
 
 ## 12.4 Justification of the choices
@@ -53,7 +53,7 @@ e.g. `--set train.lr=0.0003 model.params.dropout=0.5`.
 * **Small fine-tuning LR ($2\times 10^{-5}$) for `ast_pretrained`.** Following Gong et al. [1], pretrained weights are fine-tuned with a small learning rate to avoid destroying the pretrained representations. The larger rate in the `ast_scratch` configuration ($10^{-4}$) was intended for random initialisation, but that run was not performed.
 * **Label smoothing ($0.1$)** reduces over-confidence on a 50-class problem with only 24 training clips per class [5]. We did not measure its effect.
 * **SpecAugment** [6] discourages the model from relying on narrow frequency bands or short time slices. We did not run a with/without comparison (Section 15), so its benefit here is not tested.
-* **On-the-fly DEMAND noise mixing** (Conformer only) exposes the model to non-stationary background noise using only the 10 training environments, leaving validation and test environments unseen.
+* **On-the-fly DEMAND noise mixing** (Conformer only) exposes the model to non-stationary background noise using only the 10 training environments, leaving validation and test environments unseen. The training SNR range ($-5$ to $20$ dB) covers the evaluation SNR levels, but the noise environments differ, so this is not leakage.
 * **Early stopping on validation macro-F1** selects the epoch without touching the test split.
 
 ## References
