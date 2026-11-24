@@ -22,12 +22,12 @@ Idea 17: Environmental sound classification under noise.
 | Classic models (2-D CNN, CRNN), 3 seeds, test evaluation | Done |
 | Modern model (AST pretrained), 3 seeds, test evaluation | Done |
 | Advanced model (Conformer + noise mixing), 3 seeds, test evaluation | Done (seed 0 used a mis-sized config, see report Section 10.3) |
-| Error analysis | Done for the Random Forest only; files for the deep models are in `experiments/eval_deep/` |
+| Error analysis | Written up for the Random Forest and the pretrained AST; files for all models are in `experiments/eval_baselines/` and `experiments/eval_deep/` |
 | Computational cost table (Table 7) | Done |
 | AST from scratch (`ast_scratch`, pretrained vs scratch) | **Not run** |
 | Ablation study and data-strategy study | **Not run** |
 | Learning-rate / batch-size study | **Not run** |
-| Gradio demo | Done (tested locally with the CNN and baseline checkpoints) |
+| Gradio demo | Done (tested locally with the CNN and Random Forest checkpoints; not tested with the AST) |
 
 Everything in the report comes from real runs. Items marked "Not run" are stated as such in the report.
 
@@ -44,7 +44,7 @@ Full details (versions, licences, preprocessing, split): see `docs/DATASET.md`.
 pip install -r requirements.txt
 ```
 
-Hardware used: baselines on a 11th Gen Intel Core i5-11400H (CPU); CNN, CRNN, Conformer and AST on a Google Colab Tesla T4 GPU.
+Hardware used: baselines, evaluation of the baselines and the demo on a 11th Gen Intel Core i5-11400H (CPU, no GPU); CNN, CRNN, Conformer and AST training and their evaluation on a Google Colab Tesla T4 GPU.
 
 ## Dataset download and preprocessing
 
@@ -77,7 +77,7 @@ test  = ESC50("data/ESC-50", "test", snr_db=5, demand_dir="data/DEMAND")
 One script trains all models. It reads a YAML config (inheriting `configs/base.yaml`), trains for the given seeds, selects the best epoch / grid point on the **validation** split and saves a checkpoint. It never touches the test split.
 
 ```bash
-# 0) Smoke test (1 epoch, 64 clips)
+# 0) Smoke test (1 epoch, 64 clips per seed)
 python src/train.py --config configs/cnn.yaml --fast-dev-run
 
 # 1) Baselines (CPU, about 1 min per seed)
@@ -128,7 +128,7 @@ Each output folder contains `table4_main.md` (mean ± SD, 95% CI), `acc_vs_snr.p
 
 ## Demo (`demo/app.py`)
 
-Gradio app: upload or record audio, choose a checkpoint, add DEMAND noise at a chosen SNR, and see the top-5 classes. The demo was run locally with the CNN and baseline checkpoints. It needs a checkpoint, which is not stored in the repo (train one first with `src/train.py`).
+Gradio app: upload or record audio, choose a checkpoint, add DEMAND noise at a chosen SNR, and see the top-5 classes. The demo was run locally with the CNN and Random Forest checkpoints; it was not tested with the AST. It needs trained checkpoints in `checkpoints/`, which are not stored in the repo (they are created by `src/train.py`).
 
 ```bash
 python demo/app.py

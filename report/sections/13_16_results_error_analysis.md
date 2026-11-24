@@ -43,16 +43,14 @@ Validation macro-F1 (fold 4, clean audio) is reported by `train.py`: CNN 0.5655 
 
 ---
 
-## 16. Error Analysis (`experiments/eval_baselines/table6_errors.md`)
+## 16. Error Analysis (`experiments/eval_baselines/table6_errors.md`, `experiments/eval_deep/table6_errors.md`)
 
-The error analysis below was produced only for the best baseline (Random Forest). It was not produced for the deep models. At `eval.error_snr = 0 dB`, `src/evaluate.py` produces:
+The error analysis below covers the best baseline (Random Forest, Table 6) and the best model (pretrained AST, Table 6b). It was not written up for the CNN, CRNN and Conformer, but the same files exist for them in `experiments/eval_deep/`. At `eval.error_snr = 0 dB`, `src/evaluate.py` produces:
 
 * **Normalized 50×50 Confusion Matrix:** `experiments/eval_baselines/confusion_baseline_rf.png`.
 * **Full Misclassification Log:** `experiments/eval_baselines/errors_baseline_rf.csv`, tagging every error as either **noise-induced** (correctly classified on clean audio, broken by 0 dB noise) or **inherent** (already misclassified on clean audio).
 * **Exported Audio Failure Cases:** `experiments/eval_baselines/error_examples/*.wav` (8 failure clips saved for listening).
 * **Per-Class Degradation:** `experiments/eval_baselines/per_class_f1.csv`.
-
-The same files exist for the deep models in `experiments/eval_deep/` and can be inspected there.
 
 ### Table 6: Error Analysis on Test Split @ 0 dB SNR (best baseline, MFCC + Random Forest, mean over 3 seeds)
 
@@ -65,6 +63,21 @@ The same files exist for the deep models in `experiments/eval_deep/` and can be 
 | baseline_rf | Cross-category confusion: sneezing → frog | 3.0 | `5-202220-A-21.wav` | Hypothesis: noise texture resembles the predicted class (not verified by listening) |
 
 We analysed the errors of the best baseline, Random Forest, on the test split at 0 dB (averaged over three seeds). Of its misclassified clips, about 114 per seed were noise-induced (correct on the clean clip, wrong once noise was added) and about 193 were inherent (wrong even on clean audio). Even for this weak model, most errors at 0 dB therefore exist without noise: the hand-crafted MFCC features separate many ESC-50 classes poorly to begin with. The most frequent single confusion was crickets predicted as chirping birds (about 5.7 clips per seed), two classes of the same ESC-50 major category (natural soundscapes) with similar spectra. The remaining frequent confusions (door creak as snoring, sneezing as frog, pouring water as brushing teeth, can opening as hand saw; about 3 clips each) involve different categories, which suggests that the noise texture resembles the predicted class. This is a hypothesis, since we did not verify it by listening to every example.
+
+### Table 6b: Error Analysis on Test Split @ 0 dB SNR (best model, AST pretrained, mean over 3 seeds)
+
+| Model | Error Type | Count / Seed | Concrete Example (Clip: True → Pred) | Likely Cause |
+|---|---|---|---|---|
+| ast_pretrained | Noise-induced errors (correct on clean, wrong @ 0 dB) | 43.0 | `5-103416-A-2.wav: pig → hen` | Additive noise masks the event (low SNR, overlapping spectrum) |
+| ast_pretrained | Inherent errors (wrong on both clean and 0 dB) | 26.0 | `5-141683-A-35.wav: washing_machine → glass_breaking` | Class confusion independent of noise (similar acoustic texture, short event) |
+| ast_pretrained | Cross-category confusion: thunderstorm → train | 4.3 | `5-156999-C-19.wav` | Hypothesis: noise texture resembles the predicted class (not verified by listening) |
+| ast_pretrained | Cross-category confusion: fireworks → clapping | 2.0 | `5-160614-D-48.wav` | Hypothesis: noise texture resembles the predicted class (not verified by listening) |
+| ast_pretrained | Cross-category confusion: airplane → wind | 2.0 | `5-215445-A-47.wav` | Hypothesis: noise texture resembles the predicted class (not verified by listening) |
+| ast_pretrained | Intra-category confusion: breathing → snoring | 2.0 | `5-232816-A-23.wav` | Same ESC-50 major category (human non-speech), similar spectra |
+| ast_pretrained | Cross-category confusion: helicopter → wind | 1.7 | `5-177957-A-40.wav` | Hypothesis: noise texture resembles the predicted class (not verified by listening) |
+| ast_pretrained | High-confidence errors (confidence ≥ 0.8) | 1.3 | `5-260875-A-35.wav: washing_machine → train (0.849)` | Over-confident prediction or possible label ambiguity (not verified) |
+
+We also analysed the errors of the pretrained AST at 0 dB (mean over three seeds). It misclassifies about 69 of the 400 test clips per seed: about 43 are noise-induced (correct on the clean clip, wrong once noise was added) and about 26 are inherent (wrong even on clean audio). Unlike the Random Forest, where most errors already exist on clean audio, most of the AST's errors at 0 dB are therefore caused by the noise. This is consistent with its high clean accuracy (92.4%), which leaves little room for inherent errors. The most frequent confusion is thunderstorm predicted as train (about 4.3 clips per seed), followed by several confusions between sounds with continuous broadband texture (fireworks as clapping, airplane and helicopter as wind). A plausible explanation is that these sounds and the DEMAND noise share a similar spectral texture, but this is a hypothesis: we did not verify it by listening to the examples. High-confidence errors (confidence of at least 0.8) are rare, about 1.3 clips per seed. This analysis covers 0 dB only; errors at -5 dB were not analysed.
 
 ---
 

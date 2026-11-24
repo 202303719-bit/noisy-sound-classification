@@ -9,7 +9,7 @@ noise_aug:
 model:
   name: conformer
   params:
-    n_mels: 128
+    n_mels: 64
     d_model: 144
     n_layers: 4
     heads: 4
